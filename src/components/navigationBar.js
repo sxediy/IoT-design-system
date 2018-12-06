@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-const NavigationBar = (props) => (
+const NavigationBarTop = (props) => (
   <header className='nav-bar'>
     {props.routes.map(route =>
       <NavLink exact={route.isExact} activeClassName='active' key={route.path} to={route.path}>{route.name}</NavLink>
@@ -10,8 +10,8 @@ const NavigationBar = (props) => (
   </header>
 );
 
-export default NavigationBar;
+export default NavigationBarTop;
 
-NavigationBar.propTypes = {
+NavigationBarTop.propTypes = {
   routes: PropTypes.array,
 };
