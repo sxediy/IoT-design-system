@@ -1,0 +1,55 @@
+.wrapper{
+  display: flex;
+  .button{
+    font-size: 15px;
+    background-color: #fff;
+    padding: 0px 16px;
+    border: 1px solid #ededed;
+    height: 48px;
+    cursor: pointer;
+    line-height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    &:not(:last-child){
+      border-right: none;
+    }
+    &:hover:not(.datepicker){
+      background-color: #ededed;
+    }
+    &.active{
+      box-shadow: 0px 1px 10px rgba(51, 51, 51, 0.2);
+      z-index: 10;
+    }
+    &.datepickerWr{
+      padding:0;
+      width: 260px;
+      &:hover{
+        background-color: #fff;
+      }
+    }
+    :global{
+      .ant-calendar-picker-input{
+        border:none;
+        height: 46px;
+        // line-height: 46px;
+        input{
+          cursor: pointer;
+
+        }
+      }
+      .ant-calendar-picker-clear{
+        display: none;
+      }
+      .ant-calendar-picker-clear, .ant-calendar-picker-icon{
+        top: 43%;
+      }
+      .ant-calendar-range-picker-separator{
+        line-height: 35px;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+//@import '~variables';
+// В storybook less-loader не может разрешить модуль variables
+
+@heatColor: #ffa718;
+@pureWaterColor: #99d5f8;
+@hotWaterColor: #f62534;
+@gasColor: #404d46;
+@coldWaterColor: #34aaf2;
+@electricityColor: #b809d4;
+
+@heatShadow: rgba(255, 167, 24, 0.5);
+@pureWaterShadow: rgba(153, 213, 248, 0.5);
+@hotWaterShadow: rgba(246, 37, 52, 0.5);
+@gasShadow: rgba(64, 77, 70, 0.5);
+@coldWaterShadow: rgba(52, 170, 242, 0.5);
+@electricityShadow: rgba(184, 9, 212, 0.5);
+
+
+.containerTableResources{
+    display: flex;
+    width:  100%;
+}
+
+
+.tableResources{
+    border-bottom: 1px solid #ededed;
+    // width: 160px;
+    width: 100%;
+    cursor: pointer;
+    &:not(:last-child){
+        border-right: 1px solid #ededed;
+    }
+    &.active{
+      z-index: 2;
+    }
+    &:hover{
+      z-index: 3;
+      background-color: white;
+    }
+    &.active, &:hover{
+      border-right: 0;
+      transform: scale(1.025);
+      transition: transform 0.3s;
+    }
+    &.heat{
+        border-top: 2px solid  @heatColor;
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @heatShadow;
+        }
+    }
+    &.pureWater{
+        border-top: 2px solid @pureWaterColor;
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @pureWaterShadow;
+        }
+    }
+    &.hotWater{
+        border-top: 2px solid @hotWaterColor;
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @hotWaterShadow;
+        }
+    }
+     &.gas{
+        border-top: 2px solid @gasColor;
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @gasShadow;
+        }
+    }
+    &.coldWater{
+        border-top: 2px solid @coldWaterColor;  
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @coldWaterShadow;
+        }        
+    }
+    &.electricity{
+        border-top: 2px solid @electricityColor; 
+        &.active, &:hover{
+            box-shadow: 0 4px 12px 0 @electricityShadow;
+        }       
+    }
+    >div:first-child{
+        height: 80px;
+        background-color: #fafafa;
+        font-weight: 500;
+        font-style: normal;
+        padding-bottom: 12px;
+    }
+    >div{
+        height: 70px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        // padding-top: 15px;
+        padding: 15px; 
+        background-color: #fff;
+    }
+    >div:last-child{
+        border: hidden;
+        // height: 104px;
+    }
+    // >   div:last-child >   div:first-child{
+    //     padding-bottom: 15px;
+    // }
+}
+
+
+.button{
+    padding: 10px 30px;
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: 0.2s;  
+    &.hotWater{
+        color: @hotWaterColor;
+        border: 1px solid  @hotWaterColor;
+        &.active{
+            color:white;
+            background-color: @hotWaterColor;
+        }
+        
+    }
+    &.coldWater{
+        color: @coldWaterColor;
+        border: 1px solid  @coldWaterColor;
+        &.active{
+            color:white;
+            background-color: @coldWaterColor;
+        }
+    }
+    &.pureWater{
+        color: @pureWaterColor;
+        border: 1px solid  @pureWaterColor;
+        &.active{
+            color:white;
+            background-color: @pureWaterColor;
+        }
+    }
+    &.electricity{
+        color: @electricityColor;
+        border: 1px solid  @electricityColor;
+        &.active{
+            color:white;
+            background-color: @electricityColor;
+        }
+    }
+    &.gas{
+        color: @gasColor;
+        border: 1px solid  @gasColor;
+        &.active{
+            color:white;
+            background-color: @gasColor;
+        }
+    }
+    &.heat{
+        color: @heatColor;
+        border: 1px solid  @heatColor;
+        &.active{
+            color:white;
+            background-color: @heatColor;
+        }
+    }
+}
+
+.tableTitles{
+    width: 210px;
+    // height: 318px;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    >div{
+      height: 70px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-align: left;
+      padding-left: 28px;
+      border-bottom: 1px solid #eee; 
+    }
+    >div:first-child{
+      padding-top: 15px;
+      height: 82px;
+      background-color: #fafafa;
+    }
+    >div:last-child{
+      border: hidden;
+      padding-top: 15px;
+    }
+
+}
+
