@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from './routes';
-import NavigationBar from './components/navigationBar';
+import Bar from './components/bar';
 import Authorization from './hoc/authorization';
 
 const App = () => {
@@ -25,9 +25,17 @@ const App = () => {
   return (
     <Router>
       <React.Fragment>
-        <NavigationBar routes={routes.filter(route => route.isNavBar)}/>
-        <div id='ui-content'>
-          {renderSwitch()}
+        <div className='app-container' >
+          <header className='header'></header>
+          <main className='main'>
+            <section className='gkh-container'>
+              <Bar routes={routes.filter(route => route.isNavBar)}/>
+              <aside className='gkh-componentst'>
+                {renderSwitch()}
+              </aside>
+            </section>
+          </main>
+          <footer className='footer'></footer>
         </div>
       </React.Fragment>
     </Router>

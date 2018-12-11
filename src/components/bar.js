@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-const NavigationBarTop = (props) => (
-  <header className='nav-bar'>
+const Bar = (props) => (
+  <nav className='gkh-bar'>
     {props.routes.map(route =>
       <NavLink exact={route.isExact} activeClassName='active' key={route.path} to={route.path}>{route.name}</NavLink>
     )}
-  </header>
+  </nav>
 );
 
-export default NavigationBarTop;
+export default Bar;
 
-NavigationBarTop.propTypes = {
+Bar.propTypes = {
   routes: PropTypes.array,
 };
