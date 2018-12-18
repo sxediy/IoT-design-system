@@ -9,7 +9,8 @@ class News extends React.Component {
   };
 
   componentDidMount() {
-    const url = 'https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=60d2126818fc401489664a4bd5ade034';
+    const url =
+     'https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=60d2126818fc401489664a4bd5ade034';
     axios(url)
       .then(({ data }) => this.setState({ articles: data.articles }));
   }

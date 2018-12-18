@@ -1,3 +1,4 @@
+
 const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
@@ -5,6 +6,7 @@ const lessToJs = require('less-vars-to-js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const { resolve } = path;
 const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/ant-theme.less'), 'utf8'));
 
 module.exports = {
@@ -62,4 +64,19 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  resolve: {
+    alias: {
+      assets: resolve(__dirname, 'src/assets/'),
+      icons: resolve(__dirname, 'src/assets/icons/'),
+      components: resolve(__dirname, 'src/components/'),
+      'gkh-components': resolve(__dirname, 'src/components/gkh-components/'),
+      layouts: resolve(__dirname, 'src/layouts/'),
+      models: resolve(__dirname, 'src/models/'),
+      routes: resolve(__dirname, 'src/routes/'),
+      services: resolve(__dirname, 'src/services/'),
+      utils: resolve(__dirname, 'src/utils/'),
+      theme: resolve(__dirname, 'src/theme.js/'),
+      variables: resolve(__dirname, 'src/variables.less/'),
+    },
+  },
 };

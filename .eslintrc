@@ -3,6 +3,7 @@
   "rules": {
     "indent": ["error", 2, {"SwitchCase": 1}],
     "quotes": ["error", "single"],
+    "max-len": ["error", { "code": 120 }],
     "no-undef-init": 0,
     "import/prefer-default-export": 0,
     "arrow-parens": 0,
