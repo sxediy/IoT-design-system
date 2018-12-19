@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { routes } from './routes';
-import Bar from './components/bar';
+import RouteBar from './components/routeBar';
 import Authorization from './hoc/authorization';
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           />
         );
       })}
-      <Redirect from='*' to='/news' />
+      <Redirect from='*' to='/' />
     </Switch>
   );
 
@@ -26,16 +26,13 @@ const App = () => {
     <Router>
       <React.Fragment>
         <div className='app-container' >
-          <header className='header'></header>
+          <header className='header'>
+            <RouteBar routes={routes.filter(route => route.isNavBar)}/>
+          </header>
           <main className='main'>
-            <section className='gkh-container'>
-              <Bar routes={routes.filter(route => route.isNavBar)}/>
-              <aside className='gkh-componentst'>
-                {renderSwitch()}
-              </aside>
-            </section>
+            {renderSwitch()}
           </main>
-          <footer className='footer'></footer>
+          <footer className='footer'><p>All rights reserved © 2018</p></footer>
         </div>
       </React.Fragment>
     </Router>

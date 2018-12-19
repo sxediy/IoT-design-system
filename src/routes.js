@@ -1,8 +1,6 @@
-import News from './pages/news';
 import Profile from './pages/profile';
 import Login from './pages/login';
 import Home from './pages/home';
-import ResourcesTablePage from './pages/pricing-table';
 
 export const routes = [
   {
@@ -11,13 +9,6 @@ export const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    isPrivate: true,
-  },
-  {
-    isNavBar: true,
-    path: '/news',
-    name: 'News',
-    component: News,
     isPrivate: false,
   },
   {
@@ -31,13 +22,6 @@ export const routes = [
     path: '/login',
     name: 'Login',
     component: Login,
-    isPrivate: false,
-  },
-  {
-    isNavBar: true,
-    path: '/pricing-table',
-    name: 'ResourcesTablePage',
-    component: ResourcesTablePage,
     isPrivate: false,
   }
 ];

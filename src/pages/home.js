@@ -1,9 +1,16 @@
 import React from 'react';
+import MenuBar from '../components/menuBar';
+import ResourcesTablePage from '../pages/pricing-table';
 
 const Home = () => (
-  <React.Fragment>
-    <h1 className="home-header">Internet of Things</h1>
-  </React.Fragment>
+  <section className='gkh-container'>
+    <aside className='menu-bar'>
+      <MenuBar />
+    </aside>
+    <arcticle className='gkh-componentst'>
+      <ResourcesTablePage/>
+    </arcticle>
+  </section>
 );
 
 export default Home;

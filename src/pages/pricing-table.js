@@ -5,35 +5,41 @@ import { Cards as ResourcesTable } from '../components/gkh-components/PricingTab
 import { pricingData } from '../components/gkh-components/PricingTable/data';
 
 
-// const ResourcesTablePage = () =>
-//   <React.Fragment>
-//     <ResourcesTable
-//       pricingData={pricingData}
-//       changeActiveColumn = {() => {}}
-//       activeResourceType={'Тепло'}
-//     />;
-//   </React.Fragment>;
+const ResourcesTablePage = () =>
+  <React.Fragment>
+    <ResourcesTable
+      pricingData={pricingData}
+      changeActiveColumn = {() => {}}
+      activeResourceType={'Тепло'}
+    />;
+  </React.Fragment>;
 
-class ResourcesTablePage extends React.Component {
-  static propTypes = {
-    pricingData: PropTypes.object,
-    getPricingData: PropTypes.func,
-  };
+ResourcesTablePage.propTypes = {
+  pricingData: PropTypes.object,
+  changeActiveColumn: PropTypes.func,
+  activeResourceType: PropTypes.string,
+};
 
-  // componentDidMount() {
-  //   this.props.getPricingData(pricingData);
-  // }
+// class ResourcesTablePage extends React.Component {
+//   static propTypes = {
+//     pricingData: PropTypes.object,
+//     getPricingData: PropTypes.func,
+//   };
 
-  render() {
-    return (
-      <ResourcesTable
-        pricingData={pricingData}
-        changeActiveColumn = {() => {}}
-        activeResourceType={'Тепло'}
-      />
-    );
-  }
-}
+// componentDidMount() {
+//   this.props.getPricingData(pricingData);
+// }
+
+//   render() {
+//     return (
+//       <ResourcesTable
+//         pricingData={pricingData}
+//         changeActiveColumn = {() => {}}
+//         activeResourceType={'Тепло'}
+//       />
+//     );
+//   }
+// }
 
 // const mapStateToProps = ({ pricing }) => (
 //   { pricingData: pricing.pricingData }
