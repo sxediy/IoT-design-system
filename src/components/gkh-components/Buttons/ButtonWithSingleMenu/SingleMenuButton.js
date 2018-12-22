@@ -1,4 +1,4 @@
-import { Dropdown, Menu, Spin} from "antd"
+import { Dropdown, Menu } from "antd"
 import styles from 'components/Buttons/Buttons.less'
 
 const menu = (click, items) => (
@@ -7,8 +7,7 @@ const menu = (click, items) => (
     </Menu>
   )
 
-export const SingleMenuButton = ({ buttonName, logo, items, loading, click }) =>
-    <Spin spinning={loading}>
+export const SingleMenuButton = ({ buttonName, logo, items, click }) =>
         <Dropdown
             overlay={menu(click, items)}
             placement="bottomCenter"
@@ -18,7 +17,6 @@ export const SingleMenuButton = ({ buttonName, logo, items, loading, click }) =>
             <span className={styles.buttonName}>{buttonName}</span>
         </div>
         </Dropdown>
-    </Spin>
 
 
 

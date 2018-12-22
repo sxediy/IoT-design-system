@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { connect } from "dva"
 import PropTypes from 'prop-types';
 import {withRouter} from "react-router"
 import classnamesBind from 'classnames/bind'
@@ -14,20 +13,13 @@ const cx = classnamesBind.bind(styles)
 const { RangePicker } = DatePicker
 const timeFormat = TimeService.getTimeLayout()
 
-@connect(({selectedDates}) => {
-  // console.table([selectedDates.dateFrom,  selectedDates.dateTo])
-  return ({ selectedDates })
-})
 export class RowTimeFilter extends PureComponent {
 
   onChange = (momentz) => {
     if (!momentz || momentz.length === 0) {
       return
     }
-    const [dateFrom, dateTo] = momentz
-
     this.props.setDate(...momentz)()
-    this.dispatchSelectedDates(dateFrom, dateTo)
   }
 
   today = moment()
@@ -36,40 +28,29 @@ export class RowTimeFilter extends PureComponent {
     return current > moment().endOf('day');
   }
 
-  click = (dateFrom, dateTo) => () => {
-    this.props.setDate(dateFrom, dateTo)()
-    this.dispatchSelectedDates(dateFrom, dateTo)
-  }
-    
-  dispatchSelectedDates = (dateFrom, dateTo) =>
-    this.props.dispatch({
-      type: 'selectedDates/saveSelectedDates',
-      payload : {
-        dateFrom: dateFrom.format(TimeService.getTimeLayout()),
-        dateTo: dateTo.format(TimeService.getTimeLayout()),
-      }
-    })
-  
-
   render() {
-    const {isTSRV} = this.props
-    const dateFrom = this.props.selectedDates.unMomentoFrom
-    const dateTo = this.props.selectedDates.unMomentoTo
-    // const {dateFrom, dateTo } = this.props
-    console.log('dateFrom RowTimeFilter', dateFrom)
-    const {click, today} = this
+    const {dateFrom, dateTo, setDate, isTSRV} = this.props
+   //debugger
+
     return (
       <div className={styles.wrapper}>
-        <div onClick={click(today.clone().subtract(7, 'd'), today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'd') === 7})}>
+        {
+          !isTSRV && (
+            <div onClick={setDate(this.today, this.today)} className={cx('button', {'active': dateFrom.isSame(this.today, 'd')})}>
+            Сегодня
+          </div>
+          )
+        }
+        <div onClick={setDate(this.today.clone().subtract(7, 'd'), this.today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'd') === 7})}>
           Неделя
         </div>
-        <div onClick={click(today.clone().subtract(1, 'months'), today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'months') === 1})}>
+        <div onClick={setDate(this.today.clone().subtract(1, 'months'), this.today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'months') === 1})}>
           Месяц
         </div>
-        <div onClick={click(today.clone().subtract(3, 'months'), today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'months') === 3})}>
+        <div onClick={setDate(this.today.clone().subtract(3, 'months'), this.today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'months') === 3})}>
           Квартал
         </div>
-        <div onClick={click(today.clone().subtract(1, 'y'), today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'y') === 1})}>
+        <div onClick={setDate(this.today.clone().subtract(1, 'y'), this.today)} className={cx('button', {'active': dateTo.diff(dateFrom, 'y') === 1})}>
           Год
         </div>
         <div className={styles.button + " " + styles.datepickerWr}>
@@ -102,33 +83,27 @@ export class UrlRowTimerFilterHelper {
   }
 }
 
-@connect(({selectedDates}) => ({ selectedDates }))
+
 class UrlBindedRowTimerFilter extends PureComponent {
   constructor(props) {
     super(props)
     const urlVals = qs.parse(this.props.location.search)
-    const {dateFrom, dateTo } = this.props.selectedDates
     this.state = {
-      dateFrom: urlVals.dateFrom ? moment(urlVals.dateFrom, timeFormat) : moment(dateFrom),
-      dateTo: urlVals.dateFrom ? moment(urlVals.dateTo, timeFormat) : moment(dateFrom),
+      dateFrom: urlVals.dateFrom ? moment(urlVals.dateFrom, timeFormat) : moment(new Date()),
+      dateTo: urlVals.dateFrom ? moment(urlVals.dateTo, timeFormat) : moment(new Date()),
     }
   }
 
   componentDidMount() {
     this.listenerCancelation = this.props.history.listen((location) => {
-      const { dateFrom:urlFrom, dateTo:urlTo} = qs.parse(location.search)
-      const { dateFrom: dvaFrom, dateTo: dvaTo, datesString:dvaDatesString } = this.props.selectedDates
-      const conditionOne = urlFrom && urlTo
-      const conditionTwo = dvaDatesString !== ''
-      if (conditionOne || conditionTwo) {
+      const urlVals = qs.parse(location.search)
+      if (Object.keys(urlVals).length > 0 && urlVals.dateFrom && urlVals.dateTo) {
         const newState = {};
-        const dateFrom = urlFrom || dvaFrom
-        const dateTo = urlTo || dvaTo
-        if (this.state.dateFrom.format(timeFormat) !== urlFrom) {
-          newState.dateFrom = moment(dateFrom, timeFormat)
+        if (this.state.dateFrom.format(timeFormat) !== urlVals.dateFrom) {
+          newState.dateFrom = moment(urlVals.dateFrom, timeFormat)
         }
-        if (this.state.dateTo.format(timeFormat) !== urlTo) {
-          newState.dateTo = moment(dateTo, timeFormat)
+        if (this.state.dateTo.format(timeFormat) !== urlVals.dateTo) {
+          newState.dateTo = moment(urlVals.dateTo, timeFormat)
         }
         if (Object.keys(newState).length > 0) this.setState(newState, () => {
           if (this.props.onDateChanged) this.props.onDateChanged(this.state)

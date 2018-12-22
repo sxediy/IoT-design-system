@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react"
 import * as resourceTypes from "services/resourceTypes"
 import classnames from 'classnames/bind'
-import {withRouter} from "react-router"
 import styles from "./ResourceNameAndUnit.less"
 import PropTypes from 'prop-types';
 

@@ -32,8 +32,8 @@ class SmartCheckboxWithButton extends React.Component {
       const { plainOptions, args, click } = this.props
       
       return (
-        <div>
-          <div style={{ borderBottom: '1px solid #E9E9E9' }}>
+        <div style={{ padding: '10px' }}>
+          <div style={{ padding: '10px 0 10px 30px', width: '200px' }}>
             <Checkbox
                 indeterminate={ indeterminate }
                 onChange={ this.onCheckAllChange }
@@ -43,7 +43,7 @@ class SmartCheckboxWithButton extends React.Component {
             </Checkbox>
           </div>
           <br />
-          <CheckboxGroup options={ plainOptions } value={ checkedList } onChange={ this.onChange } />
+          <CheckboxGroup style={{ padding: '10px' }} options={ plainOptions } value={ checkedList } onChange={ this.onChange } />
           <Button 
             type="primary" 
             onClick={click(checkedList, ...args)}

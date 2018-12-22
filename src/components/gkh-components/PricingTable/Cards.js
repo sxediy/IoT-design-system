@@ -19,6 +19,7 @@ export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) =
     const premises = pricingData ? pricingData[typeName].premises : '-';
     const difference = pricingData ? pricingData[typeName].difference : '-';
 
+    console.log('@@@ styles', styles);
     return (
       <div
         key={eng}
