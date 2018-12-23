@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import RouteBar from 'components/routeBar';
+import Authorization from 'hoc/authorization';
 import { routes } from './routes';
-import RouteBar from './components/routeBar';
-import Authorization from './hoc/authorization';
+
 
 const App = () => {
   const renderSwitch = () => (

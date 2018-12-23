@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
-import { SIGN_OUT } from '../store/actionTypes';
+import { SIGN_OUT } from 'store/actionTypes';
 
 
 class Profile extends React.Component {

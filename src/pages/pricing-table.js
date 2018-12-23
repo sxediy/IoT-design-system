@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
-import { Cards as ResourcesTable } from '../components/gkh-components/PricingTable/Cards';
-import { pricingData } from '../components/gkh-components/PricingTable/data';
+import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards';
+import { pricingData } from 'components/gkh-components/PricingTable/data';
 
 
 const ResourcesTablePage = () =>

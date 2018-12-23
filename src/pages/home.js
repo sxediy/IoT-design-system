@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuBar from 'components/menuBar';
-import ResourcesTablePage from '../pages/pricing-table';
+import ResourcesTablePage from 'pages/pricing-table';
 
 const Home = () => (
   <section className='gkh-container'>
