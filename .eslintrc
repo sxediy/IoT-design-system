@@ -19,5 +19,23 @@
     "browser": true
   },
   "extends": ["airbnb/base", "plugin:react/recommended"],
-  "plugins": ["react", "import"]
+  "plugins": ["react", "import"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "assets": "./src/assets",
+          "icons": "./src/assets/icons",
+          "components": "./src/components",
+          "fonts": "./src/fonts",
+          "hoc": "./src/hoc",
+          "pages": "./src/pages",
+          "services": "./src/services",
+          "store": "./src/store",
+          "utils": "./src/utils",
+          "variables": "./src/variables.less"
+        }
+      }
+    }
+  }
 }
