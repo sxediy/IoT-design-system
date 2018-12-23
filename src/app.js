@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import RouteBar from 'components/routeBar';
 import Authorization from 'hoc/authorization';
 import { routes } from './routes';
-import appStyles from './style.less';
+import styles from './app.less';
 
 
 const App = () => {
@@ -27,14 +27,14 @@ const App = () => {
   return (
     <Router>
       <React.Fragment>
-        <div className={appStyles.appContainer} >
-          <header className={appStyles.header}>
+        <div className={styles.appContainer} >
+          <header className={styles.header}>
             <RouteBar routes={routes.filter(route => route.isNavBar)}/>
           </header>
-          <main className={appStyles.main}>
+          <main className={styles.main}>
             {renderSwitch()}
           </main>
-          <footer className={appStyles.footer}><p>All rights reserved © 2018</p></footer>
+          <footer className={styles.footer}><p>All rights reserved © 2018</p></footer>
         </div>
       </React.Fragment>
     </Router>
