@@ -18,7 +18,7 @@ class MenuBar extends React.Component {
         mode="inline"
       >
         <SubMenu key="basic" title="Базовые компоненты">
-          <Menu.Item key="1">Option 1</Menu.Item>
+          <Menu.Item key="pricingTable">Карточки ресурсов</Menu.Item>
           <Menu.Item key="2">Option 2</Menu.Item>
         </SubMenu>
         <SubMenu key="universal" title="Универсальные компоненты">
