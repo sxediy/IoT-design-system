@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import { SIGN_OUT } from 'store/actionTypes';
+import styles from './profile.less';
 
 
 class Profile extends React.Component {
@@ -13,14 +14,14 @@ class Profile extends React.Component {
 
   render() {
     return (
-      <div className='profile'>
-        <div className='profile-info'>
-          <div className='group'>
+      <div className={styles.profile}>
+        <div className={styles.profileInfo}>
+          <div className={styles.group}>
             <h3>{this.props.username}</h3>
           </div>
           <Button
             type="danger"
-            className="button"
+            className={styles.button}
             onClick={this.signOut}
           >
           Sign out

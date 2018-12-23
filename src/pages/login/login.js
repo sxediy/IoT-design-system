@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { Form, Icon, Input, Button } from 'antd';
+import styles from './login.less';
 
 const FormItem = Form.Item;
 
@@ -37,7 +38,7 @@ class NormalLoginForm extends React.Component {
     const { error } = this.props;
 
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
+      <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }]
@@ -68,12 +69,12 @@ class NormalLoginForm extends React.Component {
           <Button
             type="primary"
             htmlType="submit"
-            className="login-form-button"
+            className={styles.loginFormButton}
           >
             Log in
           </Button>
         </FormItem>
-        <div className='error-message' hidden={!error}>
+        <div className={styles.errorMessage} hidden={!error}>
           {error}
         </div>
       </Form>

@@ -1,6 +1,6 @@
-import Profile from 'pages/profile';
-import Login from 'pages/login';
-import Home from 'pages/home';
+import Profile from 'pages/profile/profile';
+import Login from 'pages/login/login';
+import Home from 'pages//home/home';
 
 export const routes = [
   {
