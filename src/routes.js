@@ -1,4 +1,3 @@
-import Profile from 'pages/profile/profile';
 import Login from 'pages/login/login';
 import Home from 'pages//home/home';
 
@@ -10,13 +9,6 @@ export const routes = [
     name: 'Home',
     component: Home,
     isPrivate: false,
-  },
-  {
-    isNavBar: true,
-    path: '/profile',
-    name: 'Profile',
-    component: Profile,
-    isPrivate: true
   },
   {
     path: '/login',
