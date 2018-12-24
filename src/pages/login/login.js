@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
@@ -10,7 +9,7 @@ const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
   static propTypes = {
-    form: PropTypes.func,
+    form: PropTypes.object,
     validateFields: PropTypes.func,
     isAuthorized: PropTypes.bool,
     logIn: PropTypes.func.isRequired,
@@ -28,7 +27,6 @@ class NormalLoginForm extends React.Component {
   };
   render() {
     const { isAuthorized } = this.props;
-    console.log('isAuthorized in login.js', isAuthorized);
 
     if (isAuthorized) {
       return <Redirect to='/' />;
@@ -98,8 +96,3 @@ const mapDispatchToProps = (dispatch) => (
 
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 export default connect(mapStateToProps, mapDispatchToProps)(WrappedNormalLoginForm);
-
-ReactDOM.render(
-  <WrappedNormalLoginForm />,
-  document.getElementById('root')
-);
