@@ -3,7 +3,6 @@ import Home from 'pages//home/home';
 
 export const routes = [
   {
-    isNavBar: true,
     isExact: true,
     path: '/',
     name: 'Home',

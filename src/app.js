@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import RouteBar from 'components/routeBar';
 import Authorization from 'hoc/authorization';
 import { routes } from './routes';
 import styles from './app.less';
@@ -28,13 +27,9 @@ const App = () => {
     <Router>
       <React.Fragment>
         <div className={styles.appContainer} >
-          <header className={styles.header}>
-            <RouteBar routes={routes.filter(route => route.isNavBar)}/>
-          </header>
           <main className={styles.main}>
             {renderSwitch()}
           </main>
-          <footer className={styles.footer}><p>All rights reserved © 2018</p></footer>
         </div>
       </React.Fragment>
     </Router>
