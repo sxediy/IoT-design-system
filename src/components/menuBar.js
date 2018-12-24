@@ -1,11 +1,18 @@
 import React from 'react';
 import { Menu } from 'antd';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const { SubMenu } = Menu;
 
 class MenuBar extends React.Component {
+  static propTypes = {
+    changeUIContainer: PropTypes.func,
+  };
+
   handleClick = (e) => {
     console.log('click ', e);
+    this.props.changeUIContainer(e.key);
   }
 
   render() {
@@ -30,4 +37,12 @@ class MenuBar extends React.Component {
   }
 }
 
-export default MenuBar;
+
+const mapDispatchToProps = (dispatch) => (
+  {
+    changeUIContainer: (activeKey) =>
+      dispatch({ type: 'changeUIContainer', payload: { activeKey } }),
+  }
+);
+
+export default connect(null, mapDispatchToProps)(MenuBar);

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import page from './page';
+import activeUIContainer from './activeUIContainer';
 import auth from './auth';
 
 export default combineReducers({
-  page,
+  activeUIContainer,
   auth,
 });
