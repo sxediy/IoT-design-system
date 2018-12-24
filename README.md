@@ -7,7 +7,7 @@
 - webpack
 - eslint
 - json-server
-- nodemon
+
 
 делается это командой  
 sudo npm install -g ИМЯ_ПАКЕТА
