@@ -2,7 +2,7 @@ import React from 'react';
 import propsStyle from 'design-system/propsStyle.less';
 
 const Props = () =>
-  <p className={propsStyle.someClass}>
+  <p className={propsStyle.container}>
     здесь будет описание пропсов прайсингтэйбла
   </p >;
 

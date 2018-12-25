@@ -2,13 +2,17 @@ import React from 'react';
 import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards';
 import { pricingData } from 'components/gkh-components/PricingTable/data';
 import PropTypes from 'prop-types';
+import gkhStyle from 'design-system/gkh.less';
+
 
 const GKH = () =>
-  <ResourcesTable
-    pricingData={pricingData}
-    changeActiveColumn = {() => {}}
-    activeResourceType={'Тепло'}
-  />;
+  <div className={gkhStyle.container}>
+    <ResourcesTable
+      pricingData={pricingData}
+      changeActiveColumn = {() => {}}
+      activeResourceType={'Тепло'}
+    />
+  </div>;
 
 export default GKH;
 
