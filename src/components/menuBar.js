@@ -40,8 +40,8 @@ class MenuBar extends React.Component {
 
 const mapDispatchToProps = (dispatch) => (
   {
-    changeUIContainer: (activeKey) =>
-      dispatch({ type: 'changeUIContainer', payload: { activeKey } }),
+    changeUIContainer: (activeNameOfComponent) =>
+      dispatch({ type: 'changeUIContainer', payload: { activeNameOfComponent } }),
   }
 );
 

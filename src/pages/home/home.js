@@ -5,26 +5,29 @@ import MenuBar from 'components/menuBar';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 
-const Home = ({ activeKey }) => {
-  console.log('KEY в HOME ', activeKey);
+const Home = ({ activeNameOfComponent }) => {
+  console.log('KEY в HOME ', activeNameOfComponent);
   return (
     <section className={styles.home}>
       <aside className={styles.menuBar}>
         <MenuBar />
       </aside>
       <arcticle className={styles.UIContainer}>
-        {UIContainer(activeKey)}
+        {UIContainer(activeNameOfComponent)}
       </arcticle>
     </section>
   );
 };
 
 Home.propTypes = {
-  activeKey: PropTypes.string,
+  activeNameOfComponent: PropTypes.string,
 };
 
 
-const mapStateToProps = ({ activeUIContainer: { activeKey } }) => ({ activeKey });
+const mapStateToProps = (
+  { activeUIContainer: { activeNameOfComponent } }
+) =>
+  ({ activeNameOfComponent });
 
 
 export default connect(mapStateToProps)(Home);

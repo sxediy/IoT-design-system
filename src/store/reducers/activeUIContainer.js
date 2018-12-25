@@ -1,9 +1,9 @@
 
-const activeUIContainer = (state = { activeKey: 'pricingTable' }, action) => {
+const activeUIContainer = (state = { activeNameOfComponent: 'pricingTable' }, action) => {
 //   console.log('Reducer activeUIContainer 1)state 2)action', state, action);
   switch (action.type) {
     case 'changeUIContainer':
-      return { activeKey: action.payload.activeKey };
+      return { activeNameOfComponent: action.payload.activeNameOfComponent };
     default:
       return state;
   }
