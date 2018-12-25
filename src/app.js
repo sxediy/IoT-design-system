@@ -9,7 +9,7 @@ const App = () => {
   const renderSwitch = () => (
     <Switch>
       {routes.map(route => {
-        const component = route.isPrivate ? Authorization(route.component) : route.component;
+        const component = route.isPrivate ? Authorization(route.page) : route.page;
         return (
           <Route
             key={route.path}
@@ -26,11 +26,9 @@ const App = () => {
   return (
     <Router>
       <React.Fragment>
-        <div className={styles.appContainer} >
-          <main className={styles.main}>
-            {renderSwitch()}
-          </main>
-        </div>
+        <main className={styles.app}>
+          {renderSwitch()}
+        </main>
       </React.Fragment>
     </Router>
   );

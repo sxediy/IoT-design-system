@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import obj from 'design-system';
 
 const makeUIContainer = key => {
@@ -10,21 +10,27 @@ const makeUIContainer = key => {
     Props
   } = obj[key];
 
-  const leftSide = (() =>
-    <div>
+
+  const title = (() =>
+    <Fragment>
       <Title />
+    </Fragment>
+  )();
+
+  const leftSide = (() =>
+    <Fragment>
       <GKH />
       <Code />
-    </div>
+    </Fragment>
   )();
 
   const rightSide = (() =>
-    <div>
+    <Fragment>
       <Props />
-    </div>
+    </Fragment>
   )();
 
-  return [leftSide, rightSide];
+  return [title, leftSide, rightSide];
 };
 
 export default makeUIContainer;

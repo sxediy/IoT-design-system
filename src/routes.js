@@ -6,13 +6,13 @@ export const routes = [
     isExact: true,
     path: '/',
     name: 'Home',
-    component: Home,
+    page: Home,
     isPrivate: true,
   },
   {
     path: '/login',
     name: 'Login',
-    component: Login,
+    page: Login,
     isPrivate: false,
   }
 ];
