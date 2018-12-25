@@ -35,34 +35,42 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     const { error } = this.props;
 
+
+    const InputUsername = (
+      <Input
+        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        placeholder="Username"
+      />
+    );
+    const DecoratorUsername = getFieldDecorator(
+      'userName', { rules: [{ required: true, message: 'Please input your username!' }] }
+    )(InputUsername);
+
+    const InputPassword = (
+      <Input
+        prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        type="password"
+        placeholder="Password"
+      />
+    );
+    const DecoratorPassword = getFieldDecorator(
+      'password', { rules: [{ required: true, message: 'Please input your Password!' }] }
+    )(InputPassword);
+
+
     return (
       <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
         <FormItem>
-          {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }]
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Username"
-            />
-          )}
+          {DecoratorUsername}
         </FormItem>
         <FormItem>
-          {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }]
-          })(
-            <Input
-              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="password"
-              placeholder="Password"
-            />
-          )}
+          {DecoratorPassword}
         </FormItem>
         <FormItem>
-          {getFieldDecorator('remember', {
+          {/* {getFieldDecorator('remember', {
             valuePropName: 'checked',
             initialValue: true
-          })}
+          })} */}
 
           <Button
             type="primary"
