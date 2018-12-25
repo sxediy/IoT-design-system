@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MenuBar from 'components/menuBar';
-import makeUIContainer from 'services/makeUIContainer';
+import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 
 const Home = ({ activeKey }) => {
   console.log('KEY в HOME ', activeKey);
   return (
-    <section className={styles.gkhContainer}>
+    <section className={styles.home}>
       <aside className={styles.menuBar}>
         <MenuBar />
       </aside>
       <arcticle className={styles.UIContainer}>
-        { makeUIContainer('pricingTable')[0]}
-        {/* { makeUIContainer(activeKey)} */}
+        {UIContainer(activeKey)}
       </arcticle>
     </section>
   );
