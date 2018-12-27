@@ -11,7 +11,7 @@ class MenuBar extends React.Component {
   };
 
   handleClick = (e) => {
-    console.log('click ', e);
+    console.log('clickOnMenuBar ', e);
     this.props.changeUIContainer(e.key);
   }
 

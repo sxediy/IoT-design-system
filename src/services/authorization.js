@@ -11,8 +11,6 @@ const Athorization = (WrappedComponent) => {
 
     render() {
       const { isAuthorized } = this.props;
-      console.log('HOC AUth');
-
       if (!isAuthorized) {
         return <Redirect to='/login' />;
       }

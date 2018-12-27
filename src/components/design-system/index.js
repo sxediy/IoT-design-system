@@ -1,4 +1,4 @@
-import pricingTable from 'design-system/PricingTable';
+import pricingTable from 'design-system/pricingTable';
 
 const obj = {
   pricingTable
