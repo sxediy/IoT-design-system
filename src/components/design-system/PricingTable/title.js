@@ -3,7 +3,18 @@ import titleStyle from 'design-system/titleStyle.less';
 
 const Title = () =>
   <div className={titleStyle.container}>
-    <p>здесь будет Title компонента прайсингтэйбла/ для чего он нужен и что с ним делать</p>
+    <h2 className={titleStyle.title}> PricingTable </h2>
+    <code className={titleStyle.code}>
+      {`
+      import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards')
+      `}
+    </code>
+    <p className={titleStyle.description}>
+      Этот компонент отображает разницу и объем
+      Этот компонент отображает разницу и объем
+      Этот компонент отображает разницу и объем
+      Этот компонент отображает разницу и объем
+    </p>
   </div >;
 
 export default Title;
