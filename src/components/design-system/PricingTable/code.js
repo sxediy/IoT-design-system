@@ -2,8 +2,8 @@ import React from 'react';
 import codeStyle from 'design-system/codeStyle.less';
 
 const Code = () =>
-  <code className={codeStyle.code}>
-    какой-никакой код
-  </code >;
+  <div className={codeStyle.container}>
+    <p>какой-никакой код</p>
+  </div >;
 
 export default Code;
