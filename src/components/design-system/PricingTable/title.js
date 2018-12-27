@@ -3,7 +3,7 @@ import titleStyle from 'design-system/titleStyle.less';
 
 const Title = () =>
   <div className={titleStyle.container}>
-    <h2 className={titleStyle.title}> PricingTable </h2>
+    <h2 className={titleStyle.title}> PricingTable Cards </h2>
     <code className={titleStyle.code}>
       {`
       import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards')
