@@ -30,7 +30,6 @@
           "design-system": "./src/components/design-system",
           "gkh": "./src/components/gkh",
           "fonts": "./src/fonts",
-          "hoc": "./src/hoc",
           "pages": "./src/pages",
           "services": "./src/services",
           "store": "./src/store",

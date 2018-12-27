@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Authorization from 'hoc/authorization';
+import Authorization from 'services/authorization';
 import { routes } from './routes';
 import styles from './app.less';
 
