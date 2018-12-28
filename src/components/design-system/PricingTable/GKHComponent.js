@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import construct from 'services/constructFromTemplates';
+
 import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards';
 import { pricingData } from 'components/gkh-components/PricingTable/data';
-import PropTypes from 'prop-types';
+
+import * as data from './data';
 
 
 const GKHComponent = () =>
@@ -11,10 +15,11 @@ const GKHComponent = () =>
     activeResourceType={'Тепло'}
   />;
 
-export default GKHComponent;
 
 GKHComponent.propTypes = {
   pricingData: PropTypes.object,
   changeActiveColumn: PropTypes.func,
   activeResourceType: PropTypes.string,
 };
+
+export default construct(GKHComponent, data);
