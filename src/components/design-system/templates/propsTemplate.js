@@ -1,9 +1,9 @@
 import React from 'react';
 import propsStyle from 'design-system/templates/propsStyle.less';
 
-const Props = (props) =>
+const propsTemplate = (props) =>
   <div className={propsStyle.container}>
     <p>{props} </p>
   </div >;
 
-export default Props;
+export default propsTemplate;

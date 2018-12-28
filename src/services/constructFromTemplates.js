@@ -1,7 +1,7 @@
-import Title from 'design-system/templates/titleTemplate';
-import Code from 'design-system/templates/codeTemplate';
-import Props from 'design-system/templates/propsTemplate';
-import GKHContainer from 'design-system/templates/gkhTemplate';
+import titleTemplate from 'design-system/templates/titleTemplate';
+import gkhTemplate from 'design-system/templates/gkhTemplate';
+import codeTemplate from 'design-system/templates/codeTemplate';
+import propsTemplate from 'design-system/templates/propsTemplate';
 
 export default (GKHComponent, data) => {
   const {
@@ -13,10 +13,10 @@ export default (GKHComponent, data) => {
   } = data;
 
   return {
-    Title: (() => Title(title, importString, description)),
-    GKHContainer: (() => GKHContainer(GKHComponent)),
-    Code: (() => Code(code)),
-    Props: (() => Props(props)),
+    Title: (() => titleTemplate(title, importString, description)),
+    GKHContainer: (() => gkhTemplate(GKHComponent)),
+    Code: (() => codeTemplate(code)),
+    Props: (() => propsTemplate(props)),
   };
 };
 

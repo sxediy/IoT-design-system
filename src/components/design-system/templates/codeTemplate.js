@@ -1,9 +1,9 @@
 import React from 'react';
 import codeStyle from 'design-system/templates/codeStyle.less';
 
-const Code = (code) =>
+const codeTemplate = (code) =>
   <div className={codeStyle.container}>
     <p>{code}</p>
   </div >;
 
-export default Code;
+export default codeTemplate;
