@@ -3,7 +3,7 @@ import gkhTemplate from 'design-system/templates/gkhTemplate';
 import codeTemplate from 'design-system/templates/codeTemplate';
 import propsTemplate from 'design-system/templates/propsTemplate';
 
-const constructFromTemplates = (GKHComponent, data) => {
+export default (GKHComponent, data) => {
   const {
     title,
     importString,
@@ -19,5 +19,3 @@ const constructFromTemplates = (GKHComponent, data) => {
     Props: (() => propsTemplate(props)),
   };
 };
-
-export default { constructFromTemplates };
