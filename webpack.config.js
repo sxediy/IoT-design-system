@@ -66,6 +66,20 @@ module.exports = {
           path.resolve(__dirname, './'),
         ],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            // options: {
+            //   plugins: [
+            //     { removeTitle: true },
+            //     { removeStyleElement: true },
+            //   ],
+            // },
+          },
+        ],
+      },
     ],
   },
   devServer: {
