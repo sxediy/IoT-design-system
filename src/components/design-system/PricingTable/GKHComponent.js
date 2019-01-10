@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import construct from 'services/constructFromTemplates';
+import constructFromTemplates from 'services/constructFromTemplates';
 
 import { Cards as ResourcesTable } from 'components/gkh-components/PricingTable/Cards';
 import { pricingData } from 'components/gkh-components/PricingTable/data';
@@ -22,4 +22,4 @@ GKHComponent.propTypes = {
   activeResourceType: PropTypes.string,
 };
 
-export default construct(GKHComponent, data);
+export default constructFromTemplates(GKHComponent, data);
