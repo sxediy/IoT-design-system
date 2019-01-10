@@ -13,7 +13,20 @@ export const description = `
     Этот компонент 
 `;
 
-export const code = 'какой-нибудь код/ Найти решение для раскраски';
+export const code = `
+  <div>
+      {
+          ['s', 'm', 'l', 'xl'].map(size => (
+              <div key={ size }>
+                  <Amount
+                      size={ size }
+                      amount={ AMOUNT }
+                  />
+              </div>
+          ))
+      }
+  </div>
+`;
 
 
 export const props = {
