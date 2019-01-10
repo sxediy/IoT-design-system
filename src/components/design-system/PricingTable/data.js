@@ -1,3 +1,4 @@
+
 export const title = 'PricingTable Cards';
 
 export const importString = `
@@ -14,5 +15,20 @@ export const description = `
 
 export const code = 'какой-нибудь код/ Найти решение для раскраски';
 
-export const props = 'какие-то свойства и методы/ Заюзать антовскую таблицу';
+
+export const props = {
+  pricingData: {
+    type: 'object',
+    description: 'описание объекта pricingData'
+  },
+  changeActiveColumn: {
+    type: 'function',
+    description: 'по клику мышки меняет активный элемент, применяя к нему свой стиль'
+  },
+  activeResourceType: {
+    type: 'string',
+    description: 'название выбранного ресурса',
+    default: 'Тепло'
+  }
+};
 
