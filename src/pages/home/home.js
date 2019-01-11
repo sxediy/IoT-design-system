@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MenuBar from 'components/menuBar';
 import MegafonLogo from 'components/megafonLogo';
+import GitHubLogo from 'components/githubLogo';
+import ConfluenceLogo from 'components/confluenceLogo';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 
@@ -16,6 +18,10 @@ const Home = ({ activeNameOfComponent }) => {
         </div>
         <div className={styles.menuBar}>
           <MenuBar />
+        </div>
+        <div className={styles.asidefooter}>
+          <GitHubLogo />
+          <ConfluenceLogo />
         </div>
       </aside>
       <arcticle className={styles.UIContainer}>
