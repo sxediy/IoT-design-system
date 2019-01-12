@@ -1,13 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import Authorization from 'services/authorization';
 import { routes } from './routes';
 
 const App = () => {
   const renderSwitch = () => (
     <Switch>
       {routes.map(route => {
-        const component = route.isPrivate ? Authorization(route.page) : route.page;
+        const component = route.page;
         return (
           <Route
             key={route.path}
