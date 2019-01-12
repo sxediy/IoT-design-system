@@ -19,7 +19,7 @@ class MenuBar extends React.Component {
     return (
       <Menu
         onClick={this.handleClick}
-        style={{ width: 250 }}
+        style={{ width: 250, flexGrow: 1 }}
         defaultSelectedKeys={['pricingTable']}
         defaultOpenKeys={['universal']}
         mode="inline"
