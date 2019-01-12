@@ -1,6 +1,6 @@
 {
   "name": "megafon",
-  "description": "тестовое задание",
+  "description": "Библиотека UI компонентов для будущих проектов",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sxediy/megafon.git"
@@ -50,9 +50,7 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
     "react-syntax-highlighter": "^10.1.2",
-    "redux": "^4.0.0",
-    "redux-saga": "^0.16.0"
+    "redux": "^4.0.0"
   }
 }
