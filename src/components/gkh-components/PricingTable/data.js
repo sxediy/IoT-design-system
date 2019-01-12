@@ -1,3 +1,5 @@
+// В реальности эти данные для компонента получают с сервера
+
 const heat = 'heat';
 const pureWater = 'pureWater';
 const hotWater = 'hotWater';

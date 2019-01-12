@@ -11,14 +11,14 @@ import * as data from './data';
 const GKHComponent = () =>
   <ResourcesTable
     pricingData={pricingData}
-    changeActiveColumn = {() => {}}
+    changeActiveElement= {() => {}}
     activeResourceType={'Тепло'}
   />;
 
 
 GKHComponent.propTypes = {
   pricingData: PropTypes.object,
-  changeActiveColumn: PropTypes.func,
+  changeActiveElement: PropTypes.func,
   activeResourceType: PropTypes.string,
 };
 
