@@ -71,12 +71,6 @@ module.exports = {
         use: [
           {
             loader: 'svg-sprite-loader',
-            // options: {
-            //   plugins: [
-            //     { removeTitle: true },
-            //     { removeStyleElement: true },
-            //   ],
-            // },
           },
         ],
       },

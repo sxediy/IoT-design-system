@@ -13,8 +13,7 @@
     }],
     ["module-resolver", {
       "alias": {
-        "assets": "./src/assets",
-        "icons": "./src/assets/icons",
+        "icons": "./src/icons",
         "components": "./src/components",
         "design-system": "./src/components/design-system",
         "gkh": "./src/components/gkh",

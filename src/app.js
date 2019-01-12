@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Authorization from 'services/authorization';
 import { routes } from './routes';
-// import styles from './app.less';
-
 
 const App = () => {
   const renderSwitch = () => (
@@ -26,9 +24,7 @@ const App = () => {
   return (
     <Router>
       <React.Fragment>
-        {/* <main className={styles.app}> */}
         {renderSwitch()}
-        {/* </main> */}
       </React.Fragment>
     </Router>
   );

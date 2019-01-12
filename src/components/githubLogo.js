@@ -1,5 +1,5 @@
 import React from 'react';
-import githubSVG from 'assets/icons/github-logo.svg';
+import githubSVG from 'icons/github-logo.svg';
 
 const GitHubLogo = () =>
   <svg viewBox={githubSVG.viewBox} width='16'>
