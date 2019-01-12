@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MenuBar from 'components/menuBar';
-import MegafonLogo from 'components/megafonLogo';
-import GitHubLogo from 'components/githubLogo';
-import ConfluenceLogo from 'components/confluenceLogo';
+import MegafonLogo from 'logos/megafonLogo';
+import GitHubLogo from 'logos/githubLogo';
+import ConfluenceLogo from 'logos/confluenceLogo';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 

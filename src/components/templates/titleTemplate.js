@@ -1,5 +1,5 @@
 import React from 'react';
-import titleStyle from 'design-system/templates/titleStyle.less';
+import titleStyle from 'templates/titleStyle.less';
 
 const titleTemplate = (title, importString, description) =>
   <div className={titleStyle.container}>

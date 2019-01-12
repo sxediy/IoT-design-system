@@ -1,7 +1,7 @@
-import titleTemplate from 'design-system/templates/titleTemplate';
-import gkhTemplate from 'design-system/templates/gkhTemplate';
-import codeTemplate from 'design-system/templates/codeTemplate';
-import propsTemplate from 'design-system/templates/propsTemplate';
+import titleTemplate from 'templates/titleTemplate';
+import gkhTemplate from 'templates/gkhTemplate';
+import codeTemplate from 'templates/codeTemplate';
+import propsTemplate from 'templates/propsTemplate';
 
 export default (GKHComponent, data) => {
   const {

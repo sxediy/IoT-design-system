@@ -1,5 +1,5 @@
 import React from 'react';
-import codeStyle from 'design-system/templates/codeStyle.less';
+import codeStyle from 'templates/codeStyle.less';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { githubGist } from 'react-syntax-highlighter/dist/styles/hljs';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import gkhStyle from 'design-system/templates/gkhTemplates.less';
+import gkhStyle from 'templates/gkhTemplates.less';
 
 
 const gkhTemplate = (GKHComponent) =>

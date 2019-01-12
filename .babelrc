@@ -17,6 +17,8 @@
         "components": "./src/components",
         "design-system": "./src/components/design-system",
         "gkh": "./src/components/gkh",
+        "logos": "./src/components/logos",
+        "templates": "./src/components/templates",
         "fonts": "./src/fonts",
         "pages": "./src/pages",
         "services": "./src/services",

@@ -1,5 +1,5 @@
 import React from 'react';
-import propsStyle from 'design-system/templates/propsStyle.less';
+import propsStyle from 'templates/propsStyle.less';
 import { Table } from 'antd';
 
 const columns = [{
