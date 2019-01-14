@@ -4,15 +4,15 @@
 export const title = 'PricingTable Cards';
 
 export const importString = `
-  import { Cards } from 'components/gkh-components/PricingTable/Cards')
+  import { ResourcesTable } from 'components/gkh-components/PricingTable/PricingTable')
 `;
 
 export const description = `
-   Карточки с данными показателей счётчика
+   Таблица с данными показателей счётчика
 `;
 
 export const code = `
-  <Cards
+  <ResourcesTable
     pricingData={pricingData}
     changeActiveElement={() => {}}
     activeResourceType={'Тепло'}

@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { Cards } from 'components/gkh-components/PricingTable/Cards';
+import { PricingTable } from 'components/gkh-components/PricingTable/PricingTable';
 import { pricingData } from 'components/gkh-components/PricingTable/data';
 
 import * as data from './data';
 
 
 const GKHComponent = () =>
-  <Cards
+  <PricingTable
     pricingData={pricingData}
     changeActiveElement= {() => {}}
     activeResourceType={'Тепло'}
