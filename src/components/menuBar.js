@@ -31,6 +31,7 @@ class MenuBar extends React.Component {
           <Menu.Item key="pricingTableCards">Карточки ресурсов</Menu.Item>
           <Menu.Item key="pricingTable">Таблица ресурсов</Menu.Item>
           <Menu.Item key="appHeader">Верхняя панель приложения</Menu.Item>
+          <Menu.Item key="rowTimeFilter">Фильтр времени</Menu.Item>
         </SubMenu>
       </Menu>
     );

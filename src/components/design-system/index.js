@@ -2,6 +2,7 @@ import pricingTableCards from 'design-system/PricingTableCards/GKHComponent';
 import pricingTable from 'design-system/PricingTable/GKHComponent';
 import resourcesTabs from 'design-system/ResourcesTabs/GKHComponent';
 import appHeader from 'design-system/AppHeader/GKHComponent';
+import rowTimeFilter from 'design-system/RowTimeFilter/GKHComponent';
 
 
 const obj = {
@@ -9,6 +10,7 @@ const obj = {
   pricingTable,
   resourcesTabs,
   appHeader,
+  rowTimeFilter,
 };
 
 export default obj;

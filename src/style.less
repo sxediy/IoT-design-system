@@ -51,6 +51,73 @@ li > p {
   .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
     background: #ededed;
   }
+
+  .ant-calendar-picker-container{
+    .ant-calendar-range-right, .ant-calendar-range-left{
+      .ant-calendar-date-input-wrap{
+        margin: 0;
+        .ant-calendar-input{
+          text-align: center;
+        }
+      }
+    }
+    .ant-calendar-range-middle{
+      margin-left: -12px;
+    }
+    .ant-calendar-today{
+      .ant-calendar-date{
+        background: rgb(115, 25, 130);
+        border-color: transparent;
+        color: #fff;
+      }
+    }
+    .ant-calendar-selected-day {
+      .ant-calendar-date{
+        background: #00B956;
+        width:  100%;
+        height: 100%;
+        line-height: 28px;
+        &:hover{
+          background: #00B956;
+        }
+      }
+    }
+    .ant-calendar-date{
+      padding: 3px 7px;
+      width: auto;
+      height: auto;
+      line-height: auto;
+    }
+    .ant-calendar-selected-start-date .ant-calendar-date {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .ant-calendar-selected-end-date .ant-calendar-date {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ant-calendar-selected-day{
+      padding: 0;
+    }
+    .ant-calendar-range {
+      .ant-calendar-in-range-cell{
+        .ant-calendar-date, &:before{
+          background: #ccfce2;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+    
+  }
+  
+  .ant-calendar-date:hover{
+    background: #EDEDED;
+  }
+  .ant-calendar-selected-start-date .ant-calendar-date:hover{
+    background: #EDEDED;
+  }
+
 }
 
 
