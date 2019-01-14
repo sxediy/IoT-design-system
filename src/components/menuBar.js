@@ -25,10 +25,11 @@ class MenuBar extends React.Component {
         mode="inline"
       >
         <SubMenu key="basic" title="Базовые компоненты">
-          <Menu.Item key="resourcesTabs">Табы ресурсов</Menu.Item>
+          {/* <Menu.Item key="resourcesTabs">Табы ресурсов</Menu.Item> */}
         </SubMenu>
         <SubMenu key="universal" title="Уникальные компоненты">
           <Menu.Item key="pricingTable">Карточки ресурсов</Menu.Item>
+          <Menu.Item key="resourcesTabs">Табы ресурсов</Menu.Item>
         </SubMenu>
       </Menu>
     );

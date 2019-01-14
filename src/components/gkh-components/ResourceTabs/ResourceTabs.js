@@ -11,15 +11,15 @@ const ResourceTabs = ({
 }) =>
   <div className={styles.gkhTabs}>
     {
-      tabsArr.map(typeObj =>
+      tabsArr.map(tab =>
         <div
-          key={ typeObj.typeName }
-          className={classnames(styles.tab, styles[typeObj.eng], { [styles.active]: active === typeObj.typeName })}
+          key={ tab.typeName }
+          className={classnames(styles.tab, styles[tab.eng], { [styles.active]: active === tab.typeName })}
           onClick={ onClick }
         >
           <div className={styles.icon} />
           <div>
-            { typeObj.title }
+            { tab.title }
           </div>
         </div>
       )
