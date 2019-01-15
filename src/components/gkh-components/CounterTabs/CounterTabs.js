@@ -1,26 +1,41 @@
-import * as resourceTypes from "services/resourceTypes"
-import classnames, {bind} from 'classnames/bind'
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames/bind';
+import styles from './CounterTabs.less';
 
-export const CounterTabs = ({ counters, counterResourceType, activeCounterNum, setActiveCounterNum }) =>  {
-   return (
-        <div style={{marginTop: 15}} className='gkhTabs'>
-        {
-            Object.keys(counters).map( counterSnNum => {
-                const counter = counters[counterSnNum]
-                return (
-                    <div
-                    key={ counterSnNum }
-                    className={classnames('tab ' + resourceTypes.getEngTrans(counter[counterResourceType]), { active: counterSnNum === activeCounterNum })}
-                    onClick={ () => setActiveCounterNum(counterSnNum) }
-                    >
-                        <div className='icon' />
-                        <div className='text' >
-                        Счетчик №{ counterSnNum }
-                        </div>
-                    </div>
-                )
-            })
-        }
-        </div>
-     )}
+
+const CounterTabs = ({
+  counters,
+  activeKey,
+  setActiveCounterNum,
+}) =>
+  (
+    <div className={styles.gkhTabs}>
+      {
+        Object.keys(counters).map(key => {
+          const counterData = counters[key];
+          return (
+            <div
+              key={ key }
+              className={
+                classnames(styles.tab, styles[counterData.eng], { [styles.active]: activeKey === key })
+              }
+              onClick={ () => setActiveCounterNum(key) }
+            >
+              <div className={styles.icon} />
+              Счетчик №{ key }
+            </div>
+          );
+        })
+      }
+    </div>
+  );
+
+CounterTabs.propTypes = {
+  counters: PropTypes.object,
+  activeKey: PropTypes.object,
+  setActiveCounterNum: PropTypes.object,
+};
+
+
+export { CounterTabs };
