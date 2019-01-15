@@ -28,6 +28,7 @@ class MenuBar extends React.Component {
           <Menu.Item key="resourcesTabs">Табы ресурсов</Menu.Item>
           <Menu.Item key="counterTabs">Табы счётчиков</Menu.Item>
           <Menu.Item key="pricingTableCards">Карточки ресурсов</Menu.Item>
+          <Menu.Item key="resourceNameAndUnit">Ресурсы</Menu.Item>
         </SubMenu>
         <SubMenu key="universal" title="Уникальные компоненты">
           <Menu.Item key="pricingTable">Таблица ресурсов</Menu.Item>

@@ -4,7 +4,7 @@ import resourcesTabs from 'design-system/ResourcesTabs/GKHComponent';
 import counterTabs from 'design-system/CounterTabs/GKHComponent';
 import appHeader from 'design-system/AppHeader/GKHComponent';
 import rowTimeFilter from 'design-system/RowTimeFilter/GKHComponent';
-
+import resourceNameAndUnit from 'design-system/ResourceNameAndUnit/GKHComponent';
 
 const obj = {
   pricingTableCards,
@@ -13,6 +13,7 @@ const obj = {
   counterTabs,
   appHeader,
   rowTimeFilter,
+  resourceNameAndUnit,
 };
 
 export default obj;
