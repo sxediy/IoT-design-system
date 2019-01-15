@@ -8,7 +8,7 @@ const {
   tableResources,
   active,
   button,
-  containerTableResources
+  containerCards
 } = styles;
 
 export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) => {
@@ -46,7 +46,7 @@ export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) =
   };
 
   return (
-    <div className={ containerTableResources }>
+    <div className={ containerCards }>
       { resourcesValArray.map(resourceData => getCard(resourceData)) }
     </div>
   );

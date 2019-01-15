@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Header } from './Header';
 import { Cards } from './Cards';
+import styles from './PricingTable.less';
+
 
 const PricingTable = (props) => (
-  <Fragment>
+  <div className ={styles.containerTable}>
     <Header/>
     <Cards
       {... props }
     />
-  </Fragment>
+  </div>
 );
 
 export { PricingTable };
