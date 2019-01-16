@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const lessToJs = require('less-vars-to-js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './src/ant-theme.less'), 'utf8'));
 
@@ -96,5 +97,6 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
     }),
+    new CopyWebpackPlugin([{ from: './assets', to: './' }])
   ]
 };
