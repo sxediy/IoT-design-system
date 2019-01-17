@@ -6,4 +6,4 @@ node_modules
 .vscode
 .eslintcache
 .package-lock.json
-dist/
+.DS_Store
