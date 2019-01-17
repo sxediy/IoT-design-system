@@ -1,16 +1,39 @@
-import { notification} from "antd"
+import React from 'react';
+import { notification } from 'antd';
 
-export const errorMesage = (text, title = `Упс..`) => notification.error({ 
+const message = ([type, text, title]) =>
+  notification[type]({
     message: title,
     description: text,
-});
+  });
 
-export const sucessMessage = (text, title = 'Отлично!') => notification.success({
-    message: title,
-    description: text,
-});
+const wrapperMessage = (...props) =>
+  <div>
+    {message(props)}
+  </div>;
 
-export const warningMessage = (text, title = 'Упс..') => notification.warning({
-    message: title,
-    description: text,
-});
+
+const ErrorMesage = ({
+  type,
+  text,
+  title = 'Упс..!',
+}) =>
+  wrapperMessage(type, text, title);
+
+
+const WarningMessage = ({
+  type,
+  text,
+  title,
+}) =>
+  wrapperMessage(type, text, title);
+
+const SucessMessage = ({
+  type,
+  text,
+  title = 'Отлично!',
+}) =>
+  wrapperMessage(type, text, title);
+
+
+export { ErrorMesage, WarningMessage, SucessMessage };

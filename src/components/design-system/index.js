@@ -8,6 +8,7 @@ import appHeaderBell from 'design-system/AppHeaderBell/GKHComponent';
 import appHeaderProfile from 'design-system/AppHeaderProfile/GKHComponent';
 import rowTimeFilter from 'design-system/RowTimeFilter/GKHComponent';
 import resourceNameAndUnit from 'design-system/ResourceNameAndUnit/GKHComponent';
+import notifications from 'design-system/Notifications/GKHComponent';
 
 const obj = {
   pricingTableCards,
@@ -20,6 +21,7 @@ const obj = {
   appHeaderProfile,
   rowTimeFilter,
   resourceNameAndUnit,
+  notifications,
 };
 
 export default obj;
