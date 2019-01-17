@@ -7,9 +7,11 @@ import * as data from './data';
 
 
 const GKHComponent = () =>
-  <Bell
-    setActiveNavLink= {() => {}}
-  />;
+  <div style={{ marginLeft: 'auto', marginRight: '10%' }}>
+    <Bell
+      setActiveNavLink= {() => {}}
+    />
+  </div>;
 
 
 export default constructFromTemplates(GKHComponent, data);

@@ -8,18 +8,16 @@ import { renderMenu } from './renderMenu';
 
 
 const ProfileWithDropdown = ({ setActive, activeNavLink }) =>
-  <div className={styles.rightItems} >
-    <Dropdown placement='bottomRight' overlay={ renderMenu() } >
-      <div
-        className={ classNames([styles.item], { [styles.active]: activeNavLink === 'Profile' }) }
-        onClick={ () => setActive('Profile') }
-      >
-        <svg width='21' height='25' fill='currentColor' viewBox={profile.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${profile.id}`} />
-        </svg>
-      </div>
-    </Dropdown>
-  </div>;
+  <Dropdown placement='bottomRight' overlay={ renderMenu() } >
+    <div
+      className={ classNames([styles.bellAndProfile], { [styles.active]: activeNavLink === 'Profile' }) }
+      onClick={ () => setActive('Profile') }
+    >
+      <svg width='21' height='25' fill='currentColor' viewBox={profile.viewBox} className={styles.icon} >
+        <use xlinkHref={`#${profile.id}`} />
+      </svg>
+    </div>
+  </Dropdown>;
 
 ProfileWithDropdown.propTypes = {
   setActive: PropTypes.func,

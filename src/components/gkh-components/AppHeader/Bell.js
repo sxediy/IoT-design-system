@@ -6,15 +6,13 @@ import styles from './styles.less';
 
 
 const Bell = ({ setActive, activeNavLink }) =>
-  <div className={styles.rightItems} >
-    <div
-      className={ classNames([styles.item], { [styles.active]: activeNavLink === 'Alerts' }) }
-      onClick={ () => setActive('Alerts') }
-    >
-      <svg width='21' height='25' fill='currentColor' viewBox={alert.viewBox} className={styles.icon} >
-        <use xlinkHref={`#${alert.id}`} />
-      </svg>
-    </div>
+  <div
+    className={ classNames([styles.bellAndProfile], { [styles.active]: activeNavLink === 'Alerts' }) }
+    onClick={ () => setActive('Alerts') }
+  >
+    <svg width='21' height='25' fill='currentColor' viewBox={alert.viewBox} className={styles.icon} >
+      <use xlinkHref={`#${alert.id}`} />
+    </svg>
   </div>;
 
 Bell.propTypes = {

@@ -7,10 +7,12 @@ import * as data from './data';
 
 
 const GKHComponent = () =>
-  <ProfileWithDropdown
-    activeNavLink='Reports'
-    setActiveNavLink= {() => {}}
-  />;
+  <div style={{ marginLeft: 'auto' }}>
+    <ProfileWithDropdown
+      activeNavLink='Reports'
+      setActiveNavLink= {() => {}}
+    />
+  </div>;
 
 
 export default constructFromTemplates(GKHComponent, data);
