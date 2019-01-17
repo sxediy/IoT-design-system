@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import styles from './styles.less';
 
+// ToDo мапить массив с названиями опций меню, массив передавать аргументом сюда из data.js
 const renderMenu = () =>
   (
     <Menu className={styles.menu}>
