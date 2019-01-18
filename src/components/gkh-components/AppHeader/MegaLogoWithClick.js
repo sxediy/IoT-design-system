@@ -1,26 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import mega from 'icons/Mega-logotype.svg';
+import { MegaLogoType } from 'components/gkh-components/Logo/Logo';
 import styles from './styles.less';
 
 
-const MegaLogoWithClick = ({ setActive }) =>
+const MegaLogoInAppHeader = ({ setActive }) =>
   <div
     className={styles.logoWr} key='logo'
     onClick={ () => setActive('Objects') }
   >
     <div className={styles.logoImg} >
-      <svg viewBox={mega.viewBox} >
-        <use xlinkHref={`#${mega.id}`} />
-      </svg>
+      <MegaLogoType />
     </div>
   </div>;
 
 
-MegaLogoWithClick.propTypes = {
+MegaLogoInAppHeader.propTypes = {
   setActive: PropTypes.func,
 };
 
 
-export { MegaLogoWithClick };
+export { MegaLogoInAppHeader };
 
