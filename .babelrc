@@ -26,6 +26,7 @@
         "utils": "./src/utils",
         "variables": "./src/variables.less"
       }
-    }]
+    }],
+    "transform-object-rest-spread"
   ]
 }
