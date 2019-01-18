@@ -1,34 +1,35 @@
-import { Menu } from "antd"
+import React from 'react';
+import { Menu } from 'antd';
 import PropTypes from 'prop-types';
-import styles from "./DoubleMenu.less"
+import styles from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DoubleMenu.less';
 
-const SubMenu = Menu.SubMenu;
+const { SubMenu } = Menu;
 
-const DoubleMenu = ({ firstLineData, secondLineData }) => { 
+const DoubleMenu = ({ linesData }) => {
+  const { firstLineData, secondLineData } = linesData;
 
-  const menuItems = item => {
-    return (
-        <SubMenu key={`submenu_${item}`} title={ item }>
-          {secondLineData(item)}
-        </SubMenu>
-      )
-  }
+  const firstMenuItems = (firstitem) =>
+    <SubMenu key={[firstitem]} title={firstitem}>
+      {secondLineData.map(
+        seconditem =>
+          <Menu.Item key={[seconditem]}>
+            {seconditem}
+          </Menu.Item>)
+      }
+    </SubMenu>;
 
-  return(
+  return (
     <Menu className={styles.formatsMenu} >
       {
-        firstLineData.map( item => menuItems(item) )
+        firstLineData.map((firstitem) => firstMenuItems(firstitem))
       }
-    </Menu> 
-   )
- }
+    </Menu>
+  );
+};
 
- 
-  DoubleMenu.propTypes = {
-    firstLineData: PropTypes.array,
-    secondLineData: PropTypes.func,
-  }
+DoubleMenu.propTypes = {
+  linesData: PropTypes.object,
+};
 
-  export default DoubleMenu
 
-  
+export { DoubleMenu };

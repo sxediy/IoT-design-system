@@ -38,6 +38,7 @@ class MenuBar extends React.Component {
           <Menu.Item key="pricingTable">Таблица ресурсов</Menu.Item>
           <Menu.Item key="appHeader">Верхняя панель приложения</Menu.Item>
           <Menu.Item key="rowTimeFilter">Фильтр времени</Menu.Item>
+          <Menu.Item key="buttonWithDoubleMenu">Кнопка с двойным выпадающим списком</Menu.Item>
         </SubMenu>
       </Menu>
     );

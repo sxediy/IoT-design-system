@@ -1,15 +1,20 @@
-import { Dropdown } from "antd"
-import DoubleMenu from 'components/Buttons/ButtonWithDoubleMenu/DoubleMenu.js'
-import styles from 'components/Buttons/Buttons.less'
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Dropdown } from 'antd';
+import { DoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DoubleMenu';
+import styles from 'components/gkh-components/Buttons/Buttons.less';
 
-const DropdownWithDoubleMenu = ({ getFirstLineData, firstLineData, secondLineData, buttonName, logo }) => {
+const DropdownWithDoubleMenu = ({
+  getFirstLineData,
+  buttonName,
+  logo,
+  ...linesData,
+}) => {
   const renderMenu = (
-    <DoubleMenu 
-      firstLineData={firstLineData}
-      secondLineData={secondLineData}
+    <DoubleMenu
+      linesData={linesData}
     />
-  )
+  );
 
   return (
     <Dropdown
@@ -22,16 +27,14 @@ const DropdownWithDoubleMenu = ({ getFirstLineData, firstLineData, secondLineDat
         <span className={styles.buttonName}>{buttonName}</span>
       </div>
     </Dropdown>
-  )
-}
+  );
+};
 
 DropdownWithDoubleMenu.propTypes = {
   getFirstLineData: PropTypes.func,
-  firstLineData: PropTypes.array,
-  secondLineData: PropTypes.func,
   buttonName: PropTypes.string,
   logo: PropTypes.object,
-}
+};
 
 
-export default DropdownWithDoubleMenu
+export { DropdownWithDoubleMenu };
