@@ -20,8 +20,8 @@ const Home = ({ activeNameOfComponent }) => {
           <MenuBar />
         </div>
         <div className={styles.asidefooter}>
-          <GitHubLogo />
-          <ConfluenceLogo />
+          <a href="https://github.com/" target="blank"><GitHubLogo /></a>
+          <a href="https://www.atlassian.com/software/confluence" target="blank"><ConfluenceLogo /></a>
         </div>
       </aside>
       <arcticle className={styles.UIContainer}>
