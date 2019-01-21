@@ -2,7 +2,8 @@ import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { DropdownWithTripleMenu } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/DropdownWithTripleMenu';
-import SmartCheckboxWithButton from 'components/gkh-components/Checkbox/SmartCheckboxWithButton';
+import SmartCheckboxWithButton from
+  'components/gkh-components/Checkbox/SmartCheckboxWithButton/SmartCheckboxWithButton';
 
 
 import {

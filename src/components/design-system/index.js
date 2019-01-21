@@ -11,6 +11,7 @@ import resourceNameAndUnit from 'design-system/ResourceNameAndUnit/GKHComponent'
 import notifications from 'design-system/Notifications/GKHComponent';
 import buttonWithDoubleMenu from 'design-system/ButtonWithDoubleMenu/GKHComponent';
 import buttonWithTripleMenu from 'design-system/ButtonWithTripleMenu/GKHComponent';
+import smartCheckboxWithButton from 'design-system/SmartCheckboxWithButton/GKHComponent';
 
 const obj = {
   pricingTableCards,
@@ -26,6 +27,7 @@ const obj = {
   notifications,
   buttonWithDoubleMenu,
   buttonWithTripleMenu,
+  smartCheckboxWithButton,
 };
 
 export default obj;

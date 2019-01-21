@@ -40,6 +40,7 @@ class MenuBar extends React.Component {
           <Menu.Item key="rowTimeFilter">Фильтр времени</Menu.Item>
           <Menu.Item key="buttonWithDoubleMenu">Кнопка с двойным выпадающим списком</Menu.Item>
           <Menu.Item key="buttonWithTripleMenu">Кнопка с тройным выпадающим списком</Menu.Item>
+          <Menu.Item key="smartCheckboxWithButton">Чекбокс с кнопкой</Menu.Item>
         </SubMenu>
       </Menu>
     );

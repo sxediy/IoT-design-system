@@ -30,10 +30,15 @@ class SmartCheckboxWithButton extends React.Component {
 
     render() {
       const { indeterminate, checkAll, checkedList } = this.state;
-      const { plainOptions, args, click } = this.props;
+      const {
+        plainOptions,
+        args,
+        click,
+        styleContainer,
+      } = this.props;
 
       return (
-        <div style={{ padding: '10px' }}>
+        <div style={{ padding: '10px', ...styleContainer }}>
           <div style={{ padding: '10px 0 10px 30px', width: '200px' }}>
             <Checkbox
               indeterminate={ indeterminate }
@@ -66,6 +71,7 @@ SmartCheckboxWithButton.propTypes = {
   click: PropTypes.func,
   plainOptions: PropTypes.array,
   defaultCheckedList: PropTypes.array,
+  styleContainer: PropTypes.object,
 };
 
 export default SmartCheckboxWithButton;
