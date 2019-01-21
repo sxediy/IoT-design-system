@@ -10,6 +10,7 @@ import rowTimeFilter from 'design-system/RowTimeFilter/GKHComponent';
 import resourceNameAndUnit from 'design-system/ResourceNameAndUnit/GKHComponent';
 import notifications from 'design-system/Notifications/GKHComponent';
 import buttonWithDoubleMenu from 'design-system/ButtonWithDoubleMenu/GKHComponent';
+import buttonWithTripleMenu from 'design-system/ButtonWithTripleMenu/GKHComponent';
 
 const obj = {
   pricingTableCards,
@@ -24,6 +25,7 @@ const obj = {
   resourceNameAndUnit,
   notifications,
   buttonWithDoubleMenu,
+  buttonWithTripleMenu,
 };
 
 export default obj;
