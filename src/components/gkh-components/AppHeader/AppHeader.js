@@ -12,8 +12,12 @@ const AppHeader = () => (
       <MegaLogoInAppHeader />
       <NavBar />
       <div className={styles.rightItems} >
-        <Bell />
-        <ProfileWithDropdown />
+        <span className={styles.bellContainer}>
+          <Bell />
+        </span>
+        <span className={styles.profileContainer}>
+          <ProfileWithDropdown />
+        </span>
       </div>
 
     </div>
