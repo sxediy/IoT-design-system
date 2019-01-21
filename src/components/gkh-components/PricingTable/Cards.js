@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import styles from './PricingTable.less';
-import { resourcesValArray } from './data';
+import { resourcesValArray } from 'components/gkh-components/PricingTable/fakeData';
+
+import styles from 'components/gkh-components/PricingTable/PricingTable.less';
 
 const {
   tableResources,

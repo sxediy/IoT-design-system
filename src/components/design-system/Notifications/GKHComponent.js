@@ -12,7 +12,7 @@ import {
   typeSuccess,
   titleSuccess,
   textSuccess,
-} from 'components/gkh-components/Notifications/data';
+} from 'components/gkh-components/Notifications/fakeData';
 
 import * as data from './data';
 

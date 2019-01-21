@@ -6,7 +6,7 @@ import menuIcon2 from 'icons/menu_icon_02.svg';
 import menuIcon3 from 'icons/menu_icon_03.svg';
 import mainUspd from 'icons/main_uspd.svg';
 import classNames from 'classnames';
-import styles from './styles.less';
+import styles from 'components/gkh-components/AppHeader/styles.less';
 
 // ToDo рефакторинг мапить [Objects', 'Reports', 'Users' , и т.д] - этот массив передавать из data.js аргументом
 const NavBar = ({ setActive, activeNavLink }) =>

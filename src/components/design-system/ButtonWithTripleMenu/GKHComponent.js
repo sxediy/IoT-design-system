@@ -13,7 +13,7 @@ import {
   logo,
   options,
   onSubmit,
-} from 'components/gkh-components/Buttons/ButtonWithTripleMenu/data';
+} from 'components/gkh-components/Buttons/ButtonWithTripleMenu/fakeData';
 
 import * as data from './data';
 

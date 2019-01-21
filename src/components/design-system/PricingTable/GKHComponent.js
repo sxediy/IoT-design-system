@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { PricingTable } from 'components/gkh-components/PricingTable/PricingTable';
-import { pricingData } from 'components/gkh-components/PricingTable/data';
+import { pricingData } from 'components/gkh-components/PricingTable/fakeData';
 
 import * as data from './data';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { ResourceTabs } from 'components/gkh-components/ResourceTabs/ResourceTabs';
-import { tabsArr } from 'components/gkh-components/ResourceTabs/data';
+import { tabsArr } from 'components/gkh-components/ResourceTabs/fakeData';
 
 
 import * as data from './data';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import alert from 'icons/alert_green.svg';
 import classNames from 'classnames';
-import styles from './styles.less';
+import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
 const Bell = ({ setActive, activeNavLink }) =>

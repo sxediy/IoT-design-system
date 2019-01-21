@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from './Header';
-import { Cards } from './Cards';
-import styles from './PricingTable.less';
+import { Header } from 'components/gkh-components/PricingTable/Header';
+import { Cards } from 'components/gkh-components/PricingTable/Cards';
+import styles from 'components/gkh-components/PricingTable/PricingTable.less';
 
 
 const PricingTable = (props) => (

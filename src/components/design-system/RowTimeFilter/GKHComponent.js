@@ -3,7 +3,7 @@ import constructFromTemplates from 'services/constructFromTemplates';
 
 import { RowTimeFilter } from 'components/gkh-components/RowTimeFilter/RowTimeFilter';
 
-import { dateFrom, dateTo, setDate, isTSRV } from 'components/gkh-components/RowTimeFilter/data';
+import { dateFrom, dateTo, setDate, isTSRV } from 'components/gkh-components/RowTimeFilter/fakeData';
 
 
 import * as data from './data';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import styles from './ResourceNameAndUnit.less';
+import styles from 'components/gkh-components/ResourceNameAndUnit/ResourceNameAndUnit.less';
 
 
 const ResourceNameAndUnit = ({ resourcesValues }) =>

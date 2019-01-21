@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './styles.less';
-import { MegaLogoInAppHeader } from './MegaLogoWithClick';
-import { NavBar } from './NavBar';
-import { Bell } from './Bell';
-import { ProfileWithDropdown } from './ProfileWithDropdown';
+import { MegaLogoInAppHeader } from 'components/gkh-components/AppHeader/MegaLogoWithClick';
+import { NavBar } from 'components/gkh-components/AppHeader/NavBar';
+import { Bell } from 'components/gkh-components/AppHeader/Bell';
+import { ProfileWithDropdown } from 'components/gkh-components/AppHeader/ProfileWithDropdown';
+import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
 const AppHeader = () => (

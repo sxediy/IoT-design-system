@@ -2,7 +2,7 @@ import React from 'react';
 import download from 'icons/download_32.svg';
 import counter from 'icons/Counter.svg';
 import mega from 'icons/Mega-logotype.svg';
-import { resources } from 'components/gkh-components/Logo/data';
+import { resources } from 'components/gkh-components/Logo/fakeData';
 
 
 export const DownloadLogo = (

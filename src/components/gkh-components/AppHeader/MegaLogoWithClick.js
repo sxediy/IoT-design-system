@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MegaLogoType } from 'components/gkh-components/Logo/Logo';
-import styles from './styles.less';
+import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
 const MegaLogoInAppHeader = ({ setActive }) =>

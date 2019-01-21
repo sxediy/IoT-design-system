@@ -9,7 +9,7 @@ import {
   choisedBefore,
   options,
   onSubmit,
-} from 'components/gkh-components/Checkbox/SmartCheckboxWithButton/data';
+} from 'components/gkh-components/Checkbox/SmartCheckboxWithButton/fakeData';
 
 import * as data from './data';
 

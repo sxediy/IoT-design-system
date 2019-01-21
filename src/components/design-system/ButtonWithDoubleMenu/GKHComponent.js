@@ -8,7 +8,7 @@ import {
   secondLineData,
   buttonName,
   logo,
-} from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/data';
+} from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/fakeData';
 
 import * as data from './data';
 

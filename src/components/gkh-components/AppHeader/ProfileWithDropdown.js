@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Dropdown } from 'antd';
 import classNames from 'classnames';
 import profile from 'icons/profile.svg';
-import styles from './styles.less';
-import { renderMenu } from './renderMenu';
+import { renderMenu } from 'components/gkh-components/AppHeader/renderMenu';
+import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
 const ProfileWithDropdown = ({ setActive, activeNavLink }) =>

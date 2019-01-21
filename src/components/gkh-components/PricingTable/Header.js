@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PricingTable.less';
+import styles from 'components/gkh-components/PricingTable/PricingTable.less';
 
 export const Header = () => (
   <div className={styles.tableTitles}>

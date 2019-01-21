@@ -4,7 +4,7 @@ import classnamesBind from 'classnames/bind';
 import { DatePicker } from 'antd';
 import moment from 'moment';
 
-import styles from './RowTimeFilter.less';
+import styles from 'components/gkh-components/RowTimeFilter/RowTimeFilter.less';
 
 const cx = classnamesBind.bind(styles);
 const { RangePicker } = DatePicker;
