@@ -4,7 +4,7 @@ import constructFromTemplates from 'services/constructFromTemplates';
 import { PricingTable } from 'components/gkh-components/PricingTable/PricingTable';
 import { pricingData } from 'components/gkh-components/PricingTable/fakeData';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

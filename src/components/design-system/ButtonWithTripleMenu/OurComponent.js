@@ -15,7 +15,7 @@ import {
   onSubmit,
 } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/fakeData';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

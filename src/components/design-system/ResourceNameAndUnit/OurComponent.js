@@ -5,7 +5,7 @@ import { ResourceNameAndUnit } from 'components/gkh-components/ResourceNameAndUn
 import { resourcesValues } from 'components/gkh-components/ResourceNameAndUnit/fakeData';
 
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

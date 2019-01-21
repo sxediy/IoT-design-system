@@ -3,7 +3,7 @@ import constructFromTemplates from 'services/constructFromTemplates';
 
 import { ProfileWithDropdown } from 'components/gkh-components/AppHeader/ProfileWithDropdown';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

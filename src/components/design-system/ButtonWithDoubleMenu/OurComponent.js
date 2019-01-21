@@ -10,7 +10,7 @@ import {
   logo,
 } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/fakeData';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

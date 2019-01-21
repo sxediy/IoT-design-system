@@ -5,7 +5,7 @@ import { CounterTabs } from 'components/gkh-components/CounterTabs/CounterTabs';
 import { counters, activeKey, setActiveCounterNum, } from 'components/gkh-components/CounterTabs/fakeData';
 
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

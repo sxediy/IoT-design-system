@@ -3,7 +3,7 @@ import constructFromTemplates from 'services/constructFromTemplates';
 
 import { NavBar } from 'components/gkh-components/AppHeader/NavBar';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

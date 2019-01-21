@@ -5,7 +5,7 @@ import { ResourceTabs } from 'components/gkh-components/ResourceTabs/ResourceTab
 import { tabsArr } from 'components/gkh-components/ResourceTabs/fakeData';
 
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

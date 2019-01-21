@@ -11,7 +11,7 @@ import {
   onSubmit,
 } from 'components/gkh-components/Checkbox/SmartCheckboxWithButton/fakeData';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

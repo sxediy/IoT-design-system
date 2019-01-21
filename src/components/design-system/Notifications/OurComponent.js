@@ -14,7 +14,7 @@ import {
   textSuccess,
 } from 'components/gkh-components/Notifications/fakeData';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>

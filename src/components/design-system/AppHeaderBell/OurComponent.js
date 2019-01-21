@@ -3,7 +3,7 @@ import constructFromTemplates from 'services/constructFromTemplates';
 
 import { Bell } from 'components/gkh-components/AppHeader/Bell';
 
-import * as data from './data';
+import * as data from './about';
 
 
 const OurComponent = () =>
