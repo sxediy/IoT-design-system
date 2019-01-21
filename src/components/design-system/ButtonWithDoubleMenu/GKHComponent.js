@@ -1,10 +1,9 @@
 import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { DropdownWithDoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DropdownWithMenu';
+import { DropdownWithDoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DropdownWithDoubleMenu';
 
 import {
-  getFirstLineData,
   firstLineData,
   secondLineData,
   buttonName,
@@ -16,7 +15,6 @@ import * as data from './data';
 
 const GKHComponent = () =>
   <DropdownWithDoubleMenu
-    getFirstLineData={getFirstLineData}
     firstLineData={firstLineData}
     secondLineData={secondLineData}
     buttonName={buttonName}

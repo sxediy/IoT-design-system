@@ -14,7 +14,6 @@ export const description = `
 
 export const code = `
   <DropdownWithDoubleMenu
-    getFirstLineData={getFirstLineData}
     firstLineData={firstLineData}
     secondLineData={secondLineData}
     buttonName={buttonName}
@@ -24,10 +23,6 @@ export const code = `
 
 
 export const props = {
-  getFirstLineData: {
-    type: 'function',
-    description: 'Получение данных для первого уровня выпадающего списка'
-  },
   firstLineData: {
     type: 'array',
     description: 'Данные для первого уровня выпадающего списка',
