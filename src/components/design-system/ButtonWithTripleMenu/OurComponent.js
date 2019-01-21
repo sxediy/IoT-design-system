@@ -18,7 +18,7 @@ import {
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <DropdownWithTripleMenu
     firstLineData={firstLineData}
     secondLineData={secondLineData}
@@ -35,4 +35,4 @@ const GKHComponent = () =>
   />;
 
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

@@ -1,9 +1,9 @@
 import titleTemplate from 'templates/titleTemplate';
-import gkhTemplate from 'templates/gkhTemplate';
+import ourTemplate from 'templates/ourTemplate';
 import codeTemplate from 'templates/codeTemplate';
 import propsTemplate from 'templates/propsTemplate';
 
-export default (GKHComponent, data) => {
+export default (OurComponent, data) => {
   const {
     title,
     importString,
@@ -14,7 +14,7 @@ export default (GKHComponent, data) => {
 
   return {
     Title: (() => titleTemplate(title, importString, description)),
-    GKHContainer: (() => gkhTemplate(GKHComponent)),
+    OurContainer: (() => ourTemplate(OurComponent)),
     Code: (() => codeTemplate(code)),
     Props: (() => propsTemplate(props)),
   };

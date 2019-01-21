@@ -9,7 +9,7 @@ import { dateFrom, dateTo, setDate, isTSRV } from 'components/gkh-components/Row
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <RowTimeFilter
     dateFrom={dateFrom}
     dateTo={dateTo}
@@ -17,4 +17,4 @@ const GKHComponent = () =>
     isTSRV={isTSRV}
   />;
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

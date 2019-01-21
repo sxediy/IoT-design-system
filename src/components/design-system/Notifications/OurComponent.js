@@ -17,7 +17,7 @@ import {
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <Fragment>
     <ErrorMesage
       type={ typeError }
@@ -36,4 +36,4 @@ const GKHComponent = () =>
     />
   </Fragment>;
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

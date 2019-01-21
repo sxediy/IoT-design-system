@@ -8,9 +8,9 @@ import { resourcesValues } from 'components/gkh-components/ResourceNameAndUnit/f
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <ResourceNameAndUnit
     resourcesValues= { resourcesValues }
   />;
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

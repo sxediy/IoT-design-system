@@ -8,11 +8,11 @@ import { counters, activeKey, setActiveCounterNum, } from 'components/gkh-compon
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <CounterTabs
     counters={ counters }
     activeKey={ activeKey }
     setActiveCounterNum={setActiveCounterNum}
   />;
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

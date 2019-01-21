@@ -6,7 +6,7 @@ import { ProfileWithDropdown } from 'components/gkh-components/AppHeader/Profile
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <div style={{ marginLeft: 'auto' }}>
     <ProfileWithDropdown
       activeNavLink='Reports'
@@ -15,4 +15,4 @@ const GKHComponent = () =>
   </div>;
 
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

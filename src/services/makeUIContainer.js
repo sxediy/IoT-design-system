@@ -5,7 +5,7 @@ import obj from 'design-system';
 const makeUIContainer = key => {
   const {
     Title,
-    GKHContainer,
+    OurContainer,
     Code,
     Props
   } = obj[key];
@@ -19,7 +19,7 @@ const makeUIContainer = key => {
 
   const leftSide = (() =>
     <Fragment>
-      <GKHContainer />
+      <OurContainer />
       <Code />
     </Fragment>
   )();

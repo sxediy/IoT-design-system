@@ -6,7 +6,7 @@ import { Bell } from 'components/gkh-components/AppHeader/Bell';
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <div style={{ marginLeft: 'auto', marginRight: '10%' }}>
     <Bell
       setActiveNavLink= {() => {}}
@@ -14,4 +14,4 @@ const GKHComponent = () =>
   </div>;
 
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

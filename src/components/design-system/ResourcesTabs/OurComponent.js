@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { ResourceTabs } from 'components/gkh-components/ResourceTabs/ResourceTabs';
@@ -9,17 +8,12 @@ import { tabsArr } from 'components/gkh-components/ResourceTabs/fakeData';
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <ResourceTabs
     tabsArr={ tabsArr }
     active={'Тепло'}
     changeActiveElement={ () => {} }
   />;
 
-GKHComponent.propTypes = {
-  tabsArr: PropTypes.array,
-  active: PropTypes.string,
-  changeActiveElement: PropTypes.func,
-};
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

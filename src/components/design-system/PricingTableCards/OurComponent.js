@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { Cards } from 'components/gkh-components/PricingTable/Cards';
@@ -8,7 +7,7 @@ import { pricingData } from 'components/gkh-components/PricingTable/fakeData';
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <Cards
     pricingData={pricingData}
     changeActiveElement= {() => {}}
@@ -16,10 +15,4 @@ const GKHComponent = () =>
   />;
 
 
-GKHComponent.propTypes = {
-  pricingData: PropTypes.object,
-  changeActiveElement: PropTypes.func,
-  activeResourceType: PropTypes.string,
-};
-
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);

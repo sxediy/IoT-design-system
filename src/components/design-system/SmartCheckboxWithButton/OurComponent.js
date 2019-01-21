@@ -14,7 +14,7 @@ import {
 import * as data from './data';
 
 
-const GKHComponent = () =>
+const OurComponent = () =>
   <SmartCheckboxWithButton
     args={choisedBefore}
     click={onSubmit}
@@ -24,4 +24,4 @@ const GKHComponent = () =>
   />;
 
 
-export default constructFromTemplates(GKHComponent, data);
+export default constructFromTemplates(OurComponent, data);
