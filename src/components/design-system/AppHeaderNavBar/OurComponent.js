@@ -8,8 +8,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <NavBar
-    activeNavLink='Reports'
-    setActiveNavLink= {() => {}}
+    activeElement='Reports'
   />;
 
 

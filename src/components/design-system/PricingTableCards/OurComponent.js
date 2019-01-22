@@ -10,8 +10,7 @@ import * as data from './about';
 const OurComponent = () =>
   <Cards
     pricingData={pricingData}
-    changeActiveElement= {() => {}}
-    activeResourceType={'Тепло'}
+    activeElement={'Тепло'}
   />;
 
 

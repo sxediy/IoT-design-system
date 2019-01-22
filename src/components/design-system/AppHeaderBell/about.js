@@ -12,20 +12,10 @@ export const description = `
 `;
 
 export const code = `
-  <Bell
-    setActiveNavLink= {() => {}}
-  />;
+  <Bell />;
 `;
 
 
 export const props = {
-  activeNavLink: {
-    type: 'string',
-    description: 'название активного элемента панели навигации'
-  },
-  setActiveNavLink: {
-    type: 'function',
-    description: 'по клику мышки меняет активный элемент панели навигации'
-  },
 };
 

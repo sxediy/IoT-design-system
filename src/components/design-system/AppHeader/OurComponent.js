@@ -8,8 +8,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <AppHeader
-    activeNavLink='Reports'
-    setActiveNavLink= {() => {}}
+    activeElement='Reports'
   />;
 
 

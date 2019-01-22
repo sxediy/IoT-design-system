@@ -15,8 +15,7 @@ export const description = `
 export const code = `
   <ResourceTabs
     tabsArr={ tabsArr }
-    active={'Тепло'}
-    changeActiveElement={ () => {} }
+    activeElement={'Тепло'}
   />
 `;
 
@@ -26,7 +25,7 @@ export const props = {
     type: 'array',
     description: 'Данные для отрисовки компонента, полученные с сервера'
   },
-  active: {
+  activeElement: {
     type: 'string',
     description: 'Текущий активный элемент',
     default: 'Тепло'

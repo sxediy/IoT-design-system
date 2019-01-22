@@ -8,9 +8,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <div style={{ marginLeft: 'auto', marginRight: '10%' }}>
-    <Bell
-      setActiveNavLink= {() => {}}
-    />
+    <Bell />
   </div>;
 
 

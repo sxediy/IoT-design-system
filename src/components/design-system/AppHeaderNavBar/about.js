@@ -13,8 +13,7 @@ export const description = `
 
 export const code = `
   <NavBar
-    activeNavLink='Objects'
-    setActiveNavLink= {() => {}}
+    activeElement='Objects'
   />;
 `;
 
@@ -23,10 +22,6 @@ export const props = {
   activeNavLink: {
     type: 'string',
     description: 'название активного элемента панели навигации'
-  },
-  setActiveNavLink: {
-    type: 'function',
-    description: 'по клику мышки меняет активный элемент панели навигации'
-  },
+  }
 };
 

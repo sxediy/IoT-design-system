@@ -9,8 +9,7 @@ import * as data from './about';
 const OurComponent = () =>
   <div style={{ marginLeft: 'auto' }}>
     <ProfileWithDropdown
-      activeNavLink='Reports'
-      setActiveNavLink= {() => {}}
+      activeElement='Reports'
     />
   </div>;
 

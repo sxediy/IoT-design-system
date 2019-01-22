@@ -13,8 +13,7 @@ export const description = `
 
 export const code = `
   <ProfileWithDropdown
-    activeNavLink='Objects'
-    setActiveNavLink= {() => {}}
+    activeElement='Reports'
   />;
 `;
 
@@ -23,10 +22,6 @@ export const props = {
   activeNavLink: {
     type: 'string',
     description: 'название активного элемента панели навигации'
-  },
-  setActiveNavLink: {
-    type: 'function',
-    description: 'по клику мышки меняет активный элемент панели навигации'
-  },
+  }
 };
 

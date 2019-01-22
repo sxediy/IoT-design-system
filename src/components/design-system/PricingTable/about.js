@@ -14,8 +14,7 @@ export const description = `
 export const code = `
   <ResourcesTable
     pricingData={pricingData}
-    changeActiveElement={() => {}}
-    activeResourceType={'Тепло'}
+    activeElement={'Тепло'}
   />;
 `;
 
@@ -25,11 +24,7 @@ export const props = {
     type: 'object',
     description: 'описание объекта pricingData'
   },
-  changeActiveElement: {
-    type: 'function',
-    description: 'по клику мышки меняет активный элемент, применяя к нему свой стиль'
-  },
-  activeResourceType: {
+  activeElement: {
     type: 'string',
     description: 'название выбранного ресурса',
     default: 'Тепло'

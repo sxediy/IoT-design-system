@@ -13,20 +13,15 @@ export const description = `
 
 export const code = `
   <AppHeader
-    activeNavLink='Objects'
-    setActiveNavLink= {() => {}}
+    activeElement='Objects'
   />;
 `;
 
 
 export const props = {
-  activeNavLink: {
+  activeElement: {
     type: 'string',
     description: 'название активного элемента панели навигации'
-  },
-  setActiveNavLink: {
-    type: 'function',
-    description: 'по клику мышки меняет активный элемент панели навигации'
-  },
+  }
 };
 
