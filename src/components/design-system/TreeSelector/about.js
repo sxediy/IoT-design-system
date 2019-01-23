@@ -26,7 +26,7 @@ export const code = `
 export const props = {
   title: {
     type: 'string',
-    description: 'наименование компонента'
+    description: 'наименование компонента (здесь это "Фильтры:")'
   },
   treeData: {
     type: 'array',
@@ -38,7 +38,7 @@ export const props = {
   },
   placeholder: {
     type: 'array',
-    description: 'Заполняющий текст',
+    description: 'Заполняющий текст (здесь это "Выберите единицы")',
   },
   customStyle: {
     type: 'string',
