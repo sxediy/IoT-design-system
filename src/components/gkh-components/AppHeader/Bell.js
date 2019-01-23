@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import alert from 'icons/alert_green.svg';
 import classNames from 'classnames';
 import styles from 'components/gkh-components/AppHeader/styles.less';
+import { BellLogo } from 'components/gkh-components/Logo/Logo';
 
 
 const Bell = ({ setActive, activeNavLink }) =>
@@ -10,9 +10,7 @@ const Bell = ({ setActive, activeNavLink }) =>
     className={ classNames([styles.bellAndProfile], { [styles.active]: activeNavLink === 'Alerts' }) }
     onClick={ () => setActive('Alerts') }
   >
-    <svg width='21' height='25' fill='currentColor' viewBox={alert.viewBox} className={styles.icon} >
-      <use xlinkHref={`#${alert.id}`} />
-    </svg>
+    <BellLogo />
   </div>;
 
 Bell.propTypes = {

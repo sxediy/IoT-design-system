@@ -2,6 +2,7 @@ import React from 'react';
 import download from 'icons/download_32.svg';
 import counter from 'icons/Counter.svg';
 import mega from 'icons/Mega-logotype.svg';
+import alert from 'icons/alert_green.svg';
 import { resources } from 'components/gkh-components/Logo/fakeData';
 
 
@@ -31,3 +32,7 @@ export const MegaLogoType = () =>
     <use xlinkHref={`#${mega.id}`} />
   </svg>;
 
+export const BellLogo = () =>
+  <svg width='21' height='25' fill='currentColor' viewBox={alert.viewBox} >
+    <use xlinkHref={`#${alert.id}`} />
+  </svg>;
