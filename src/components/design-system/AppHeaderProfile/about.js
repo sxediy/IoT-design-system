@@ -12,16 +12,11 @@ export const description = `
 `;
 
 export const code = `
-  <ProfileWithDropdown
-    activeElement='Reports'
-  />;
+  <ProfileWithDropdown />;
 `;
 
 
 export const props = {
-  activeNavLink: {
-    type: 'string',
-    description: 'название активного элемента панели навигации'
-  }
+
 };
 

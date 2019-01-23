@@ -8,7 +8,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <NavBar
-    activeElement='Reports'
+    initialActive='Objects'
   />;
 
 

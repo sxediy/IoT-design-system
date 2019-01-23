@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import menuIcon1 from 'icons/menu_icon_01.svg';
@@ -9,63 +9,71 @@ import classNames from 'classnames';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 // ToDo рефакторинг мапить [Objects', 'Reports', 'Users' , и т.д] - этот массив передавать из data.js аргументом
-const NavBar = ({ setActive, activeNavLink }) =>
-  <div className={styles.items}>
+const NavBar = ({ initialActive, ...props }) => {
+  const [currentActiveHook, setNewActiveHook] = useState(initialActive);
+  const currentActive = props.setNewActive ? initialActive : currentActiveHook;
+  const setNewActive = props.setNewActive || setNewActiveHook;
 
-    <div
-      className={ classNames([styles.item], { [styles.active]: activeNavLink === 'Objects' }) }
-      onClick={ () => setActive('Objects') }
-    >
-      <svg width='21' height='25' fill='currentColor' viewBox={menuIcon1.viewBox} className={styles.icon} >
-        <use xlinkHref={`#${menuIcon1.id}`} />
-      </svg>
-      <div className={ styles.title }>
-        Объекты
+
+  return (
+    <div className={styles.items}>
+
+      <div
+        className={ classNames([styles.item], { [styles.active]: currentActive === 'Objects' }) }
+        onClick={ () => setNewActive('Objects') }
+      >
+        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon1.viewBox} className={styles.icon} >
+          <use xlinkHref={`#${menuIcon1.id}`} />
+        </svg>
+        <div className={ styles.title }>
+          Объекты
+        </div>
       </div>
-    </div>
 
-    <div
-      className={ classNames([styles.item], { [styles.active]: activeNavLink === 'Reports' }) }
-      onClick={ () => setActive('Reports') }
-    >
-      <svg width='21' height='25' fill='currentColor' viewBox={menuIcon2.viewBox} className={styles.icon} >
-        <use xlinkHref={`#${menuIcon2.id}`} />
-      </svg>
-      <div className={ styles.title }>
-        Отчеты
+      <div
+        className={ classNames([styles.item], { [styles.active]: currentActive === 'Reports' }) }
+        onClick={ () => setNewActive('Reports') }
+      >
+        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon2.viewBox} className={styles.icon} >
+          <use xlinkHref={`#${menuIcon2.id}`} />
+        </svg>
+        <div className={ styles.title }>
+          Отчеты
+        </div>
       </div>
-    </div>
 
-    <div
-      className={ classNames([styles.item], { [styles.active]: activeNavLink === 'Users' }) }
-      onClick={ () => setActive('Users') }
-    >
-      <svg width='21' height='25' fill='currentColor' viewBox={menuIcon3.viewBox} className={styles.icon} >
-        <use xlinkHref={`#${menuIcon3.id}`} />
-      </svg>
-      <div className={ styles.title }>
-        Пользователи
+      <div
+        className={ classNames([styles.item], { [styles.active]: currentActive === 'Users' }) }
+        onClick={ () => setNewActive('Users') }
+      >
+        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon3.viewBox} className={styles.icon} >
+          <use xlinkHref={`#${menuIcon3.id}`} />
+        </svg>
+        <div className={ styles.title }>
+          Пользователи
+        </div>
       </div>
-    </div>
 
-    <div
-      className={ classNames([styles.item], { [styles.active]: activeNavLink === 'USPD' }) }
-      onClick={ () => setActive('USPD') }
-    >
-      <svg width='21' height='25' fill='currentColor' viewBox={mainUspd.viewBox} className={styles.icon} >
-        <use xlinkHref={`#${mainUspd.id}`} />
-      </svg>
-      <div className={ styles.title }>
-        УСПД
+      <div
+        className={ classNames([styles.item], { [styles.active]: currentActive === 'USPD' }) }
+        onClick={ () => setNewActive('USPD') }
+      >
+        <svg width='21' height='25' fill='currentColor' viewBox={mainUspd.viewBox} className={styles.icon} >
+          <use xlinkHref={`#${mainUspd.id}`} />
+        </svg>
+        <div className={ styles.title }>
+          УСПД
+        </div>
       </div>
-    </div>
 
-  </div>;
+    </div>
+  );
+};
 
 
 NavBar.propTypes = {
-  setActive: PropTypes.func,
-  activeNavLink: PropTypes.string,
+  initialActive: PropTypes.string,
+  setNewActive: PropTypes.func,
 };
 
 

@@ -8,9 +8,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <div style={{ marginLeft: 'auto' }}>
-    <ProfileWithDropdown
-      activeElement='Reports'
-    />
+    <ProfileWithDropdown />
   </div>;
 
 

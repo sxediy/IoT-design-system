@@ -4,10 +4,10 @@ import { MegaLogo } from 'components/gkh-components/Logo/Logo';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
-const Mega = ({ setActive }) =>
+const Mega = ({ setNewActive }) =>
   <div
     className={styles.logoWr} key='logo'
-    onClick={ () => setActive('Objects') }
+    onClick={ () => setNewActive('Objects') }
   >
     <div className={styles.logoImg} >
       <MegaLogo />
@@ -16,7 +16,7 @@ const Mega = ({ setActive }) =>
 
 
 Mega.propTypes = {
-  setActive: PropTypes.func,
+  setNewActive: PropTypes.func,
 };
 
 

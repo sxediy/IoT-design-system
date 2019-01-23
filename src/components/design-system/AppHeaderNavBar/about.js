@@ -13,13 +13,13 @@ export const description = `
 
 export const code = `
   <NavBar
-    activeElement='Objects'
+    initialActive='Reports'
   />;
 `;
 
 
 export const props = {
-  activeNavLink: {
+  initialActive: {
     type: 'string',
     description: 'название активного элемента панели навигации'
   }
