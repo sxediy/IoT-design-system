@@ -1,0 +1,52 @@
+// Эти данные  исключительно для данного приложения (для UI дизайн-системы)
+
+
+export const title = 'TreeSelector';
+
+export const importString = `
+  import { TreeSelector } from 'components/gkh-components/TreeSelector/TreeSelector'
+`;
+
+export const description = `
+   Селектор в виде дерева
+`;
+
+export const code = `
+  <TreeSelector
+    title={title}
+    treeData={treeData}
+    activeElement={activeValue}
+    placeholder={placeholder}
+    customStyle={customStyle}
+    onSearch={onSearch}
+  />
+`;
+
+
+export const props = {
+  title: {
+    type: 'string',
+    description: 'наименование компонента'
+  },
+  treeData: {
+    type: 'array',
+    description: 'Набор данных, которыми заполняется компонент',
+  },
+  activeElement: {
+    type: 'string',
+    description: 'Выбранное значение из селектора',
+  },
+  placeholder: {
+    type: 'array',
+    description: 'Заполняющий текст',
+  },
+  customStyle: {
+    type: 'string',
+    description: 'Пользовательские стили',
+  },
+  onSearch: {
+    type: 'function',
+    description: 'Включен/отключен поиск',
+  }
+};
+
