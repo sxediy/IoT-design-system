@@ -27,7 +27,7 @@ export const CounterLogo = (resource = 'Холодная вода') => (
 );
 
 
-export const MegaLogoType = () =>
+export const MegaLogo = () =>
   <svg viewBox={mega.viewBox} >
     <use xlinkHref={`#${mega.id}`} />
   </svg>;
