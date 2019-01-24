@@ -13,12 +13,13 @@ export const description = `
 
 export const code = `
   <TreeSelector
-    title={title}
-    treeData={treeData}
-    initActiveElement={activeValue}
-    placeholder={placeholder}
-    customStyle={customStyle}
-    onSearch={onSearch}
+    title={ title }
+    treeData={ treeData }
+    initActiveElement={ initActiveElement }
+    onChange={ onChange }
+    placeholder={ placeholder }
+    customStyle={ customStyle }
+    onSearch={ onSearch }
   />
 `;
 

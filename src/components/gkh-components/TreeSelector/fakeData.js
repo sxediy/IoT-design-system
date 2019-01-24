@@ -50,7 +50,7 @@ const treeData = [{
 }
 ];
 
-const activeValue = '1-1';
+const initActiveElement = '1-1';
 const placeholder = 'Выберите единицы';
 const customStyle = {
   width: 500,
@@ -58,4 +58,4 @@ const customStyle = {
 };
 const onSearch = () => false;
 
-export { title, treeData, activeValue, placeholder, customStyle, onSearch };
+export { title, treeData, initActiveElement, placeholder, customStyle, onSearch };

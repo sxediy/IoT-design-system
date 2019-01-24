@@ -5,7 +5,7 @@ import { TreeSelector } from 'components/gkh-components/TreeSelector/TreeSelecto
 import {
   title,
   treeData,
-  activeValue,
+  initActiveElement,
   onChange,
   placeholder,
   customStyle,
@@ -17,13 +17,13 @@ import * as data from './about';
 
 const OurComponent = () =>
   <TreeSelector
-    title={title}
-    treeData={treeData}
-    initActiveElement={activeValue}
-    onChange={onChange}
-    placeholder={placeholder}
-    customStyle={customStyle}
-    onSearch={onSearch}
+    title={ title }
+    treeData={ treeData }
+    initActiveElement={ initActiveElement }
+    onChange={ onChange }
+    placeholder={ placeholder }
+    customStyle={ customStyle }
+    onSearch={ onSearch }
   />;
 
 
