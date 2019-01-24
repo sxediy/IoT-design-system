@@ -7,9 +7,9 @@ import { renderMenu } from 'components/gkh-components/AppHeader/renderMenu';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
-const ProfileWithDropdown = ({ initialActive, ...props }) => {
-  const [currentActiveHook, setNewActiveHook] = useState(initialActive);
-  const currentActive = props.setNewActive ? initialActive : currentActiveHook;
+const ProfileWithDropdown = ({ initActiveElement, ...props }) => {
+  const [currentActiveHook, setNewActiveHook] = useState(initActiveElement);
+  const currentActive = props.setNewActive ? initActiveElement : currentActiveHook;
   const setNewActive = props.setNewActive || setNewActiveHook;
 
   return (
@@ -27,7 +27,7 @@ const ProfileWithDropdown = ({ initialActive, ...props }) => {
 };
 
 ProfileWithDropdown.propTypes = {
-  initialActive: PropTypes.string,
+  initActiveElement: PropTypes.string,
   setNewActive: PropTypes.func,
 };
 

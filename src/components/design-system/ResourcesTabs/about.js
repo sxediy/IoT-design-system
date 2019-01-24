@@ -15,7 +15,7 @@ export const description = `
 export const code = `
   <ResourceTabs
     tabsArr={ tabsArr }
-    activeElement={'Тепло'}
+    initActiveElement={'Тепло'}
   />
 `;
 
@@ -25,7 +25,7 @@ export const props = {
     type: 'array',
     description: 'Данные для отрисовки компонента, полученные с сервера'
   },
-  activeElement: {
+  initActiveElement: {
     type: 'string',
     description: 'Текущий активный элемент',
     default: 'Тепло'

@@ -15,7 +15,7 @@ export const code = `
   <TreeSelector
     title={title}
     treeData={treeData}
-    activeElement={activeValue}
+    initActiveElement={activeValue}
     placeholder={placeholder}
     customStyle={customStyle}
     onSearch={onSearch}
@@ -32,7 +32,7 @@ export const props = {
     type: 'array',
     description: 'Набор данных, которыми заполняется компонент',
   },
-  activeElement: {
+  initActiveElement: {
     type: 'string',
     description: 'Выбранное значение из селектора',
   },

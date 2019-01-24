@@ -11,7 +11,7 @@ import * as data from './about';
 const OurComponent = () =>
   <ResourceTabs
     tabsArr={ tabsArr }
-    activeElement={'Тепло'}
+    initActiveElement={'Тепло'}
   />;
 
 

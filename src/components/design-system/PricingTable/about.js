@@ -14,7 +14,7 @@ export const description = `
 export const code = `
   <ResourcesTable
     pricingData={pricingData}
-    activeElement={'Тепло'}
+    initActiveElement={'Тепло'}
   />;
 `;
 
@@ -24,7 +24,7 @@ export const props = {
     type: 'object',
     description: 'описание объекта pricingData'
   },
-  activeElement: {
+  initActiveElement: {
     type: 'string',
     description: 'название выбранного ресурса',
     default: 'Тепло'

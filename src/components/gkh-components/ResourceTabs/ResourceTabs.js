@@ -6,7 +6,7 @@ import styles from 'components/gkh-components/ResourceTabs/ResourceTabs.less';
 
 const ResourceTabs = ({
   tabsArr,
-  active,
+  initActiveElement,
   onClick,
 }) =>
   <div className={styles.gkhTabs}>
@@ -14,7 +14,7 @@ const ResourceTabs = ({
       tabsArr.map(tab =>
         <div
           key={ tab.typeName }
-          className={classnames(styles.tab, styles[tab.eng], { [styles.active]: active === tab.typeName })}
+          className={classnames(styles.tab, styles[tab.eng], { [styles.active]: initActiveElement === tab.typeName })}
           onClick={ onClick }
         >
           <div className={styles.icon} />
@@ -28,7 +28,7 @@ const ResourceTabs = ({
 
 ResourceTabs.propTypes = {
   tabsArr: PropTypes.array,
-  active: PropTypes.string,
+  initActiveElement: PropTypes.string,
   onClick: PropTypes.func,
 };
 

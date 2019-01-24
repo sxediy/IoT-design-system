@@ -19,7 +19,7 @@ const OurComponent = () =>
   <TreeSelector
     title={title}
     treeData={treeData}
-    activeElement={activeValue}
+    initActiveElement={activeValue}
     onChange={onChange}
     placeholder={placeholder}
     customStyle={customStyle}

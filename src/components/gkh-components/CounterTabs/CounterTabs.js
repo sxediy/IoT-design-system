@@ -6,7 +6,7 @@ import styles from 'components/gkh-components/CounterTabs/CounterTabs.less';
 
 const CounterTabs = ({
   counters,
-  activeKey,
+  initActiveElement,
   setActiveCounterNum,
 }) =>
   (
@@ -18,7 +18,7 @@ const CounterTabs = ({
             <div
               key={ key }
               className={
-                classnames(styles.tab, styles[counterData.eng], { [styles.active]: activeKey === key })
+                classnames(styles.tab, styles[counterData.eng], { [styles.active]: initActiveElement === key })
               }
               onClick={ () => setActiveCounterNum(key) }
             >
@@ -33,7 +33,7 @@ const CounterTabs = ({
 
 CounterTabs.propTypes = {
   counters: PropTypes.object,
-  activeKey: PropTypes.object,
+  initActiveElement: PropTypes.object,
   setActiveCounterNum: PropTypes.object,
 };
 

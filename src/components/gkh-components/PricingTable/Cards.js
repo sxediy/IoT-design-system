@@ -12,18 +12,18 @@ const {
   containerCards
 } = styles;
 
-export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) => {
+export const Cards = ({ pricingData, initActiveElement, changeActiveColumn }) => {
   const getCard = ({
     typeName, eng, title, unit
   }) => {
-    const word = (typeName === activeResourceType) ? 'Выбрано' : 'Выбрать';
+    const word = (typeName === initActiveElement) ? 'Выбрано' : 'Выбрать';
     const premises = pricingData ? pricingData[typeName].premises : '-';
     const difference = pricingData ? pricingData[typeName].difference : '-';
 
     return (
       <div
         key={eng}
-        className={classnames(tableResources, styles[eng], { [active]: typeName === activeResourceType })}
+        className={classnames(tableResources, styles[eng], { [active]: typeName === initActiveElement })}
         onClick={ () => changeActiveColumn(typeName) }
       >
         <div><span> {`${title}`}<br />{`(${unit})`}</span></div>
@@ -31,7 +31,7 @@ export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) =
         {/* <div><span>{volume}</span></div> */}
         <div><span>{difference}</span></div>
         <div>
-          <div className={classnames(styles[eng], button, { [active]: typeName === activeResourceType })}>
+          <div className={classnames(styles[eng], button, { [active]: typeName === initActiveElement })}>
             <span>{word}</span>
           </div>
         </div>
@@ -56,5 +56,5 @@ export const Cards = ({ pricingData, changeActiveColumn, activeResourceType }) =
 Cards.propTypes = {
   pricingData: PropTypes.object,
   changeActiveColumn: PropTypes.func,
-  activeResourceType: PropTypes.string,
+  initActiveElement: PropTypes.string,
 };

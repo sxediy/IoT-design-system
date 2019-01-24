@@ -10,7 +10,7 @@ import * as data from './about';
 const OurComponent = () =>
   <PricingTable
     pricingData={pricingData}
-    activeElement={'Тепло'}
+    initActiveElement={'Тепло'}
   />;
 
 

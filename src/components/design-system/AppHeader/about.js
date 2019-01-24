@@ -13,13 +13,13 @@ export const description = `
 
 export const code = `
   <AppHeader
-    activeElement='Objects'
+    initActiveElement='Reports'
   />;
 `;
 
 
 export const props = {
-  activeElement: {
+  initActiveElement: {
     type: 'string',
     description: 'название активного элемента панели навигации'
   }

@@ -9,9 +9,9 @@ import classNames from 'classnames';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 // ToDo рефакторинг мапить [Objects', 'Reports', 'Users' , и т.д] - этот массив передавать из data.js аргументом
-const NavBar = ({ initialActive, ...props }) => {
-  const [currentActiveHook, setNewActiveHook] = useState(initialActive);
-  const currentActive = props.setNewActive ? initialActive : currentActiveHook;
+const NavBar = ({ initActiveElement, ...props }) => {
+  const [currentActiveHook, setNewActiveHook] = useState(initActiveElement);
+  const currentActive = props.setNewActive ? initActiveElement : currentActiveHook;
   const setNewActive = props.setNewActive || setNewActiveHook;
 
 
@@ -72,7 +72,7 @@ const NavBar = ({ initialActive, ...props }) => {
 
 
 NavBar.propTypes = {
-  initialActive: PropTypes.string,
+  initActiveElement: PropTypes.string,
   setNewActive: PropTypes.func,
 };
 

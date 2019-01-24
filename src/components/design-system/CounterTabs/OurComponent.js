@@ -11,7 +11,7 @@ import * as data from './about';
 const OurComponent = () =>
   <CounterTabs
     counters={ counters }
-    activeElement={ activeKey }
+    initActiveElement={ activeKey }
   />;
 
 export default constructFromTemplates(OurComponent, data);

@@ -5,9 +5,9 @@ import styles from 'components/gkh-components/AppHeader/styles.less';
 import { BellLogo } from 'components/gkh-components/Logo/Logo';
 
 
-const Bell = ({ initialActive, ...props }) => {
-  const [currentActiveHook, setNewActiveHook] = useState(initialActive);
-  const currentActive = props.setNewActive ? initialActive : currentActiveHook;
+const Bell = ({ initActiveElement, ...props }) => {
+  const [currentActiveHook, setNewActiveHook] = useState(initActiveElement);
+  const currentActive = props.setNewActive ? initActiveElement : currentActiveHook;
   const setNewActive = props.setNewActive || setNewActiveHook;
 
   return (
@@ -21,7 +21,7 @@ const Bell = ({ initialActive, ...props }) => {
 };
 
 Bell.propTypes = {
-  initialActive: PropTypes.string,
+  initActiveElement: PropTypes.string,
   setNewActive: PropTypes.func,
 };
 

@@ -6,12 +6,12 @@ import { TreeSelect } from 'antd';
 const TreeSelector = ({
   title,
   treeData,
-  activeElement: initialActive,
+  initActiveElement,
   placeholder = 'Выберите единицы',
   customStyle,
   onSearch,
 }) => {
-  const [currentActive, setNewActive] = useState(initialActive);
+  const [currentActive, setNewActive] = useState(initActiveElement);
 
   return (
     <Fragment>
@@ -33,7 +33,7 @@ const TreeSelector = ({
 TreeSelector.propTypes = {
   title: PropTypes.string,
   treeData: PropTypes.array,
-  activeElement: PropTypes.string,
+  initActiveElement: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   customStyle: PropTypes.object,
