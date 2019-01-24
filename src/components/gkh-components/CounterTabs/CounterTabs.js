@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import styles from 'components/gkh-components/CounterTabs/CounterTabs.less';
 
 
-const CounterTabs = ({
-  counters,
-  initActiveElement,
-  setActiveCounterNum,
-}) =>
-  (
+const CounterTabs = ({ counters, initActiveElement }) => {
+  const [currentActive, setNewActive] = useState(initActiveElement);
+
+  return (
     <div className={styles.gkhTabs}>
       {
         Object.keys(counters).map(key => {
@@ -18,9 +16,9 @@ const CounterTabs = ({
             <div
               key={ key }
               className={
-                classnames(styles.tab, styles[counterData.eng], { [styles.active]: initActiveElement === key })
+                classnames(styles.tab, styles[counterData.eng], { [styles.active]: currentActive === key })
               }
-              onClick={ () => setActiveCounterNum(key) }
+              onClick={ () => setNewActive(key) }
             >
               <div className={styles.icon} />
               Счетчик №{ key }
@@ -30,11 +28,11 @@ const CounterTabs = ({
       }
     </div>
   );
+};
 
 CounterTabs.propTypes = {
   counters: PropTypes.object,
-  initActiveElement: PropTypes.object,
-  setActiveCounterNum: PropTypes.object,
+  initActiveElement: PropTypes.string,
 };
 
 
