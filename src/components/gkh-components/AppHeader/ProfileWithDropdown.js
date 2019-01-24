@@ -7,10 +7,10 @@ import { renderMenu } from 'components/gkh-components/AppHeader/renderMenu';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
-const ProfileWithDropdown = ({ initActiveElement, ...props }) => {
+const ProfileWithDropdown = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
   const [currentActiveHook, setNewActiveHook] = useState(initActiveElement);
-  const currentActive = props.setNewActive ? initActiveElement : currentActiveHook;
-  const setNewActive = props.setNewActive || setNewActiveHook;
+  const currentActive = setNewActiveProps ? initActiveElement : currentActiveHook;
+  const setNewActive = setNewActiveProps || setNewActiveHook;
 
   return (
     <Dropdown placement='bottomRight' overlay={ renderMenu() } >
