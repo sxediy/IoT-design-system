@@ -1,8 +1,7 @@
 import moment from 'moment';
 
-const dateFrom = moment();
-const dateTo = moment();
-const setDate = () => {};
+const initialDateFrom = moment().subtract(7, 'd');
+const initialDateTo = moment();
 const isTSRV = false;
 
-export { dateFrom, dateTo, setDate, isTSRV };
+export { initialDateFrom, initialDateTo, isTSRV };

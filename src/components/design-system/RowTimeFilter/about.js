@@ -2,10 +2,10 @@
 // Эти данные  исключительно для данного приложения (для UI дизайн-системы)
 
 
-export const title = 'RowTimeFilter';
+export const title = 'RowTimeFilterWrapper';
 
 export const importString = `
-  import { RowTimeFilter } from 'components/gkh-components/RowTimeFilter/RowTimeFilter')
+  import { RowTimeFilterWrapper } from 'components/gkh-components/RowTimeFilter/RowTimeFilterWrapper';
 `;
 
 export const description = `
@@ -13,27 +13,22 @@ export const description = `
 `;
 
 export const code = `
-  <RowTimeFilter
-    dateFrom={dateFrom}
-    dateTo={dateTo}
-    setDate={setDate}
-    isTSRV={isTSRV}
-  />;
+  <RowTimeFilterWrapper
+    initialDateFrom={ initialDateFrom }
+    initialDateTo={ initialDateTo }
+    isTSRV={ isTSRV }
+  />
 `;
 
 
 export const props = {
-  dateFrom: {
+  initialDateFrom: {
     type: 'string',
     description: 'Начальная дата'
   },
-  dateTo: {
+  initialDateTo: {
     type: 'string',
     description: 'Конечная дата',
-  },
-  setDate: {
-    type: 'function',
-    description: 'Функция, вызываемая при клике для смены выбранных дат',
   },
   isTSRV: {
     type: 'boolean',

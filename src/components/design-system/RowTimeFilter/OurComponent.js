@@ -1,20 +1,20 @@
 import React from 'react';
+
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { RowTimeFilter } from 'components/gkh-components/RowTimeFilter/RowTimeFilter';
+import { RowTimeFilterWrapper } from 'components/gkh-components/RowTimeFilter/RowTimeFilterWrapper';
 
-import { dateFrom, dateTo, setDate, isTSRV } from 'components/gkh-components/RowTimeFilter/fakeData';
+import { initialDateFrom, initialDateTo, isTSRV } from 'components/gkh-components/RowTimeFilter/fakeData';
 
 
 import * as data from './about';
 
 
 const OurComponent = () =>
-  <RowTimeFilter
-    dateFrom={dateFrom}
-    dateTo={dateTo}
-    setDate={setDate}
-    isTSRV={isTSRV}
+  <RowTimeFilterWrapper
+    initialDateFrom={ initialDateFrom }
+    initialDateTo={ initialDateTo }
+    isTSRV= { isTSRV }
   />;
 
 export default constructFromTemplates(OurComponent, data);
