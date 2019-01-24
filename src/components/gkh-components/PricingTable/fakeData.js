@@ -71,4 +71,7 @@ const resources = {
 
 const resourcesValArray = Object.values(resources);
 
-export { pricingData, resourcesValArray };
+const initActiveElement1 = 'Чистая вода';
+const initActiveElement2 = 'Горячая вода';
+
+export { pricingData, initActiveElement1, initActiveElement2, resourcesValArray };

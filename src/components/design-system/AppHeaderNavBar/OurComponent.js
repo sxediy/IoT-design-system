@@ -2,13 +2,14 @@ import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
 
 import { NavBar } from 'components/gkh-components/AppHeader/NavBar';
+import { initActiveElement2 } from 'components/gkh-components/AppHeader/fakeData';
 
 import * as data from './about';
 
 
 const OurComponent = () =>
   <NavBar
-    initActiveElement='Objects'
+    initActiveElement={ initActiveElement2 }
   />;
 
 

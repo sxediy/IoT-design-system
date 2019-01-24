@@ -13,7 +13,7 @@ export const description = `
 
 export const code = `
   <AppHeader
-    initActiveElement='Reports'
+    initActiveElement={ initActiveElement1 }
   />;
 `;
 
@@ -21,7 +21,7 @@ export const code = `
 export const props = {
   initActiveElement: {
     type: 'string',
-    description: 'название активного элемента панели навигации'
+    description: 'Название начального активного элемента "шапки" приложения'
   }
 };
 

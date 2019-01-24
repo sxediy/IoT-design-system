@@ -15,7 +15,7 @@ export const description = `
 export const code = `
   <ResourceTabs
     tabsArr={ tabsArr }
-    initActiveElement={'Тепло'}
+    initActiveElement={ initActiveElement }
   />
 `;
 
@@ -27,7 +27,7 @@ export const props = {
   },
   initActiveElement: {
     type: 'string',
-    description: 'Текущий активный элемент',
+    description: 'Название начального активного таба',
     default: 'Тепло'
   }
 };

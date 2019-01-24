@@ -13,8 +13,8 @@ export const description = `
 
 export const code = `
   <Cards
-    pricingData={pricingData}
-    initActiveElement={'Тепло'}
+    pricingData={ pricingData }
+    initActiveElement={ initActiveElement2 }
   />;
 `;
 
@@ -22,11 +22,11 @@ export const code = `
 export const props = {
   pricingData: {
     type: 'object',
-    description: 'описание объекта pricingData'
+    description: 'Данные для отрисовки компонента, полученные с сервера'
   },
   initActiveElement: {
     type: 'string',
-    description: 'название выбранного ресурса',
+    description: 'Название начальной активной карточки',
     default: 'Тепло'
   }
 };

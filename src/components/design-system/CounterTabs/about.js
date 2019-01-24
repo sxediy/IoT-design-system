@@ -15,7 +15,7 @@ export const description = `
 export const code = `
   <CounerTabs
     counters={ counters }
-    initActiveElement={ activeKey }
+    initActiveElement={ initActiveElement }
   />;
 `;
 
@@ -27,7 +27,7 @@ export const props = {
   },
   initActiveElement: {
     type: 'string',
-    description: 'Ключ(название) счётчика активного таба',
+    description: 'Название начального активного таба',
   }
 };
 

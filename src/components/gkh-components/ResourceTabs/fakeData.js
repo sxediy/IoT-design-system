@@ -45,5 +45,8 @@ const tabsArr = [
   },
 ];
 
-export { tabsArr };
+const initActiveElement = 'Горячая вода';
+
+
+export { tabsArr, initActiveElement };
 

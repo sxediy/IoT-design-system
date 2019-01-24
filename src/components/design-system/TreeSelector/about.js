@@ -34,7 +34,7 @@ export const props = {
   },
   initActiveElement: {
     type: 'string',
-    description: 'Выбранное значение из селектора',
+    description: 'Название начального выбранного элемента',
   },
   placeholder: {
     type: 'array',

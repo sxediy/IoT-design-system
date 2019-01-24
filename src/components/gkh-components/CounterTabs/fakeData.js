@@ -41,9 +41,9 @@ const counters = {
   },
 };
 
-const activeKey = '16-0048915-ЧВ';
+const initActiveElement = '16-0048915-ЧВ';
 
 const setActiveCounterNum = () => {};
 
-export { counters, activeKey, setActiveCounterNum };
+export { counters, initActiveElement, setActiveCounterNum };
 
