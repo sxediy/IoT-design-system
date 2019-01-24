@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import { resourcesValArray } from 'components/gkh-components/PricingTable/fakeData';
@@ -12,26 +12,27 @@ const {
   containerCards
 } = styles;
 
-export const Cards = ({ pricingData, initActiveElement, changeActiveColumn }) => {
+export const Cards = ({ pricingData, initActiveElement }) => {
+  const [currentActive, setNewActive] = useState(initActiveElement);
   const getCard = ({
     typeName, eng, title, unit
   }) => {
-    const word = (typeName === initActiveElement) ? 'Выбрано' : 'Выбрать';
+    const word = (typeName === currentActive) ? 'Выбрано' : 'Выбрать';
     const premises = pricingData ? pricingData[typeName].premises : '-';
     const difference = pricingData ? pricingData[typeName].difference : '-';
 
     return (
       <div
         key={eng}
-        className={classnames(tableResources, styles[eng], { [active]: typeName === initActiveElement })}
-        onClick={ () => changeActiveColumn(typeName) }
+        className={classnames(tableResources, styles[eng], { [active]: typeName === currentActive })}
+        onClick={ () => setNewActive(typeName) }
       >
         <div><span> {`${title}`}<br />{`(${unit})`}</span></div>
         <div><span>{premises}</span></div>
         {/* <div><span>{volume}</span></div> */}
         <div><span>{difference}</span></div>
         <div>
-          <div className={classnames(styles[eng], button, { [active]: typeName === initActiveElement })}>
+          <div className={classnames(styles[eng], button, { [active]: typeName === currentActive })}>
             <span>{word}</span>
           </div>
         </div>
@@ -55,6 +56,5 @@ export const Cards = ({ pricingData, initActiveElement, changeActiveColumn }) =>
 
 Cards.propTypes = {
   pricingData: PropTypes.object,
-  changeActiveColumn: PropTypes.func,
   initActiveElement: PropTypes.string,
 };
