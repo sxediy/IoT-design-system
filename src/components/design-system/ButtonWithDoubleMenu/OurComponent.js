@@ -8,6 +8,7 @@ import {
   secondLineData,
   buttonName,
   logo,
+  callbackFunction,
 } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/fakeData';
 
 import * as data from './about';
@@ -15,10 +16,11 @@ import * as data from './about';
 
 const OurComponent = () =>
   <DropdownWithDoubleMenu
-    firstLineData={firstLineData}
-    secondLineData={secondLineData}
-    buttonName={buttonName}
-    logo={logo}
+    firstLineData={ firstLineData }
+    secondLineData={ secondLineData }
+    buttonName={ buttonName }
+    logo={ logo }
+    callbackFunction={ callbackFunction }
   />;
 
 

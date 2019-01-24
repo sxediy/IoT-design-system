@@ -12,15 +12,15 @@ const DropdownWithTripleMenu = ({
 }) => {
   const renderMenu = (
     <TripleMenu
-      linesData={linesData}
+      linesData={ linesData }
     />
   );
 
   return (
     <Dropdown
-      overlay={renderMenu}
+      overlay={ renderMenu }
       placement="bottomCenter"
-      trigger={['click']}
+      trigger={ ['click'] }
     >
       <div className={styles.buttonWrapper}>
         {logo}

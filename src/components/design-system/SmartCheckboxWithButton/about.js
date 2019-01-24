@@ -14,11 +14,11 @@ export const description = `
 
 export const code = `
   <SmartCheckboxWithButton
-    args={choisedBefore}
-    click={onSubmit}
-    plainOptions={options}
-    defaultCheckedList={options}
-    styleContainer={{ width: '250px', boxShadow: '0 1px 4px rgba(0, 21, 41, 0.08)' }}
+    args={ choisedBefore }
+    callbackFunction={ onSubmit }
+    plainOptions={ options }
+    defaultCheckedList={ options }
+    styleContainer={ { width: '250px', boxShadow: '0 1px 4px rgba(0, 21, 41, 0.08)' } }
   />
 `;
 
@@ -28,9 +28,9 @@ export const props = {
     type: 'array',
     description: 'Список выбранных ранее значений',
   },
-  click: {
+  callbackFunction: {
     type: 'function',
-    description: 'функция, срабатывающая при клике на кнопку',
+    description: 'Функция обратного вызова, срабатывающая при клике на кнопку',
   },
   plainOptions: {
     type: 'array',

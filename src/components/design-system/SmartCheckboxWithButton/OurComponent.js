@@ -16,11 +16,11 @@ import * as data from './about';
 
 const OurComponent = () =>
   <SmartCheckboxWithButton
-    args={choisedBefore}
-    click={onSubmit}
-    plainOptions={options}
-    defaultCheckedList={options}
-    styleContainer={{ width: '250px', boxShadow: '0 1px 4px rgba(0, 21, 41, 0.08)' }}
+    args={ choisedBefore }
+    callbackFunction={ onSubmit }
+    plainOptions={ options}
+    defaultCheckedList={ options }
+    styleContainer={ { width: '250px', boxShadow: '0 1px 4px rgba(0, 21, 41, 0.08)' } }
   />;
 
 

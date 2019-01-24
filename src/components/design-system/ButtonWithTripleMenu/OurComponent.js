@@ -20,18 +20,18 @@ import * as data from './about';
 
 const OurComponent = () =>
   <DropdownWithTripleMenu
-    firstLineData={firstLineData}
-    secondLineData={secondLineData}
-    thirdLine={(...args) =>
+    firstLineData={ firstLineData }
+    secondLineData={ secondLineData }
+    thirdLine={ (...args) =>
       <SmartCheckboxWithButton
-        args={args}
-        click={onSubmit}
-        plainOptions={options}
-        defaultCheckedList={options}
+        args={ args }
+        callbackFunction={ onSubmit }
+        plainOptions={ options }
+        defaultCheckedList={ options }
       />
     }
-    buttonName={buttonName}
-    logo={logo}
+    buttonName={ buttonName }
+    logo={ logo }
   />;
 
 

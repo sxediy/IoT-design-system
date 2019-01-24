@@ -33,7 +33,7 @@ class SmartCheckboxWithButton extends React.Component {
       const {
         plainOptions,
         args,
-        click,
+        callbackFunction,
         styleContainer,
       } = this.props;
 
@@ -57,7 +57,7 @@ class SmartCheckboxWithButton extends React.Component {
           />
           <Button
             type="primary"
-            onClick={click(checkedList, ...args)}
+            onClick={callbackFunction(checkedList, ...args)}
           >
             Скачать
           </Button>
@@ -68,7 +68,7 @@ class SmartCheckboxWithButton extends React.Component {
 
 SmartCheckboxWithButton.propTypes = {
   args: PropTypes.array,
-  click: PropTypes.func,
+  callbackFunction: PropTypes.func,
   plainOptions: PropTypes.array,
   defaultCheckedList: PropTypes.array,
   styleContainer: PropTypes.object,

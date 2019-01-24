@@ -5,7 +5,7 @@ import styles from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/Doubl
 
 const { SubMenu } = Menu;
 
-const DoubleMenu = ({ linesData }) => {
+const DoubleMenu = ({ linesData, callbackFunction }) => {
   const { firstLineData, secondLineData } = linesData;
 
   const firstMenuItems = (firstitem) =>
@@ -19,7 +19,10 @@ const DoubleMenu = ({ linesData }) => {
     </SubMenu>;
 
   return (
-    <Menu className={styles.formatsMenu} >
+    <Menu
+      className={styles.formatsMenu}
+      onClick={callbackFunction}
+    >
       {
         firstLineData.map((firstitem) => firstMenuItems(firstitem))
       }
@@ -29,6 +32,7 @@ const DoubleMenu = ({ linesData }) => {
 
 DoubleMenu.propTypes = {
   linesData: PropTypes.object,
+  callbackFunction: PropTypes.func,
 };
 
 

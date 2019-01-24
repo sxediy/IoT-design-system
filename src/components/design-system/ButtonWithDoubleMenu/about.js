@@ -14,10 +14,11 @@ export const description = `
 
 export const code = `
   <DropdownWithDoubleMenu
-    firstLineData={firstLineData}
-    secondLineData={secondLineData}
-    buttonName={buttonName}
-    logo={logo}
+    firstLineData={ firstLineData }
+    secondLineData={ secondLineData }
+    buttonName={ buttonName }
+    logo={ logo }
+    callbackFunction={ callbackFunction }
   />
 `;
 
@@ -38,6 +39,10 @@ export const props = {
   logo: {
     type: 'string',
     description: 'Логотип/иконка',
+  },
+  callbackFunction: {
+    type: 'function',
+    description: 'Функция обратного вызова, которая сработает после выбора элементов выпадающего списка',
   }
 };
 

@@ -34,6 +34,10 @@ const OurComponent = () =>
       title={ titleSuccess }
       text={ textSuccess }
     />
+    <p>Всплывающие сообщения отрисовываются за пределами
+      узла DOM дерева, в котором работает данное приложение.
+      Надо сделать кнопочку и вызывать по клику на неё
+    </p>
   </Fragment>;
 
 export default constructFromTemplates(OurComponent, data);

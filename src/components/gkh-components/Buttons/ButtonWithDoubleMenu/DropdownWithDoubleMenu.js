@@ -8,11 +8,13 @@ const DropdownWithDoubleMenu = ({
   getFirstLineData,
   buttonName,
   logo,
+  callbackFunction,
   ...linesData,
 }) => {
   const renderMenu = (
     <DoubleMenu
       linesData={linesData}
+      callbackFunction={callbackFunction}
     />
   );
 
@@ -34,6 +36,7 @@ DropdownWithDoubleMenu.propTypes = {
   getFirstLineData: PropTypes.func,
   buttonName: PropTypes.string,
   logo: PropTypes.object,
+  callbackFunction: PropTypes.func
 };
 
 
