@@ -28,6 +28,8 @@ class RowTimeFilterWrapper extends PureComponent {
           dateTo={ this.state.dateTo }
           setDate={ this.setDate }
           onChange={ this.onChange }
+          today={ this.props.today }
+          disabledDate={ this.props.disabledDate }
           isTSRV= { this.props.isTSRV }
         />
       );
@@ -37,6 +39,8 @@ class RowTimeFilterWrapper extends PureComponent {
 RowTimeFilterWrapper.propTypes = {
   initialDateFrom: PropTypes.object,
   initialDateTo: PropTypes.object,
+  today: PropTypes.object,
+  disabledDate: PropTypes.func,
   isTSRV: PropTypes.bool,
 };
 
