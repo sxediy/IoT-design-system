@@ -5,7 +5,7 @@
 export const title = 'RowTimeFilterWrapper';
 
 export const importString = `
-  import { RowTimeFilterWrapper } from 'components/gkh-components/RowTimeFilter/RowTimeFilterWrapper';
+  import { RowTimeFilter } from 'components/gkh-components/RowTimeFilter/RowTimeFilter';
 `;
 
 export const description = `
@@ -13,26 +13,36 @@ export const description = `
 `;
 
 export const code = `
-  <RowTimeFilterWrapper
+  <RowTimeFilter
     initialDateFrom={ initialDateFrom }
     initialDateTo={ initialDateTo }
-    isTSRV={ isTSRV }
-  />
+    today={ today }
+    disabledDate={ disabledDate }
+    isTSRV= { isTSRV }
+  />;
 `;
 
 
 export const props = {
   initialDateFrom: {
     type: 'string',
-    description: 'Начальная дата'
+    description: 'Начальная начальная дата'
   },
   initialDateTo: {
     type: 'string',
-    description: 'Конечная дата',
+    description: 'Начальная конечная дата',
+  },
+  today: {
+    type: 'string',
+    description: 'Сегодняшняя дата',
+  },
+  disabledDate: {
+    type: 'string',
+    description: 'Дата, до которой можно выбрать значение в календаре ',
   },
   isTSRV: {
     type: 'boolean',
-    description: 'Флаг, отвечающий за тип счётчика',
+    description: 'Флаг, отвечающий за тип счётчика (ТСРВ или нет)',
   },
 };
 

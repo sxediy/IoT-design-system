@@ -2,7 +2,7 @@ import React from 'react';
 
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { RowTimeFilterWrapper } from 'components/gkh-components/RowTimeFilter/RowTimeFilterWrapper';
+import { RowTimeFilter } from 'components/gkh-components/RowTimeFilter/RowTimeFilter';
 
 import {
   initialDateFrom,
@@ -17,7 +17,7 @@ import * as data from './about';
 
 
 const OurComponent = () =>
-  <RowTimeFilterWrapper
+  <RowTimeFilter
     initialDateFrom={ initialDateFrom }
     initialDateTo={ initialDateTo }
     today={ today }
