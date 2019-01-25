@@ -17,7 +17,9 @@ const Home = ({ activeNameOfComponent }) => {
           <MegafonLogo />
         </div>
         <div className={styles.menuBar}>
-          <MenuBar />
+          <MenuBar
+            activeNameOfComponent={activeNameOfComponent}
+          />
         </div>
         <div className={styles.asidefooter}>
           <a href="https://github.com/" target="blank"><GitHubLogo /></a>

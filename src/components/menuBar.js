@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Menu } from 'antd';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 const { SubMenu } = Menu;
 
 class MenuBar extends React.Component {
   static propTypes = {
     changeUIContainer: PropTypes.func,
+    activeNameOfComponent: PropTypes.string,
   };
 
   handleClick = (e) => {
@@ -16,11 +17,12 @@ class MenuBar extends React.Component {
   }
 
   render() {
+    const { activeNameOfComponent } = this.props;
     return (
       <Menu
         onClick={this.handleClick}
         style={{ flexGrow: 1 }}
-        defaultSelectedKeys={['pricingTable']}
+        defaultSelectedKeys={[activeNameOfComponent]}
         defaultOpenKeys={['universal']}
         mode="inline"
       >
