@@ -1,4 +1,27 @@
 const initActiveElement1 = 'Reports';
 const initActiveElement2 = 'Objects';
 
-export { initActiveElement1, initActiveElement2 };
+const navBarElements = [
+  {
+    title: 'Объекты',
+    name: 'Objects',
+    logoName: 'ObjectsLogo'
+  },
+  {
+    title: 'Отчёты',
+    name: 'Reports',
+    logoName: 'ReportsLogo'
+  },
+  {
+    title: 'Пользователи',
+    name: 'Users',
+    logoName: 'UsersLogo'
+  },
+  {
+    title: 'УСПД',
+    name: 'USPD',
+    logoName: 'USPDLogo'
+  }
+];
+
+export { initActiveElement1, initActiveElement2, navBarElements };

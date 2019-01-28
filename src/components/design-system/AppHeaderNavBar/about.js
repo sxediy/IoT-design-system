@@ -14,6 +14,7 @@ export const description = `
 export const code = `
   <NavBar
     initActiveElement={ initActiveElement2 }
+    navBarElements={ navBarElements }
   />;
 `;
 
@@ -22,6 +23,10 @@ export const props = {
   initActiveElement: {
     type: 'string',
     description: 'Название начального активного элемента панели навигации'
-  }
+  },
+  navBarElements: {
+    type: 'array',
+    description: 'Список элементов с данными для панели навигации'
+  },
 };
 

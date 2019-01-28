@@ -14,6 +14,7 @@ export const description = `
 export const code = `
   <AppHeader
     initActiveElement={ initActiveElement1 }
+    navBarElements={ navBarElements }
   />;
 `;
 
@@ -22,6 +23,10 @@ export const props = {
   initActiveElement: {
     type: 'string',
     description: 'Название начального активного элемента "шапки" приложения'
-  }
+  },
+  navBarElements: {
+    type: 'array',
+    description: 'Список элементов с данными для панели навигации'
+  },
 };
 

@@ -7,7 +7,7 @@ import { ProfileWithDropdown } from 'components/gkh-components/AppHeader/Profile
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
 
-const AppHeader = ({ initActiveElement }) => {
+const AppHeader = ({ initActiveElement, navBarElements }) => {
   const [currentActive, setNewActive] = useState(initActiveElement);
 
   return (
@@ -19,6 +19,7 @@ const AppHeader = ({ initActiveElement }) => {
       <NavBar
         initActiveElement={currentActive}
         setNewActive={setNewActive}
+        navBarElements={ navBarElements }
       />
       <div className={styles.rightItems} >
         <span className={styles.bellContainer}>
@@ -40,6 +41,7 @@ const AppHeader = ({ initActiveElement }) => {
 
 AppHeader.propTypes = {
   initActiveElement: PropTypes.string,
+  navBarElements: PropTypes.array,
 };
 
 export { AppHeader };

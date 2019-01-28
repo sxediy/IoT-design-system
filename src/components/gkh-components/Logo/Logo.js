@@ -39,25 +39,29 @@ export const MegaLogo = () =>
     <use xlinkHref={`#${megaSVG.id}`} />
   </svg>;
 
-export const ObjectsLogo = () =>
+export const ObjectsLogo = (
   <svg width='21' height='25' fill='currentColor' viewBox={objectsSVG.viewBox} >
     <use xlinkHref={`#${objectsSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const ReportsLogo = () =>
+export const ReportsLogo = (
   <svg width='21' height='25' fill='currentColor' viewBox={reportsSVG.viewBox} >
     <use xlinkHref={`#${reportsSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const UsersLogo = () =>
+export const UsersLogo = (
   <svg width='21' height='25' fill='currentColor' viewBox={usersSVG.viewBox} >
     <use xlinkHref={`#${usersSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const USPDLogo = () =>
+export const USPDLogo = (
   <svg width='21' height='25' fill='currentColor' viewBox={USPDSVG.viewBox} >
     <use xlinkHref={`#${USPDSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
 export const BellLogo = () =>
   <svg width='21' height='25' fill='currentColor' viewBox={alertSVG.viewBox} >
@@ -68,3 +72,4 @@ export const ProfileLogo = () =>
   <svg width='21' height='25' fill='currentColor' viewBox={profileSVG.viewBox} >
     <use xlinkHref={`#${profileSVG.id}`} />
   </svg>;
+
