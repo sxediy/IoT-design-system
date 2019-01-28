@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import menuIcon1 from 'icons/menu_icon_01.svg';
-import menuIcon2 from 'icons/menu_icon_02.svg';
-import menuIcon3 from 'icons/menu_icon_03.svg';
-import mainUspd from 'icons/main_uspd.svg';
+import { ObjectsLogo, ReportsLogo, UsersLogo, USPDLogo } from 'components/gkh-components/Logo/Logo';
 import classNames from 'classnames';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
@@ -22,9 +19,7 @@ const NavBar = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
         className={ classNames([styles.item], { [styles.active]: currentActive === 'Objects' }) }
         onClick={ () => setNewActive('Objects') }
       >
-        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon1.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${menuIcon1.id}`} />
-        </svg>
+        <ObjectsLogo />
         <div className={ styles.title }>
           Объекты
         </div>
@@ -34,9 +29,7 @@ const NavBar = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
         className={ classNames([styles.item], { [styles.active]: currentActive === 'Reports' }) }
         onClick={ () => setNewActive('Reports') }
       >
-        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon2.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${menuIcon2.id}`} />
-        </svg>
+        <ReportsLogo />
         <div className={ styles.title }>
           Отчеты
         </div>
@@ -46,9 +39,7 @@ const NavBar = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
         className={ classNames([styles.item], { [styles.active]: currentActive === 'Users' }) }
         onClick={ () => setNewActive('Users') }
       >
-        <svg width='21' height='25' fill='currentColor' viewBox={menuIcon3.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${menuIcon3.id}`} />
-        </svg>
+        <UsersLogo />
         <div className={ styles.title }>
           Пользователи
         </div>
@@ -58,9 +49,7 @@ const NavBar = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
         className={ classNames([styles.item], { [styles.active]: currentActive === 'USPD' }) }
         onClick={ () => setNewActive('USPD') }
       >
-        <svg width='21' height='25' fill='currentColor' viewBox={mainUspd.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${mainUspd.id}`} />
-        </svg>
+        <USPDLogo />
         <div className={ styles.title }>
           УСПД
         </div>
