@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MenuBar from 'components/menuBar';
-import MegafonLogo from 'logos/megafonLogo';
-import GitHubLogo from 'logos/githubLogo';
-import ConfluenceLogo from 'logos/confluenceLogo';
+import { MegaIoTLogo, GitHubLogo, ConfluenceLogo } from 'components/design-system/logotypes';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 
@@ -14,7 +12,7 @@ const Home = ({ activeNameOfComponent }) => {
     <section className={styles.home}>
       <aside className={styles.aside}>
         <div className={styles.megafonLogo}>
-          <MegafonLogo />
+          <MegaIoTLogo />
         </div>
         <div className={styles.menuBar}>
           <MenuBar
