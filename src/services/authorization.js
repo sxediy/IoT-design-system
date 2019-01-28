@@ -3,29 +3,18 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 
+const mapStateToProps = ({ auth }) => ({ isAuthorized: Boolean(auth.username) });
+
 const Athorization = (WrappedComponent) => {
-  class WithAuthorization extends React.Component {
-    static propTypes = {
-      isAuthorized: PropTypes.bool
-    };
+  const WithAuthorization = (props) =>
+    (props.isAuthorized ? <WrappedComponent {...props}/> : <Redirect to='/login' />);
 
-    render() {
-      const { isAuthorized } = this.props;
-      if (!isAuthorized) {
-        return <Redirect to='/login' />;
-      }
-
-      return <WrappedComponent {...this.props}/>;
-    }
-  }
-
-  const mapStateToProps = ({ auth }) => (
-    {
-      isAuthorized: Boolean(auth.username)
-    }
-  );
+  WithAuthorization.propTypes = {
+    isAuthorized: PropTypes.bool
+  };
 
   return connect(mapStateToProps)(WithAuthorization);
 };
+
 
 export default Athorization;
