@@ -7,87 +7,80 @@ import styles from './login.less';
 
 const FormItem = Form.Item;
 
-class NormalLoginForm extends React.Component {
-  static propTypes = {
-    form: PropTypes.object,
-    validateFields: PropTypes.func,
-    isAuthorized: PropTypes.bool,
-    logIn: PropTypes.func.isRequired,
-    error: PropTypes.string
-  }
 
-  handleSubmit = e => {
+const NormalLoginForm = ({
+  form: { getFieldDecorator },
+  form: { validateFields },
+  isAuthorized,
+  logIn,
+  error
+}) => {
+  if (isAuthorized) return <Redirect to='/' />;
+
+  const handleSubmit = e => {
     e.preventDefault();
-    this.props.form.validateFields((err, values) => {
+    validateFields((err, { userName, password }) => {
       if (!err) {
-        console.log('Received values of form: ', values);
-        this.props.logIn(values.userName, values.password);
+        console.table([`Вы только что ввели логин: ${userName}`, `Вы только что ввели пароль: ${password}`]);
+        logIn(userName, password);
       }
     });
   };
-  render() {
-    const { isAuthorized } = this.props;
 
-    if (isAuthorized) {
-      return <Redirect to='/' />;
-    }
+  const InputUsername = (
+    <Input
+      prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+      placeholder="Username"
+    />
+  );
 
-    const { getFieldDecorator } = this.props.form;
-    const { error } = this.props;
+  const DecoratorUsername = getFieldDecorator(
+    'userName', { rules: [{ required: true, message: 'Please input your username!' }] }
+  )(InputUsername);
 
+  const InputPassword = (
+    <Input
+      prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+      type="password"
+      placeholder="Password"
+    />
+  );
 
-    const InputUsername = (
-      <Input
-        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-        placeholder="Username"
-      />
-    );
-    const DecoratorUsername = getFieldDecorator(
-      'userName', { rules: [{ required: true, message: 'Please input your username!' }] }
-    )(InputUsername);
-
-    const InputPassword = (
-      <Input
-        prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-        type="password"
-        placeholder="Password"
-      />
-    );
-    const DecoratorPassword = getFieldDecorator(
-      'password', { rules: [{ required: true, message: 'Please input your Password!' }] }
-    )(InputPassword);
+  const DecoratorPassword = getFieldDecorator(
+    'password', { rules: [{ required: true, message: 'Please input your Password!' }] }
+  )(InputPassword);
 
 
-    return (
-      <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
-        <FormItem>
-          {DecoratorUsername}
-        </FormItem>
-        <FormItem>
-          {DecoratorPassword}
-        </FormItem>
-        <FormItem>
-          {/* {getFieldDecorator('remember', {
-            valuePropName: 'checked',
-            initialValue: true
-          })} */}
-
-          <Button
-            type="primary"
-            htmlType="submit"
-            className={styles.loginFormButton}
-          >
+  return (
+    <Form onSubmit={handleSubmit} className={styles.loginForm}>
+      <FormItem>
+        {DecoratorUsername}
+      </FormItem>
+      <FormItem>
+        {DecoratorPassword}
+      </FormItem>
+      <FormItem>
+        <Button
+          type="primary"
+          htmlType="submit"
+          className={styles.loginFormButton}
+        >
             Log in
-          </Button>
-        </FormItem>
-        <div className={styles.errorMessage} hidden={!error}>
-          {error}
-        </div>
-      </Form>
-    );
-  }
-}
+        </Button>
+      </FormItem>
+      <div className={styles.errorMessage} hidden={!error}>
+        {error}
+      </div>
+    </Form>
+  );
+};
 
+NormalLoginForm.propTypes = {
+  form: PropTypes.object,
+  isAuthorized: PropTypes.bool,
+  logIn: PropTypes.func.isRequired,
+  error: PropTypes.string
+};
 
 const mapStateToProps = ({ auth }) => (
   {
@@ -103,4 +96,6 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
+
+
 export default connect(mapStateToProps, mapDispatchToProps)(WrappedNormalLoginForm);
