@@ -3,6 +3,7 @@ import download from 'icons/download_32.svg';
 import counter from 'icons/Counter.svg';
 import mega from 'icons/Mega-logotype.svg';
 import alert from 'icons/alert_green.svg';
+import profile from 'icons/profile.svg';
 import { resources } from 'components/gkh-components/Logo/fakeData';
 
 
@@ -35,4 +36,9 @@ export const MegaLogo = () =>
 export const BellLogo = () =>
   <svg width='21' height='25' fill='currentColor' viewBox={alert.viewBox} >
     <use xlinkHref={`#${alert.id}`} />
+  </svg>;
+
+export const ProfileLogo = () =>
+  <svg width='21' height='25' fill='currentColor' viewBox={profile.viewBox} >
+    <use xlinkHref={`#${profile.id}`} />
   </svg>;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown } from 'antd';
 import classNames from 'classnames';
-import profile from 'icons/profile.svg';
+import { ProfileLogo } from 'components/gkh-components/Logo/Logo';
 import { renderMenu } from 'components/gkh-components/AppHeader/renderMenu';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
@@ -18,9 +18,7 @@ const ProfileWithDropdown = ({ initActiveElement, setNewActive: setNewActiveProp
         className={ classNames([styles.bellAndProfile], { [styles.active]: currentActive === 'Profile' }) }
         onClick={ () => setNewActive('Profile') }
       >
-        <svg width='21' height='25' fill='currentColor' viewBox={profile.viewBox} className={styles.icon} >
-          <use xlinkHref={`#${profile.id}`} />
-        </svg>
+        <ProfileLogo />
       </div>
     </Dropdown>
   );
