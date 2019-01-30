@@ -22,15 +22,15 @@ const MenuBar = ({ activeNameOfComponent, changeUIContainer }) => {
         <Menu.Item key="resourcesTabs">Табы ресурсов</Menu.Item>
         <Menu.Item key="counterTabs">Табы счётчиков</Menu.Item>
         <Menu.Item key="resourceNameAndUnit">Ресурсы</Menu.Item>
-        <Menu.Item key="appHeaderBell">Звоночек</Menu.Item>
+        <Menu.Item key="bell">Звоночек</Menu.Item>
         <Menu.Item key="notifications">Уведомления всплывающие</Menu.Item>
       </SubMenu>
       <SubMenu key="universal" title="Уникальные компоненты">
         <Menu.Item key="pricingTable">Таблица ресурсов</Menu.Item>
         <Menu.Item key="pricingTableCards">Карточки ресурсов</Menu.Item>
         <Menu.Item key="appHeader">Верхняя панель приложения</Menu.Item>
-        <Menu.Item key="appHeaderNavBar">Верхняя панель навигации</Menu.Item>
-        <Menu.Item key="appHeaderProfile">Иконка профиля с дропдауном</Menu.Item>
+        <Menu.Item key="navBar">Верхняя панель навигации</Menu.Item>
+        <Menu.Item key="profileWithDropdown">Иконка профиля с дропдауном</Menu.Item>
         <Menu.Item key="rowTimeFilter">Фильтр времени</Menu.Item>
         <Menu.Item key="buttonWithDoubleMenu">Кнопка с двойным выпадающим списком</Menu.Item>
         <Menu.Item key="buttonWithTripleMenu">Кнопка с тройным выпадающим списком</Menu.Item>
