@@ -8,7 +8,7 @@ export const importString = `
 `;
 
 export const description = `
-   Селектор в виде дерева
+   Селектор в виде дерева.
 `;
 
 export const code = `

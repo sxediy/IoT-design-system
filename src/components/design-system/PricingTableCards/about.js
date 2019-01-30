@@ -8,7 +8,7 @@ export const importString = `
 `;
 
 export const description = `
-   Карточки с данными показателей счётчика
+  Компонент карточки с краткими сведениями показателей счетчика.
 `;
 
 export const code = `

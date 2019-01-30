@@ -9,7 +9,7 @@ export const importString = `
 `;
 
 export const description = `
-   "Умный" чекбокс с кнопкой
+   "Умный" чекбокс с кнопкой.
 `;
 
 export const code = `

@@ -9,7 +9,7 @@ export const importString = `
 `;
 
 export const description = `
-    Кнопка с двухуровневым выпадающим списком
+    Кнопка с двойным выпадающим списком.
 `;
 
 export const code = `

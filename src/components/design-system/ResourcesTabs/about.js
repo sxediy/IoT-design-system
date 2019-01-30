@@ -9,7 +9,7 @@ export const importString = `
 `;
 
 export const description = `
-    Табы с названиями показателей счетчиков
+  Компонент, отвечающий за переключения между данными ресурсов учёта.
 `;
 
 export const code = `

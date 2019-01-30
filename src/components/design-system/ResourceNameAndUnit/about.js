@@ -9,7 +9,7 @@ export const importString = `
 `;
 
 export const description = `
-    Шапки таблиц с названиями и еденицами измерения ресурсов
+  Шапки таблиц с названиями и единицами измерения ресурсов.
 `;
 
 export const code = `

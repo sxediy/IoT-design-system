@@ -9,7 +9,7 @@ export const importString = `
 `;
 
 export const description = `
-    Кнопка с тройным выпадающим списком
+    Кнопка с тройным выпадающим списком.
 `;
 
 export const code = `
