@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import PropTypes from 'prop-types';
-import styles from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DoubleMenu.less';
+
 
 const { SubMenu } = Menu;
 
@@ -20,7 +20,6 @@ const DoubleMenu = ({ linesData, callbackFunction }) => {
 
   return (
     <Menu
-      className={styles.formatsMenu}
       onClick={callbackFunction}
     >
       {

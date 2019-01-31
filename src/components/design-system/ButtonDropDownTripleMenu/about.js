@@ -2,10 +2,11 @@
 // Эти данные  исключительно для данного приложения (для UI дизайн-системы)
 
 
-export const title = 'ButtonWithTripleMenu';
+export const title = 'ButtonDropDownTripleMenu';
 
 export const importString = `
-  import { ButtonWithTripleMenu } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/DropdownWithTripleMenu';
+  import { ButtonDropDownTripleMenu } from 
+  'components/gkh-components/Buttons/ButtonDropDownTripleMenu/ButtonDropDownTripleMenu';
 `;
 
 export const description = `
@@ -13,7 +14,7 @@ export const description = `
 `;
 
 export const code = `
-  <DropdownWithTripleMenu
+  <ButtonDropDownTripleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     thirdLine={ (...args) =>

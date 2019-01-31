@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Menu } from 'antd';
-import styles from 'components/gkh-components/Buttons/ButtonWithTripleMenu/TripleMenu.less';
 
 
 const { SubMenu } = Menu;
@@ -23,7 +22,7 @@ const TripleMenu = ({ linesData }) => {
 
 
   return (
-    <Menu className={styles.formatsMenu} >
+    <Menu >
       {firstLineData.map(firstitem => firstMenuItems(firstitem))}
     </Menu>
   );

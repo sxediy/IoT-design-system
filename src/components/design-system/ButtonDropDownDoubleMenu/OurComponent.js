@@ -1,7 +1,8 @@
 import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { DropdownWithDoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DropdownWithDoubleMenu';
+// eslint-disable-next-line
+import { ButtonDropDownDoubleMenu } from 'components/gkh-components/Buttons/ButtonDropDownDoubleMenu/ButtonDropDownDoubleMenu';
 
 import {
   firstLineData,
@@ -9,13 +10,13 @@ import {
   buttonName,
   LogoComponent,
   callbackFunction,
-} from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/fakeData';
+} from 'components/gkh-components/Buttons/ButtonDropDownDoubleMenu/fakeData';
 
 import * as data from './about';
 
 
 const OurComponent = () =>
-  <DropdownWithDoubleMenu
+  <ButtonDropDownDoubleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     buttonName={ buttonName }

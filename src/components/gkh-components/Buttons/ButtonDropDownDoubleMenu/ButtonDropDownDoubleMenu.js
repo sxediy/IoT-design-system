@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown } from 'antd';
-import { DoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DoubleMenu';
-import styles from 'components/gkh-components/Buttons/Buttons.less';
+import { DoubleMenu } from 'components/gkh-components/Menu/DoubleMenu';
+import styles from './ButtonDropDownDoubleMenu.less';
 
-const DropdownWithDoubleMenu = ({
+const ButtonDropDownDoubleMenu = ({
   getFirstLineData,
   buttonName,
   LogoComponent,
@@ -32,7 +32,7 @@ const DropdownWithDoubleMenu = ({
   );
 };
 
-DropdownWithDoubleMenu.propTypes = {
+ButtonDropDownDoubleMenu.propTypes = {
   getFirstLineData: PropTypes.func,
   buttonName: PropTypes.string,
   LogoComponent: PropTypes.func,
@@ -40,4 +40,4 @@ DropdownWithDoubleMenu.propTypes = {
 };
 
 
-export { DropdownWithDoubleMenu };
+export { ButtonDropDownDoubleMenu };

@@ -2,10 +2,11 @@
 // Эти данные  исключительно для данного приложения (для UI дизайн-системы)
 
 
-export const title = 'ButtonWithDoubleMenu';
+export const title = 'ButtonDropDownDoubleMenu';
 
 export const importString = `
-  import { DropdownWithDoubleMenu } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/DropdownWithMenu';
+  import { ButtonDropDownDoubleMenu } from 
+  'components/gkh-components/Buttons/ButtonDropDownDoubleMenu/ButtonDropDownDoubleMenu';
 `;
 
 export const description = `
@@ -13,7 +14,7 @@ export const description = `
 `;
 
 export const code = `
-  <DropdownWithDoubleMenu
+  <ButtonDropDownDoubleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     buttonName={ buttonName }

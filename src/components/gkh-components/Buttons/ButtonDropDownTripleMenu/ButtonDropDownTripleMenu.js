@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Dropdown } from 'antd';
-import { TripleMenu } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/TripleMenu';
-import styles from 'components/gkh-components/Buttons/Buttons.less';
+import { TripleMenu } from 'components/gkh-components/Menu/TripleMenu';
+import styles from './ButtonDropDownTripleMenu.less';
 
-const DropdownWithTripleMenu = ({
+const ButtonDropDownTripleMenu = ({
   buttonName,
   LogoComponent,
   ...linesData,
@@ -30,11 +30,11 @@ const DropdownWithTripleMenu = ({
   );
 };
 
-DropdownWithTripleMenu.propTypes = {
+ButtonDropDownTripleMenu.propTypes = {
   buttonName: PropTypes.string,
   LogoComponent: PropTypes.func,
   linesData: PropTypes.object,
 };
 
 
-export { DropdownWithTripleMenu };
+export { ButtonDropDownTripleMenu };

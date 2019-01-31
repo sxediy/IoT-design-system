@@ -1,7 +1,8 @@
 import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
 
-import { DropdownWithTripleMenu } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/DropdownWithTripleMenu';
+// eslint-disable-next-line
+import { ButtonDropDownTripleMenu } from 'components/gkh-components/Buttons/ButtonDropDownTripleMenu/ButtonDropDownTripleMenu';
 import SmartCheckboxWithButton from
   'components/gkh-components/Checkbox/SmartCheckboxWithButton/SmartCheckboxWithButton';
 
@@ -13,13 +14,13 @@ import {
   LogoComponent,
   options,
   onSubmit,
-} from 'components/gkh-components/Buttons/ButtonWithTripleMenu/fakeData';
+} from 'components/gkh-components/Buttons/ButtonDropDownTripleMenu/fakeData';
 
 import * as data from './about';
 
 
 const OurComponent = () =>
-  <DropdownWithTripleMenu
+  <ButtonDropDownTripleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     thirdLine={ (...args) =>
