@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import downloadSVG from 'icons/download_32.svg';
 import megaSVG from 'icons/Mega-logotype.svg';
 
@@ -41,8 +42,8 @@ export const USPDLogo = () =>
     <use xlinkHref={`#${USPDSVG.id}`} />
   </svg>;
 
-export const BellLogo = () =>
-  <svg width='21' height='25' fill='currentColor' viewBox={alertSVG.viewBox} >
+export const BellLogo = ({ color } = 'black') =>
+  <svg width='21' height='25' fill='currentColor' color={color} viewBox={alertSVG.viewBox} >
     <use xlinkHref={`#${alertSVG.id}`} />
   </svg>;
 
@@ -51,3 +52,6 @@ export const ProfileLogo = () =>
     <use xlinkHref={`#${profileSVG.id}`} />
   </svg>;
 
+BellLogo.propTypes = {
+  color: PropTypes.string,
+};
