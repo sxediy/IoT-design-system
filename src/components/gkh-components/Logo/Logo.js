@@ -12,7 +12,7 @@ import profileSVG from 'icons/profile.svg';
 
 
 export const DownloadLogo = () =>
-  <svg viewBox={downloadSVG.viewBox} width={21} height={21} >
+  <svg width='21' height='25' fill='currentColor'viewBox={downloadSVG.viewBox} >
     <use xlinkHref={`#${downloadSVG.id}`} />
   </svg>;
 

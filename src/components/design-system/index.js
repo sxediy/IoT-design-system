@@ -13,6 +13,7 @@ import buttonWithDoubleMenu from 'design-system/ButtonWithDoubleMenu/OurComponen
 import buttonWithTripleMenu from 'design-system/ButtonWithTripleMenu/OurComponent';
 import smartCheckboxWithButton from 'design-system/SmartCheckboxWithButton/OurComponent';
 import treeSelector from 'design-system/TreeSelector/OurComponent';
+import logotypes from 'design-system/Logotypes/OurComponent';
 
 const obj = {
   pricingTableCards,
@@ -30,6 +31,7 @@ const obj = {
   buttonWithTripleMenu,
   smartCheckboxWithButton,
   treeSelector,
+  logotypes,
 };
 
 export default obj;
