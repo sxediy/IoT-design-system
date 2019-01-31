@@ -12,11 +12,16 @@ export const description = `
 `;
 
 export const code = `
-  <ProfileWithDropdown />;
+  <ProfileWithDropdown
+    profileElements={ profileElements }
+  />;
 `;
 
 
 export const props = {
-
+  profileElements: {
+    type: 'array',
+    description: 'Список названий вкладок выпадающего меню под иконкой профиля'
+  }
 };
 

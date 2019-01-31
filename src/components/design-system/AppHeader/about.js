@@ -15,6 +15,7 @@ export const code = `
   <AppHeader
     initActiveElement={ initActiveElement1 }
     navBarElements={ navBarElements }
+    profileElements={ profileElements }
   />;
 `;
 
@@ -28,5 +29,9 @@ export const props = {
     type: 'array',
     description: 'Список элементов с данными для панели навигации'
   },
+  profileElements: {
+    type: 'array',
+    description: 'Список названий вкладок выпадающего меню под иконкой профиля'
+  }
 };
 

@@ -6,14 +6,13 @@ import { ProfileLogo } from 'components/gkh-components/Logo/Logo';
 import { renderMenu } from 'components/gkh-components/AppHeader/renderMenu';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
-
-const ProfileWithDropdown = ({ initActiveElement, setNewActive: setNewActiveProps }) => {
+const ProfileWithDropdown = ({ initActiveElement, setNewActive: setNewActiveProps, profileElements }) => {
   const [currentActiveHook, setNewActiveHook] = useState(initActiveElement);
   const currentActive = setNewActiveProps ? initActiveElement : currentActiveHook;
   const setNewActive = setNewActiveProps || setNewActiveHook;
 
   return (
-    <Dropdown placement='bottomRight' overlay={ renderMenu() } >
+    <Dropdown placement='bottomRight' overlay={ renderMenu(profileElements) } >
       <div
         className={ classNames([styles.bellAndProfile], { [styles.active]: currentActive === 'Profile' }) }
         onClick={ () => setNewActive('Profile') }
@@ -27,6 +26,7 @@ const ProfileWithDropdown = ({ initActiveElement, setNewActive: setNewActiveProp
 ProfileWithDropdown.propTypes = {
   initActiveElement: PropTypes.string,
   setNewActive: PropTypes.func,
+  profileElements: PropTypes.array,
 };
 
 
