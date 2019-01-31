@@ -33,6 +33,7 @@ const MenuBar = ({ activeNameOfComponent, changeUIContainer }) => {
         <Menu.Item key="navBar">Верхняя панель навигации</Menu.Item>
         <Menu.Item key="profileWithDropdown">Иконка профиля с дропдауном</Menu.Item>
         <Menu.Item key="rowTimeFilter">Фильтр времени</Menu.Item>
+        <Menu.Item key="buttonDropDownSingleMenu">Кнопка с выпадающим списком</Menu.Item>
         <Menu.Item key="buttonDropDownDoubleMenu">Кнопка с двойным выпадающим списком</Menu.Item>
         <Menu.Item key="buttonDropDownTripleMenu">Кнопка с тройным выпадающим списком</Menu.Item>
         <Menu.Item key="smartCheckboxWithButton">Чекбокс с кнопкой</Menu.Item>
