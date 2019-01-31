@@ -7,7 +7,7 @@ import {
   firstLineData,
   secondLineData,
   buttonName,
-  logo,
+  LogoComponent,
   callbackFunction,
 } from 'components/gkh-components/Buttons/ButtonWithDoubleMenu/fakeData';
 
@@ -19,7 +19,7 @@ const OurComponent = () =>
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     buttonName={ buttonName }
-    logo={ logo }
+    LogoComponent={ LogoComponent }
     callbackFunction={ callbackFunction }
   />;
 

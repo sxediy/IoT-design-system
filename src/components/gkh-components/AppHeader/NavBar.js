@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import * as logos from 'components/gkh-components/Logo/Logo';
+import * as logotypes from 'components/gkh-components/Logo/Logo';
 import classNames from 'classnames';
 import styles from 'components/gkh-components/AppHeader/styles.less';
 
@@ -18,7 +18,7 @@ const NavBar = ({ initActiveElement, navBarElements, setNewActive: setNewActiveP
           className={classNames(styles.item, { [styles.active]: currentActive === element.name })}
           onClick={() => setNewActive(element.name)}
         >
-          {logos[element.logoName]}
+          {logotypes[element.logoName]()}
           <div className={styles.title}>{element.title}</div>
         </div>
       )}

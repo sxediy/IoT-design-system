@@ -10,7 +10,7 @@ import {
   firstLineData,
   secondLineData,
   buttonName,
-  logo,
+  LogoComponent,
   options,
   onSubmit,
 } from 'components/gkh-components/Buttons/ButtonWithTripleMenu/fakeData';
@@ -31,7 +31,7 @@ const OurComponent = () =>
       />
     }
     buttonName={ buttonName }
-    logo={ logo }
+    LogoComponent={ LogoComponent }
   />;
 
 

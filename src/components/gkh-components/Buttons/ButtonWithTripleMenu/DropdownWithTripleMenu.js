@@ -7,7 +7,7 @@ import styles from 'components/gkh-components/Buttons/Buttons.less';
 
 const DropdownWithTripleMenu = ({
   buttonName,
-  logo,
+  LogoComponent,
   ...linesData,
 }) => {
   const renderMenu = (
@@ -23,7 +23,7 @@ const DropdownWithTripleMenu = ({
       trigger={ ['click'] }
     >
       <div className={styles.buttonWrapper}>
-        {logo}
+        <LogoComponent />
         <span className={styles.buttonName}>{buttonName}</span>
       </div>
     </Dropdown>
@@ -32,7 +32,7 @@ const DropdownWithTripleMenu = ({
 
 DropdownWithTripleMenu.propTypes = {
   buttonName: PropTypes.string,
-  logo: PropTypes.object,
+  LogoComponent: PropTypes.func,
   linesData: PropTypes.object,
 };
 

@@ -7,7 +7,7 @@ import styles from 'components/gkh-components/Buttons/Buttons.less';
 const DropdownWithDoubleMenu = ({
   getFirstLineData,
   buttonName,
-  logo,
+  LogoComponent,
   callbackFunction,
   ...linesData,
 }) => {
@@ -25,7 +25,7 @@ const DropdownWithDoubleMenu = ({
       trigger={['click']}
     >
       <div onClick={getFirstLineData} className={styles.buttonWrapper}>
-        {logo}
+        <LogoComponent />
         <span className={styles.buttonName}>{buttonName}</span>
       </div>
     </Dropdown>
@@ -35,7 +35,7 @@ const DropdownWithDoubleMenu = ({
 DropdownWithDoubleMenu.propTypes = {
   getFirstLineData: PropTypes.func,
   buttonName: PropTypes.string,
-  logo: PropTypes.object,
+  LogoComponent: PropTypes.func,
   callbackFunction: PropTypes.func
 };
 

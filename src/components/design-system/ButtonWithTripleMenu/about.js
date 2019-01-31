@@ -25,8 +25,8 @@ export const code = `
       />
     }
     buttonName={ buttonName }
-    logo={ logo }
-  />
+    LogoComponent={ LogoComponent }
+  />;
 `;
 
 
@@ -47,9 +47,9 @@ export const props = {
     type: 'string',
     description: 'Название кнопки',
   },
-  logo: {
-    type: 'string',
-    description: 'Логотип/иконка',
+  LogoComponent: {
+    type: 'function',
+    description: 'Компонент логотипа/иконки',
   }
 };
 
