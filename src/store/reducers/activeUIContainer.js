@@ -1,5 +1,5 @@
 
-const activeUIContainer = (state = { activeNameOfComponent: 'rowTimeFilter' }, action) => {
+const activeUIContainer = (state = { activeNameOfComponent: 'button' }, action) => {
 //   console.log('Reducer activeUIContainer 1)state 2)action', state, action);
   switch (action.type) {
     case 'changeUIContainer':

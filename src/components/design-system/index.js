@@ -9,6 +9,7 @@ import profileWithDropdown from 'design-system/ProfileWithDropdown/OurComponent'
 import rowTimeFilter from 'design-system/RowTimeFilter/OurComponent';
 import resourceNameAndUnit from 'design-system/ResourceNameAndUnit/OurComponent';
 import notifications from 'design-system/Notifications/OurComponent';
+import button from 'design-system/Button/OurComponent';
 import buttonDropDownSingleMenu from 'design-system/ButtonDropDownSingleMenu/OurComponent';
 import buttonDropDownDoubleMenu from 'design-system/ButtonDropDownDoubleMenu/OurComponent';
 import buttonDropDownTripleMenu from 'design-system/ButtonDropDownTripleMenu/OurComponent';
@@ -28,6 +29,7 @@ const obj = {
   rowTimeFilter,
   resourceNameAndUnit,
   notifications,
+  button,
   buttonDropDownSingleMenu,
   buttonDropDownDoubleMenu,
   buttonDropDownTripleMenu,
