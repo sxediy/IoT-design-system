@@ -23,7 +23,8 @@
         "services": "./src/services",
         "store": "./src/store",
         "utils": "./src/utils",
-        "variables": "./src/variables.less"
+        "variables": "./src/variables.less",
+        "src": "./src"
       }
     }],
     "transform-object-rest-spread"
