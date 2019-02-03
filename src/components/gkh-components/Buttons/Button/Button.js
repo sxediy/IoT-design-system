@@ -11,20 +11,20 @@ const Button = ({
   textColor: initialTextColor = ivan.fullWhite,
   isDarkness,
   callbackFunction,
-  ...args
+  ...remainProps
 }) => {
   const [currentBackground, setNewBackground] = useState(initialBackground);
   const [currentBoxShadow, setNewBoxShadow] = useState('none');
   const [currentTextColor, setNewTextColor] = useState(initialTextColor);
 
   const [shellStyle, textStyle] = styleHelper({
-    ...args,
+    initialBackground,
+    initialTextColor,
+    isDarkness,
     currentBackground,
     currentBoxShadow,
     currentTextColor,
-    isDarkness,
-    initialBackground,
-    initialTextColor
+    ...remainProps,
   });
 
   const forHandlers = {

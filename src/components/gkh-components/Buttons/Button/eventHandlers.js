@@ -11,46 +11,31 @@ const makeDownBackground = (isDarkness) => {
   return ivan.buttonDown;
 };
 
-
-const onMouseDown = ({
-  isDarkness,
-  setNewBackground,
-  setNewBoxShadow,
-  setNewTextColor
-}) => () => {
+// eslint-disable-next-line
+const onMouseDown = ({ isDarkness, initialBoxShadow, setNewBackground, setNewBoxShadow, setNewTextColor }) => () => {
   const downBackground = makeDownBackground(isDarkness);
   setNewBackground(downBackground);
+  setNewBoxShadow(initialBoxShadow);
+  setNewTextColor(ivan.fullWhite);
+};
+
+// eslint-disable-next-line
+const onMouseUp = ({ initialBackground, setNewBackground, initialTextColor, setNewBoxShadow, setNewTextColor }) => () => {
+  setNewBackground(initialBackground);
+  setNewBoxShadow('none');
+  setNewTextColor(initialTextColor);
+};
+
+// eslint-disable-next-line
+const onMouseOver = ({initialBackground, setNewBackground, setNewBoxShadow, setNewTextColor }) => () => {
+  const hoverBackground = makeHoverBackground(initialBackground);
+  setNewBackground(hoverBackground);
   setNewBoxShadow('none');
   setNewTextColor(ivan.fullWhite);
 };
 
 // eslint-disable-next-line
-const onMouseUp = ({ initialBackground, setNewBackground, initialTextColor, setNewTextColor, setNewBoxShadow }) => () => {
-  setNewBackground(initialBackground);
-  setNewTextColor(initialTextColor);
-  setNewBoxShadow('none');
-};
-
-const onMouseOver = ({
-  initialBackground,
-  setNewBackground,
-  initialBoxShadow,
-  setNewBoxShadow,
-  setNewTextColor
-}) => () => {
-  const hoverBackground = makeHoverBackground(initialBackground);
-  setNewBackground(hoverBackground);
-  setNewBoxShadow(initialBoxShadow);
-  setNewTextColor(ivan.fullWhite);
-};
-
-const onMouseOut = ({
-  initialBackground,
-  setNewBackground,
-  setNewBoxShadow,
-  initialTextColor,
-  setNewTextColor
-}) => () => {
+const onMouseOut = ({ initialBackground, initialTextColor, setNewBackground, setNewBoxShadow, setNewTextColor }) => () => {
   setNewBackground(initialBackground);
   setNewBoxShadow('none');
   setNewTextColor(initialTextColor);

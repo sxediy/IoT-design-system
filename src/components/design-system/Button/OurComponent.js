@@ -8,7 +8,7 @@ import {
   isDarkness,
   // isDisabled,
   background,
-  // boxShadow,
+  boxShadow,
   border,
   textColor,
   // textSize,
@@ -25,7 +25,7 @@ const OurComponent = () =>
     isDarkness= { isDarkness }
     // isDisabled={ isDisabled }
     background = { background }
-    // boxShadow= { boxShadow }
+    boxShadow= { boxShadow }
     border={ border }
     textColor = { textColor }
     // textSize = { textSize }
