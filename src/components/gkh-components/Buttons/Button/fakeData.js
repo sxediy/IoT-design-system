@@ -1,7 +1,7 @@
 import * as ivan from 'src/colors';
 
 
-const buttonName = 'Простая кнопка';
+const buttonName = 'Кнопка';
 const size = 'l';
 const textSize = '24px';
 
@@ -15,7 +15,7 @@ const isDisabled = true;
 
 
 const boxShadow = '1px 1px 10px rgba(51, 51, 51, 0.2)';
-const border = `1px solid ${ivan.fullWhite}`;
+const border = `1px solid ${ivan.fury}`;
 
 
 export {

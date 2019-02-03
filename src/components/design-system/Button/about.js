@@ -14,17 +14,65 @@ export const description = `
 
 export const code = `
   <Button
-    buttonName={ buttonName }
-    size={ size }
-    isDarkness= { isDarkness }
-    isDisabled={ isDisabled }
-    background = { background }
-    boxShadow= { boxShadow }
-    border={ border }
-    textColor = { textColor }
-    textSize = { textSize }
+    buttonName={ '1' }
+    size={ 'l' }
+    border = {'1px dotted fury'}
+    background = { green }
     callbackFunction= { callbackFunction }
-  />;
+  />
+  <Button
+    buttonName={ '2' }
+    border = {'1px dotted fury'}
+    background = { green }
+    isDisabled={ true }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '3' }
+    size={ 's' }
+    border = {'1px dotted fury'}
+    background = { violet }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '4' }
+    border = {'1px dotted fury'}
+    background = { violet }
+    isDisabled={ true }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '5' }
+    isDarkness= { true }
+    background = { freshAsphalt }
+    textColor = { fullWhite }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '6' }
+    isDarkness= { true }
+    isDisabled={ true }
+    background = { freshAsphalt }
+    textColor = { fullWhite }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '7' }
+    isDarkness= { true }
+    border = {'1px dotted fury'}
+    background = { fullWhite }
+    textColor = { freshAsphalt }
+    callbackFunction= { callbackFunction }
+  />
+  <Button
+    buttonName={ '8' }
+    isDarkness= { true }
+    isDisabled={ true }
+    border = {'1px dotted fury'}
+    background = { fullWhite }
+    textColor = { freshAsphalt }
+    callbackFunction= { callbackFunction }
+  />
 `;
 
 
@@ -61,7 +109,7 @@ export const props = {
   border: {
     type: 'string',
     description: 'Стиль границы кнопки',
-    default: 'none',
+    default: '1px solid fullWhite',
   },
   textColor: {
     type: 'string',
