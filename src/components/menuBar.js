@@ -15,7 +15,7 @@ const MenuBar = ({ activeNameOfComponent, changeUIContainer }) => {
       onClick={handleClick}
       style={{ flexGrow: 1 }}
       defaultSelectedKeys={[activeNameOfComponent]}
-      defaultOpenKeys={['universal']}
+      defaultOpenKeys={['basic']}
       mode="inline"
     >
       <SubMenu key="basic" title="Базовые компоненты">

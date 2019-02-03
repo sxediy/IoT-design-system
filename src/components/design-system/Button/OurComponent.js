@@ -4,11 +4,13 @@ import constructFromTemplates from 'services/constructFromTemplates';
 import { Button } from 'components/gkh-components/Buttons/Button/Button';
 import {
   buttonName,
-  size,
-  background,
-  isBordered,
+  // size,
+  isDarkness,
   // isDisabled,
-  // textColor,
+  background,
+  // boxShadow,
+  border,
+  textColor,
   // textSize,
   callbackFunction,
 } from 'components/gkh-components/Buttons/Button/fakeData';
@@ -19,11 +21,13 @@ import * as data from './about';
 const OurComponent = () =>
   <Button
     buttonName={ buttonName }
-    size={ size }
-    background = { background }
-    isBordered={ isBordered }
+    // size={ size }
+    isDarkness= { isDarkness }
     // isDisabled={ isDisabled }
-    // textColor = { textColor }
+    background = { background }
+    // boxShadow= { boxShadow }
+    border={ border }
+    textColor = { textColor }
     // textSize = { textSize }
     callbackFunction= { callbackFunction }
   />;

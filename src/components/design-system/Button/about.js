@@ -16,7 +16,13 @@ export const code = `
   <Button
     buttonName={ buttonName }
     size={ size }
+    isDarkness= { isDarkness }
+    isDisabled={ isDisabled }
     background = { background }
+    boxShadow= { boxShadow }
+    border={ border }
+    textColor = { textColor }
+    textSize = { textSize }
     callbackFunction= { callbackFunction }
   />;
 `;
@@ -30,10 +36,42 @@ export const props = {
   size: {
     type: 'function',
     description: 'Размер кнопки',
+    default: 'm',
+  },
+  isDarkness: {
+    type: 'boolean',
+    // eslint-disable-next-line
+    description: 'Светлая или темная тема приложения (влияет на цвет зажатой и "выключенной" кнопки, прозрачность цвета текста выключенной кнопки)',
+    default: 'false'
+  },
+  isDisabled: {
+    type: 'boolean',
+    description: 'Является ли кнопка неактивным элементом страницы, исходя из бизнес логики ?',
+    default: 'false',
   },
   background: {
     type: 'string',
     description: 'Цвет фона',
+  },
+  boxShadow: {
+    type: 'string',
+    description: 'Стиль тени',
+    default: 'none',
+  },
+  border: {
+    type: 'string',
+    description: 'Стиль границы кнопки',
+    default: 'none',
+  },
+  textColor: {
+    type: 'string',
+    description: 'Цвет текста',
+    default: 'fullWhite',
+  },
+  textSize: {
+    type: 'string',
+    description: 'Размер текста',
+    default: '15px'
   },
   callbackFunction: {
     type: 'function',

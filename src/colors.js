@@ -1,6 +1,6 @@
 
 export const fullBlack = '#000000';
-export const fullwhite = '#FFFFFF';
+export const fullWhite = '#FFFFFF';
 export const freshAsphalt = '#333333';
 export const SPbSky2 = '#D8D8D8';
 export const SPbSky1 = '#EDEDED';

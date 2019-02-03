@@ -1,12 +1,25 @@
 import * as ivan from 'src/colors';
 
+const makeDisableBackground = (isDarkness, initialBackground) => {
+  if (!isDarkness) return ivan.SPbSky2;
+  if (isDarkness && initialBackground === ivan.freshAsphalt) return ivan.freshAsphalt;
+  return ivan.SPbSky1;
+};
+
 const styleHelper = ({
   size = 'm',
-  isBordered = false,
+  border = 'none',
   isDisabled = false,
   textSize: fontSize = '15px',
-  textColor: color = ivan.fullwhite,
-}, currentBackground) => {
+  currentBackground,
+  currentBoxShadow,
+  initialTextColor,
+  currentTextColor,
+  isDarkness,
+  initialBackground,
+}) => {
+// eslint-disable-next-line
+
   const height = {
     s: '32px',
     m: '48px',
@@ -19,17 +32,35 @@ const styleHelper = ({
     l: '200px',
   }[size];
 
-  const border = isBordered ? '1px solid #FFFFFF' : undefined;
-  const backgroundColor = isDisabled ? ivan.SPbSky2 : currentBackground;
+
+  const backgroundColor = isDisabled ?
+    makeDisableBackground(isDarkness, initialBackground) :
+    currentBackground;
+
+  const boxShadow = isDisabled ? 'none' : currentBoxShadow;
+  const cursor = isDisabled ? 'default' : 'pointer';
 
   const shellStyle = {
     height,
     width,
     backgroundColor,
+    boxShadow,
     border,
+    borderRadius: '100px',
+    padding: '2%',
+    cursor,
   };
 
-  const textStyle = { fontSize, color };
+  const opacity = isDisabled && isDarkness ? '0.5' : '1';
+  const color = isDisabled ? initialTextColor : currentTextColor;
+
+  const textStyle = {
+    fontSize,
+    color,
+    opacity,
+    textAlign: 'center',
+    lineHeight: '24px'
+  };
 
   return [shellStyle, textStyle];
 };
