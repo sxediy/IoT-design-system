@@ -15,9 +15,10 @@ const onMouseDown = ({
   initialBoxShadow,
   setNewBackground,
   setNewBoxShadow,
-  setNewTextColor
+  setNewTextColor,
+  customPressBackground,
 }) => () => {
-  const downBackground = makeDownBackground(isDarkness);
+  const downBackground = customPressBackground || makeDownBackground(isDarkness);
   setNewBackground(downBackground);
   setNewBoxShadow(initialBoxShadow);
   setNewTextColor(ivan.fullWhite);

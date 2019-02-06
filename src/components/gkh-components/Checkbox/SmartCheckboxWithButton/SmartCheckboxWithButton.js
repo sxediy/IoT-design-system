@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Checkbox } from 'antd';
 import { Button } from 'components/gkh-components/Buttons/Button/Button';
-import { warmRed } from 'src/colors';
+import { warmRed, mandarin } from 'src/colors';
 
 
 const CheckboxGroup = Checkbox.Group;
@@ -60,6 +60,7 @@ class SmartCheckboxWithButton extends React.Component {
           <Button
             buttonName={ 'Скачать' }
             customHoverBackground={ warmRed }
+            customPressBackground={ mandarin }
             size={'s'}
             background = { warmRed }
             callbackFunction={callbackFunction(checkedList, ...args)}

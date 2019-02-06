@@ -10,6 +10,7 @@ const Button = ({
   border,
   background: initialBackground,
   customHoverBackground,
+  customPressBackground,
   boxShadow: initialBoxShadow = 'none',
   textColor: initialTextColor = ivan.fullWhite,
   isDarkness,
@@ -39,6 +40,7 @@ const Button = ({
     setNewTextColor,
     isDarkness,
     customHoverBackground,
+    customPressBackground,
   };
 
   return (
@@ -67,6 +69,7 @@ Button.propTypes = {
   border: PropTypes.string,
   background: PropTypes.string,
   customHoverBackground: PropTypes.string,
+  customPressBackground: PropTypes.string,
   boxShadow: PropTypes.string,
   textColor: PropTypes.string,
   isDarkness: PropTypes.bool,
