@@ -74,13 +74,14 @@ const styleHelper = ({
 
   const color = isDisabled ? initialTextColor : currentTextColor;
 
+  // eslint-disable-next-line
+  const lineHeight = parseInt(height, 10) / 2 + 'px';
+
   const textStyle = {
     fontSize,
     color,
     opacity: textOpacity,
-    lineHeight: '24px',
-    background: 'inherit',
-    border: 'none',
+    lineHeight,
   };
 
   return [shellStyle, textStyle];
