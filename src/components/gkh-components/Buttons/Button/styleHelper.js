@@ -78,7 +78,9 @@ const styleHelper = ({
     fontSize,
     color,
     opacity: textOpacity,
-    lineHeight: '24px'
+    lineHeight: '24px',
+    background: 'inherit',
+    border: 'none',
   };
 
   return [shellStyle, textStyle];

@@ -83,6 +83,11 @@ export const props = {
     type: 'string',
     description: 'Название кнопки',
   },
+  type: {
+    type: 'string',
+    description: 'атрибут тэга button',
+    default: 'submit',
+  },
   size: {
     type: 'function',
     description: 'Размер кнопки',

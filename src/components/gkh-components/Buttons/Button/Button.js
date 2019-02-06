@@ -6,6 +6,7 @@ import { onMouseDown, onMouseUp, onMouseOver, onMouseOut } from './eventHandlers
 
 const Button = ({
   buttonName,
+  type = 'submit',
   border,
   background: initialBackground,
   boxShadow: initialBoxShadow = 'none',
@@ -47,11 +48,12 @@ const Button = ({
       onMouseOver={onMouseOver(forHandlers)}
       onMouseOut={onMouseOut(forHandlers)}
     >
-      <span
+      <button
         style={textStyle}
+        type={type}
       >
         {buttonName}
-      </span>
+      </button>
     </div>
   );
 };
@@ -59,6 +61,7 @@ const Button = ({
 
 Button.propTypes = {
   buttonName: PropTypes.string,
+  type: PropTypes.string,
   border: PropTypes.string,
   background: PropTypes.string,
   boxShadow: PropTypes.string,
