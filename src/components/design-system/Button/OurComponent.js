@@ -21,7 +21,8 @@ import * as data from './about';
 
 const containerStyle = {
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+  width: '600px',
 };
 
 const angelContainerStyle = {
@@ -40,9 +41,8 @@ const darkContainerStyle = {
 
 const pairContainer = {
   display: 'flex',
-  justifyContent: 'space-arround',
-  padding: '2%'
-
+  justifyContent: 'space-around',
+  padding: '2%',
 };
 
 
@@ -59,6 +59,7 @@ const OurComponent = () =>
         />
         <Button
           buttonName={ '2' }
+          size={ 'l' }
           border = {`1px dotted ${fury}`}
           background = { green }
           isDisabled={ true }
@@ -75,6 +76,7 @@ const OurComponent = () =>
         />
         <Button
           buttonName={ '4' }
+          size={ 's' }
           border = {`1px dotted ${fury}`}
           background = { violet }
           isDisabled={ true }

@@ -6,8 +6,7 @@ import { onMouseDown, onMouseUp, onMouseOver, onMouseOut } from './eventHandlers
 
 const Button = ({
   buttonName,
-  // border: initialBorder = `1px solid ${ivan.fullWhite}`,
-  border: borderFromProps = `1px solid ${ivan.fullWhite}`,
+  border,
   background: initialBackground,
   boxShadow: initialBoxShadow = 'none',
   textColor: initialTextColor = ivan.fullWhite,
@@ -15,8 +14,6 @@ const Button = ({
   callbackFunction,
   ...remainProps
 }) => {
-  const initialBorder = initialBackground === ivan.freshAsphalt ? borderFromProps : 'none';
-  const [currentBorder, setNewBorder] = useState(initialBorder);
   const [currentBackground, setNewBackground] = useState(initialBackground);
   const [currentBoxShadow, setNewBoxShadow] = useState('none');
   const [currentTextColor, setNewTextColor] = useState(initialTextColor);
@@ -25,7 +22,6 @@ const Button = ({
     initialBackground,
     initialTextColor,
     isDarkness,
-    currentBorder,
     currentBackground,
     currentBoxShadow,
     currentTextColor,
@@ -34,12 +30,9 @@ const Button = ({
 
   const forHandlers = {
     initialBackground,
-    borderFromProps,
-    initialBorder,
     initialBoxShadow,
     initialTextColor,
     setNewBackground,
-    setNewBorder,
     setNewBoxShadow,
     setNewTextColor,
     isDarkness,

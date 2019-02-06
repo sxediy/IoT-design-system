@@ -22,6 +22,7 @@ export const code = `
   />
   <Button
     buttonName={ '2' }
+    size={ 'l' }
     border = {'1px dotted fury'}
     background = { green }
     isDisabled={ true }
@@ -36,6 +37,7 @@ export const code = `
   />
   <Button
     buttonName={ '4' }
+    size={ 's' }
     border = {'1px dotted fury'}
     background = { violet }
     isDisabled={ true }

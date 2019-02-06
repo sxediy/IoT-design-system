@@ -12,16 +12,13 @@ const makeDownBackground = (isDarkness) =>
 // нажал
 const onMouseDown = ({
   isDarkness,
-  borderFromProps,
   initialBoxShadow,
   setNewBackground,
-  setNewBorder,
   setNewBoxShadow,
   setNewTextColor
 }) => () => {
   const downBackground = makeDownBackground(isDarkness);
   setNewBackground(downBackground);
-  setNewBorder(borderFromProps);
   setNewBoxShadow(initialBoxShadow);
   setNewTextColor(ivan.fullWhite);
 };
@@ -29,15 +26,12 @@ const onMouseDown = ({
 // отпустил
 const onMouseUp = ({
   initialBackground,
-  initialBorder,
   initialTextColor,
   setNewBackground,
-  setNewBorder,
   setNewBoxShadow,
   setNewTextColor
 }) => () => {
   setNewBackground(initialBackground);
-  setNewBorder(initialBorder);
   setNewBoxShadow('none');
   setNewTextColor(initialTextColor);
 };
@@ -46,13 +40,11 @@ const onMouseUp = ({
 const onMouseOver = ({
   initialBackground,
   setNewBackground,
-  setNewBorder,
   setNewBoxShadow,
   setNewTextColor
 }) => () => {
   const hoverBackground = makeHoverBackground(initialBackground);
   setNewBackground(hoverBackground);
-  setNewBorder('none');
   setNewBoxShadow('none');
   setNewTextColor(ivan.fullWhite);
 };
@@ -60,15 +52,12 @@ const onMouseOver = ({
 // увёл
 const onMouseOut = ({
   initialBackground,
-  initialBorder,
   initialTextColor,
   setNewBackground,
-  setNewBorder,
   setNewBoxShadow,
   setNewTextColor
 }) => () => {
   setNewBackground(initialBackground);
-  setNewBorder(initialBorder);
   setNewBoxShadow('none');
   setNewTextColor(initialTextColor);
 };

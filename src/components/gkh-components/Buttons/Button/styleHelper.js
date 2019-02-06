@@ -1,7 +1,7 @@
 import * as ivan from 'src/colors';
 
-const makeBorder = (isDarkness, currentBorder) =>
-  (isDarkness ? currentBorder : 'none');
+const makeBorder = (isDarkness, backgroundColor, initialBorder) =>
+  (isDarkness && backgroundColor === ivan.freshAsphalt ? initialBorder : 'none');
 
 
 const makeDisableBackground = (isDarkness, initialBackground) => {
@@ -21,12 +21,12 @@ const makeOpacity = (initialBackground, isDarkness, isDisabled) => {
 
 const styleHelper = ({
   size = 'm',
+  border: initialBorder = `1px solid ${ivan.fullWhite}`,
   isDarkness,
   isDisabled = false,
   initialBackground,
   initialTextColor,
   textSize: fontSize = '15px',
-  currentBorder,
   currentBackground,
   currentBoxShadow,
   currentTextColor,
@@ -39,7 +39,7 @@ const styleHelper = ({
     l: '60px',
   }[size];
 
-  const width = {
+  const minWidth = {
     s: '200px',
     m: '200px',
     l: '200px',
@@ -47,12 +47,13 @@ const styleHelper = ({
 
 
   const backgroundColor = isDisabled ?
-    makeDisableBackground(isDarkness, initialBackground) :
-    currentBackground;
-  const border = makeBorder(isDarkness, currentBorder);
+    makeDisableBackground(isDarkness, initialBackground) : currentBackground;
+
+  const border = makeBorder(isDarkness, backgroundColor, initialBorder);
   const boxShadow = isDisabled ? 'none' : currentBoxShadow;
-  const cursor = isDisabled ? 'default' : 'pointer';
-  const pointerEvents = isDisabled ? 'none' : 'auto';
+  const cursor = isDisabled ? 'not-allowed' : 'pointer';
+  const pointerEvents = 'auto';
+
   const [shellOpacity, textOpacity] = makeOpacity(initialBackground, isDarkness, isDisabled);
 
   const shellStyle = {
@@ -60,7 +61,7 @@ const styleHelper = ({
     justifyContent: 'center',
     alignItems: 'center',
     height,
-    width,
+    minWidth,
     backgroundColor,
     boxShadow,
     border,
