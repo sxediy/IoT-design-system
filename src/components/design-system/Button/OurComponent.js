@@ -72,6 +72,7 @@ const OurComponent = () =>
           size={ 's' }
           border = {`1px dotted ${fury}`}
           background = { violet }
+          isDisabled={ true }
           callbackFunction= { callbackFunction }
         />
         <Button
@@ -79,7 +80,6 @@ const OurComponent = () =>
           size={ 's' }
           border = {`1px dotted ${fury}`}
           background = { violet }
-          isDisabled={ true }
           callbackFunction= { callbackFunction }
         />
       </div>
