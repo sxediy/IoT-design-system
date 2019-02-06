@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input } from 'antd';
+import { Button } from 'components/gkh-components/Buttons/Button/Button';
 import styles from './login.less';
 
 const FormItem = Form.Item;
@@ -61,11 +62,10 @@ const NormalLoginForm = ({
       </FormItem>
       <FormItem>
         <Button
-          type="primary"
-          htmlType="submit"
+          buttonName={ 'Log in' }
+          background = { 'green' }
           className={styles.loginFormButton}
         >
-            Log in
         </Button>
       </FormItem>
       <div className={styles.errorMessage} hidden={!error}>
