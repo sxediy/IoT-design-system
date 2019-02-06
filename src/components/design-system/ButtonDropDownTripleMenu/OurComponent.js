@@ -6,7 +6,6 @@ import { ButtonDropDownTripleMenu } from 'components/gkh-components/Buttons/Butt
 import SmartCheckboxWithButton from
   'components/gkh-components/Checkbox/SmartCheckboxWithButton/SmartCheckboxWithButton';
 
-
 import {
   firstLineData,
   secondLineData,
@@ -15,6 +14,8 @@ import {
   options,
   onSubmit,
 } from 'components/gkh-components/Buttons/ButtonDropDownTripleMenu/fakeData';
+
+import { checkboxTitle } from 'components/gkh-components/Checkbox/SmartCheckboxWithButton/fakeData';
 
 import * as data from './about';
 
@@ -28,6 +29,7 @@ const OurComponent = () =>
         args={ args }
         callbackFunction={ onSubmit }
         plainOptions={ options }
+        checkboxTitle={ checkboxTitle }
         defaultCheckedList={ options }
       />
     }

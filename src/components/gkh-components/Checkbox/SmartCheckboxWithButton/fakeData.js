@@ -7,4 +7,6 @@ const onSubmit = (...selected) => () =>
     selected
   );
 
-export { choisedBefore, options, onSubmit };
+const checkboxTitle = 'Выбрать всё';
+
+export { choisedBefore, options, onSubmit, checkboxTitle };

@@ -22,6 +22,7 @@ export const code = `
         args={ args }
         callbackFunction={ onSubmit }
         plainOptions={ options }
+        checkboxTitle={ checkboxTitle }
         defaultCheckedList={ options }
       />
     }

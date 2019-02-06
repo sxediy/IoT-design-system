@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Checkbox } from 'antd';
 import { Button } from 'components/gkh-components/Buttons/Button/Button';
@@ -7,74 +7,67 @@ import { warmRed, mandarin } from 'src/colors';
 
 const CheckboxGroup = Checkbox.Group;
 
-class SmartCheckboxWithButton extends React.Component {
-    state = {
-      checkedList: this.props.defaultCheckedList,
-      indeterminate: true,
-      checkAll: false,
-    };
+const SmartCheckboxWithButton = ({
+  defaultCheckedList,
+  plainOptions,
+  args,
+  callbackFunction,
+  styleContainer,
+  checkboxTitle,
+}) => {
+  console.log('checkboxTitle', checkboxTitle);
+  const [currentCheckedList, setNewCheckedList] = useState(defaultCheckedList);
+  const [currentIndeterminate, setNewIndeterminate] = useState(true);
+  const [currentCheckAll, setNewCheckAll] = useState(false);
 
-    onChange = (checkedList) => {
-      this.setState({
-        checkedList,
-        indeterminate: !!checkedList.length && (checkedList.length < this.props.plainOptions.length),
-        checkAll: checkedList.length === this.props.plainOptions.length,
-      });
-    }
+  const onChange = (checkedList) => {
+    setNewCheckedList(checkedList);
+    setNewIndeterminate(!!checkedList.length && (checkedList.length < plainOptions.length));
+    setNewCheckAll(checkedList.length === plainOptions.length);
+  };
 
-    onCheckAllChange = (e) => {
-      this.setState({
-        checkedList: e.target.checked ? this.props.plainOptions : [],
-        indeterminate: false,
-        checkAll: e.target.checked,
-      });
-    }
+  const onCheckAllChange = (e) => {
+    setNewCheckedList(e.target.checked ? plainOptions : []);
+    setNewIndeterminate(false);
+    setNewCheckAll(e.target.checked);
+  };
 
-    render() {
-      const { indeterminate, checkAll, checkedList } = this.state;
-      const {
-        plainOptions,
-        args,
-        callbackFunction,
-        styleContainer,
-      } = this.props;
-
-      return (
-        <div style={{ padding: '10px', ...styleContainer }}>
-          <div style={{ padding: '10px 0 10px 30px', width: '200px' }}>
-            <Checkbox
-              indeterminate={ indeterminate }
-              onChange={ this.onCheckAllChange }
-              checked={ checkAll }
-            >
-                Выбрать все
-            </Checkbox>
-          </div>
-          <br />
-          <CheckboxGroup
-            style={{ padding: '10px' }}
-            options={ plainOptions }
-            value={ checkedList }
-            onChange={ this.onChange }
-          />
-          <Button
-            buttonName={ 'Скачать' }
-            customHoverBackground={ warmRed }
-            customPressBackground={ mandarin }
-            size={'s'}
-            background = { warmRed }
-            callbackFunction={callbackFunction(checkedList, ...args)}
-          >
-          </Button>
-        </div>
-      );
-    }
-}
+  return (
+    <div style={{ padding: '10px', ...styleContainer }}>
+      <div style={{ padding: '10px 0 10px 30px', width: '200px' }}>
+        <Checkbox
+          indeterminate={ currentIndeterminate }
+          onChange={ onCheckAllChange }
+          checked={ currentCheckAll }
+        >
+          {checkboxTitle}
+        </Checkbox>
+      </div>
+      <br />
+      <CheckboxGroup
+        style={{ padding: '10px' }}
+        options={ plainOptions }
+        value={ currentCheckedList }
+        onChange={ onChange }
+      />
+      <Button
+        buttonName={ 'Скачать' }
+        customHoverBackground={ warmRed }
+        customPressBackground={ mandarin }
+        size={'s'}
+        background = { warmRed }
+        callbackFunction={callbackFunction(currentCheckedList, ...args)}
+      >
+      </Button>
+    </div>
+  );
+};
 
 SmartCheckboxWithButton.propTypes = {
   args: PropTypes.array,
   callbackFunction: PropTypes.func,
   plainOptions: PropTypes.array,
+  checkboxTitle: PropTypes.string,
   defaultCheckedList: PropTypes.array,
   styleContainer: PropTypes.object,
 };
