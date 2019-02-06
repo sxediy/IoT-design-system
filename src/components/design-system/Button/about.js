@@ -108,6 +108,12 @@ export const props = {
     type: 'string',
     description: 'Цвет фона',
   },
+  customHoverBackground: {
+    type: 'string',
+    // eslint-disable-next-line
+    description: 'Явное указание цвета бэкграунд при хувере/ Переопределяет логику, заложенную внутри обработчика события onMouseOver в eventHandlers.js',
+    default: 'по умолчанию не задается',
+  },
   boxShadow: {
     type: 'string',
     description: 'Стиль тени',

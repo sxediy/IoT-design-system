@@ -9,6 +9,7 @@ const Button = ({
   type = 'submit',
   border,
   background: initialBackground,
+  customHoverBackground,
   boxShadow: initialBoxShadow = 'none',
   textColor: initialTextColor = ivan.fullWhite,
   isDarkness,
@@ -37,6 +38,7 @@ const Button = ({
     setNewBoxShadow,
     setNewTextColor,
     isDarkness,
+    customHoverBackground,
   };
 
   return (
@@ -64,6 +66,7 @@ Button.propTypes = {
   type: PropTypes.string,
   border: PropTypes.string,
   background: PropTypes.string,
+  customHoverBackground: PropTypes.string,
   boxShadow: PropTypes.string,
   textColor: PropTypes.string,
   isDarkness: PropTypes.bool,

@@ -41,9 +41,10 @@ const onMouseOver = ({
   initialBackground,
   setNewBackground,
   setNewBoxShadow,
-  setNewTextColor
+  setNewTextColor,
+  customHoverBackground
 }) => () => {
-  const hoverBackground = makeHoverBackground(initialBackground);
+  const hoverBackground = customHoverBackground || makeHoverBackground(initialBackground);
   setNewBackground(hoverBackground);
   setNewBoxShadow('none');
   setNewTextColor(ivan.fullWhite);
