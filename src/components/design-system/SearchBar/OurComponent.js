@@ -14,6 +14,7 @@ import {
   cityPlaceholder,
   streetPlaceholder,
   housePlaceholder,
+  width,
 } from 'components/gkh-components/SearchBar/fakeData';
 
 
@@ -32,6 +33,7 @@ const OurComponent = () =>
     firstPlaceholder={cityPlaceholder}
     secondPlaceholder={streetPlaceholder}
     thirdPlaceholder={housePlaceholder}
+    width={width}
   />;
 
 export default constructFromTemplates(OurComponent, data);

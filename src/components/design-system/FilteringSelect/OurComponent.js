@@ -16,7 +16,7 @@ import * as data from './about';
 
 const OurComponent = () =>
   <FilteringSelect
-    initialSelected={initialSelected}
+    selected={initialSelected}
     list={cityList}
     placeholder={placeholder}
     displayProp={displayProp}

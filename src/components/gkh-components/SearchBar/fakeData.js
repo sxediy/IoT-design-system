@@ -72,6 +72,8 @@ const cityPlaceholder = 'Выберете город';
 const streetPlaceholder = 'Выберете улицу';
 const housePlaceholder = 'Выберете дом';
 
+const width = '250px';
+
 
 export {
   displayProp,
@@ -84,4 +86,5 @@ export {
   cityPlaceholder,
   streetPlaceholder,
   housePlaceholder,
+  width,
 };

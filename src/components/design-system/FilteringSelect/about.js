@@ -14,7 +14,7 @@ export const description = `
 
 export const code = `
   <FilteringSelect
-    initialSelected={initialSelected}
+    selected={initialSelected}
     list={cityList}
     placeholder={placeholder}
     displayProp={displayProp}
@@ -23,7 +23,7 @@ export const code = `
 
 
 export const props = {
-  initialSelected: {
+  selected: {
     type: 'string',
     description: 'Предварительно выбранный элемент (ключ). Параметр необязательный'
   },
@@ -39,5 +39,10 @@ export const props = {
     type: 'string',
     description: 'Ключ, значение которого показывается в выпадающем списке',
     default: 'name'
+  },
+  width: {
+    type: 'string',
+    description: 'Ширина окошка выпадающего списка',
+    default: '320px'
   }
 };

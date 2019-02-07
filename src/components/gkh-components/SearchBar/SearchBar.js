@@ -16,6 +16,7 @@ const SearchBar = ({
   firstPlaceholder,
   secondPlaceholder,
   thirdPlaceholder,
+  width,
 }) => {
   const [currentFirstSelected, setFirst] = useState(initialFirst);
   const [currentSecondSelected, setSecond] = useState(initiaSecond);
@@ -25,42 +26,42 @@ const SearchBar = ({
       <div
         className={styles.container}
       >
-        <div>
+        <div className={styles.item}>
           <FilteringSelect
-            initialSelected={initialFirst}
             list={firstList}
             displayProp={displayProp}
             selected={currentFirstSelected}
             placeholder={firstPlaceholder}
             onChange={(eventTrager) => setFirst(eventTrager)}
+            width={width}
           />
         </div>
-        <div>
+        <div className={styles.item}>
           <span>{currentFirstSelected ? <YesLogo/> : <NoLogo/>}</span>
         </div>
-        <div >
+        <div className={styles.item}>
           <FilteringSelect
-            initialSelected={initiaSecond}
             list={secondList}
             displayProp={displayProp}
             disabled={!currentFirstSelected}
             selected={currentSecondSelected}
             placeholder={secondPlaceholder}
             onChange={(eventTrager) => setSecond(eventTrager)}
+            width={width}
           />
         </div>
-        <div>
+        <div className={styles.item}>
           <span>{currentSecondSelected ? <YesLogo/> : <NoLogo/>}</span>
         </div>
-        <div >
+        <div className={styles.item}>
           <FilteringSelect
-            initialSelected={initialThird}
             list={thirdList}
-            placeholder={thirdPlaceholder}
             displayProp={displayProp}
             disabled={!currentSecondSelected}
             selected={currentThirdSelected}
+            placeholder={thirdPlaceholder}
             onChange={(eventTrager) => setThird(eventTrager)}
+            width={width}
           />
         </div>
       </div>
@@ -79,7 +80,7 @@ SearchBar.propTypes = {
   firstPlaceholder: PropTypes.string,
   secondPlaceholder: PropTypes.string,
   thirdPlaceholder: PropTypes.string,
-
+  width: PropTypes.string,
 };
 
 export { SearchBar };
