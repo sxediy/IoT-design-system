@@ -15,7 +15,8 @@ import buttonDropDownDoubleMenu from 'design-system/ButtonDropDownDoubleMenu/Our
 import buttonDropDownTripleMenu from 'design-system/ButtonDropDownTripleMenu/OurComponent';
 import smartCheckboxWithButton from 'design-system/SmartCheckboxWithButton/OurComponent';
 import treeSelector from 'design-system/TreeSelector/OurComponent';
-import logotypes from 'design-system/Logotypes/OurComponent';
+import logotypes from 'design-system/Logo/OurComponent';
+import filteringSelect from 'design-system/FilteringSelect/OurComponent';
 
 const obj = {
   pricingTableCards,
@@ -36,6 +37,7 @@ const obj = {
   smartCheckboxWithButton,
   treeSelector,
   logotypes,
+  filteringSelect,
 };
 
 export default obj;

@@ -26,6 +26,7 @@ const MenuBar = ({ activeNameOfComponent, changeUIContainer }) => {
         <Menu.Item key="notifications">Уведомления всплывающие</Menu.Item>
         <Menu.Item key="logotypes">Набор логотипов и иконок</Menu.Item>
         <Menu.Item key="button">Кнопка</Menu.Item>
+        <Menu.Item key="filteringSelect">Селектор с фильтрацией</Menu.Item>
       </SubMenu>
       <SubMenu key="universal" title="Уникальные компоненты">
         <Menu.Item key="pricingTable">Таблица ресурсов</Menu.Item>
