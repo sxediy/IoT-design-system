@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MenuBar from 'components/menuBar';
-import { MegaIoTLogo, GitHubLogo, ConfluenceLogo } from 'components/design-system/logotypes';
+import { MegaIoTLogo, GitHubLogo, ConfluenceLogo } from 'components/logotypes';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 

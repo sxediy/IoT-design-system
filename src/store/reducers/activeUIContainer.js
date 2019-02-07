@@ -1,5 +1,5 @@
 
-const activeUIContainer = (state = { activeNameOfComponent: 'smartCheckboxWithButton' }, action) => {
+const activeUIContainer = (state = { activeNameOfComponent: 'filteringSelect' }, action) => {
 //   console.log('Reducer activeUIContainer 1)state 2)action', state, action);
   switch (action.type) {
     case 'changeUIContainer':
