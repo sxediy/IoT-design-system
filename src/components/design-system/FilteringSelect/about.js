@@ -25,7 +25,7 @@ export const code = `
 export const props = {
   initialSelected: {
     type: 'string',
-    description: 'Предварительно выбранный элемент(ключ). Параметр необязательный'
+    description: 'Предварительно выбранный элемент (ключ). Параметр необязательный'
   },
   list: {
     type: 'object',
@@ -38,5 +38,6 @@ export const props = {
   displayProp: {
     type: 'string',
     description: 'Ключ, значение которого показывается в выпадающем списке',
+    default: 'name'
   }
 };

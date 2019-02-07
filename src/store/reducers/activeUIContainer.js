@@ -1,5 +1,5 @@
 
-const activeUIContainer = (state = { activeNameOfComponent: 'filteringSelect' }, action) => {
+const activeUIContainer = (state = { activeNameOfComponent: 'searchBar' }, action) => {
 //   console.log('Reducer activeUIContainer 1)state 2)action', state, action);
   switch (action.type) {
     case 'changeUIContainer':

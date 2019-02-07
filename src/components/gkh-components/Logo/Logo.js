@@ -11,6 +11,8 @@ import USPDSVG from 'icons/USPD.svg';
 import alertSVG from 'icons/alert_green.svg';
 import profileSVG from 'icons/profile.svg';
 
+import yesSVG from 'icons/yes.svg';
+import noSVG from 'icons/no.svg';
 
 export const DownloadLogo = () =>
   <svg width='21' height='25' fill='currentColor'viewBox={downloadSVG.viewBox} >
@@ -51,6 +53,17 @@ export const ProfileLogo = () =>
   <svg width='21' height='25' fill='currentColor' viewBox={profileSVG.viewBox} >
     <use xlinkHref={`#${profileSVG.id}`} />
   </svg>;
+
+export const YesLogo = () =>
+  <svg width='21' height='25' fill='currentColor'viewBox={yesSVG.viewBox} >
+    <use xlinkHref={`#${yesSVG.id}`} />
+  </svg>;
+
+export const NoLogo = () =>
+  <svg width='21' height='25' fill='currentColor'viewBox={noSVG.viewBox} >
+    <use xlinkHref={`#${noSVG.id}`} />
+  </svg>;
+
 
 BellLogo.propTypes = {
   color: PropTypes.string,

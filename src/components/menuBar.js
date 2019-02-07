@@ -40,6 +40,7 @@ const MenuBar = ({ activeNameOfComponent, changeUIContainer }) => {
         <Menu.Item key="buttonDropDownTripleMenu">Кнопка с тройным выпадающим списком</Menu.Item>
         <Menu.Item key="smartCheckboxWithButton">Чекбокс с кнопкой</Menu.Item>
         <Menu.Item key="treeSelector">Селектор с древовидной структурой</Menu.Item>
+        <Menu.Item key="searchBar">Бар из выпадающих списков и иконок</Menu.Item>
       </SubMenu>
     </Menu>
   );

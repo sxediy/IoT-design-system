@@ -17,6 +17,7 @@ import smartCheckboxWithButton from 'design-system/SmartCheckboxWithButton/OurCo
 import treeSelector from 'design-system/TreeSelector/OurComponent';
 import logotypes from 'design-system/Logo/OurComponent';
 import filteringSelect from 'design-system/FilteringSelect/OurComponent';
+import searchBar from 'design-system/SearchBar/OurComponent';
 
 const obj = {
   pricingTableCards,
@@ -38,6 +39,7 @@ const obj = {
   treeSelector,
   logotypes,
   filteringSelect,
+  searchBar,
 };
 
 export default obj;
