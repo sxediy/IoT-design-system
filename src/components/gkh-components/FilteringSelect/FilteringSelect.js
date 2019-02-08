@@ -13,18 +13,18 @@ const FilteringSelect = ({
   disabled,
   selected: initialSelected,
   placeholder,
-  onChange,
+  onChange: fromParentComponent,
   width = '320px',
 }) => {
   const [currentSelected, setNewSelected] = useState(initialSelected);
 
   const changeParentState = eventTarget => {
-    onChange(eventTarget);
+    fromParentComponent(eventTarget);
     setNewSelected(eventTarget);
   };
 
   const changeSelectElement = eventTarget =>
-    (onChange ? changeParentState(eventTarget) : setNewSelected(eventTarget));
+    (fromParentComponent ? changeParentState(eventTarget) : setNewSelected(eventTarget));
 
   return (
     <div
@@ -37,7 +37,7 @@ const FilteringSelect = ({
         filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
         placeholder={placeholder}
         disabled={disabled || Object.keys(list).length === 0}
-        value={currentSelected}
+        value={fromParentComponent ? initialSelected : currentSelected}
         onChange={changeSelectElement}
       >
         {

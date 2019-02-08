@@ -24,9 +24,9 @@ import * as data from './about';
 const OurComponent = () =>
   <SearchBar
     displayProp={displayProp}
-    initialFirst={initialCity}
-    initiaSecond={initialStreet}
-    initialThird={initialHouse}
+    initialKeyFirst={initialCity}
+    initiaKeySecond={initialStreet}
+    initialKeyThird={initialHouse}
     firstList={cityList}
     secondList={streetList}
     thirdList={houseList}

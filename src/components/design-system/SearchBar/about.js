@@ -16,9 +16,9 @@ export const description = `
 export const code = `
   <SearchBar
     displayProp={displayProp}
-    initialFirst={initialCity}
-    initiaSecond={initialStreet}
-    initialThird={initialHouse}
+    initialKeyFirst={initialCity}
+    initialKeySecond={initialStreet}
+    initialKeyThird={initialHouse}
     firstList={cityList}
     secondList={streetList}
     thirdList={houseList}
@@ -36,15 +36,15 @@ export const props = {
     description: 'Ключ, значение которого показывается в выпадающем списке',
     default: 'name'
   },
-  initialFirst: {
+  initialKeyFirst: {
     type: 'string',
     description: 'Предварительно выбранный элемент (ключ) первого списка. Параметр необязательный',
   },
-  initiaSecond: {
+  initialKeySecond: {
     type: 'string',
     description: 'Предварительно выбранный элемент (ключ) второго списка. Параметр необязательный',
   },
-  initialThird: {
+  initialKeyThird: {
     type: 'string',
     description: 'Предварительно выбранный элемент (ключ) третьего списка. Параметр необязательный',
   },

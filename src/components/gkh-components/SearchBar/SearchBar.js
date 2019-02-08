@@ -7,9 +7,9 @@ import styles from './SearchBar.less';
 
 const SearchBar = ({
   displayProp,
-  initialFirst,
-  initiaSecond,
-  initialThird,
+  initialKeyFirst,
+  initiaKeySecond,
+  initialKeyThird,
   firstList,
   secondList,
   thirdList,
@@ -18,9 +18,26 @@ const SearchBar = ({
   thirdPlaceholder,
   width,
 }) => {
-  const [currentFirstSelected, setFirst] = useState(initialFirst);
-  const [currentSecondSelected, setSecond] = useState(initiaSecond);
-  const [currentThirdSelected, setThird] = useState(initialThird);
+  const [currentKeyFirst, setKeyFirst] = useState(initialKeyFirst);
+  const [currentKeySecond, setKeySecond] = useState(initiaKeySecond);
+  const [currentKeyThird, setKeyThird] = useState(initialKeyThird);
+
+  const [filterSecondList, setFilterSecond] = useState(secondList);
+  const [filterThirdList, setFilterThird] = useState(thirdList);
+
+  const onChangeFirst = (eventTrager) => {
+    setKeyFirst(eventTrager);
+    setKeySecond(undefined);
+    setKeyThird(undefined);
+    setFilterSecond(secondList[eventTrager]);
+  };
+
+  const onChangeSecond = (eventTrager) => {
+    setKeySecond(eventTrager);
+    setKeyThird(undefined);
+    setFilterThird(thirdList[eventTrager]);
+  };
+
   return (
     <Fragment>
       <div
@@ -30,37 +47,37 @@ const SearchBar = ({
           <FilteringSelect
             list={firstList}
             displayProp={displayProp}
-            selected={currentFirstSelected}
+            selected={currentKeyFirst}
             placeholder={firstPlaceholder}
-            onChange={(eventTrager) => setFirst(eventTrager)}
+            onChange={onChangeFirst}
             width={width}
           />
         </div>
         <div className={styles.item}>
-          <span>{currentFirstSelected ? <YesLogo/> : <NoLogo/>}</span>
+          <span>{currentKeyFirst ? <YesLogo/> : <NoLogo/>}</span>
         </div>
         <div className={styles.item}>
           <FilteringSelect
-            list={secondList}
+            list={filterSecondList}
             displayProp={displayProp}
-            disabled={!currentFirstSelected}
-            selected={currentSecondSelected}
+            disabled={!currentKeyFirst}
+            selected={currentKeySecond}
             placeholder={secondPlaceholder}
-            onChange={(eventTrager) => setSecond(eventTrager)}
+            onChange={onChangeSecond}
             width={width}
           />
         </div>
         <div className={styles.item}>
-          <span>{currentSecondSelected ? <YesLogo/> : <NoLogo/>}</span>
+          <span>{currentKeySecond ? <YesLogo/> : <NoLogo/>}</span>
         </div>
         <div className={styles.item}>
           <FilteringSelect
-            list={thirdList}
+            list={filterThirdList}
             displayProp={displayProp}
-            disabled={!currentSecondSelected}
-            selected={currentThirdSelected}
+            disabled={!currentKeySecond}
+            selected={currentKeyThird}
             placeholder={thirdPlaceholder}
-            onChange={(eventTrager) => setThird(eventTrager)}
+            onChange={(eventTrager) => setKeyThird(eventTrager)}
             width={width}
           />
         </div>
@@ -71,9 +88,9 @@ const SearchBar = ({
 
 SearchBar.propTypes = {
   displayProp: PropTypes.string,
-  initialFirst: PropTypes.string,
-  initiaSecond: PropTypes.string,
-  initialThird: PropTypes.string,
+  initialKeyFirst: PropTypes.string,
+  initiaKeySecond: PropTypes.string,
+  initialKeyThird: PropTypes.string,
   firstList: PropTypes.object,
   secondList: PropTypes.object,
   thirdList: PropTypes.object,

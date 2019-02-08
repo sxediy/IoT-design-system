@@ -1,66 +1,133 @@
 
-// const list = {
-//   1: {
-//     id: 1,
-//     name: 'Иннополис',
-//     placeholder: 'Выберете город',
-//   },
-//   2: {
-//     id: 2,
-//     name: 'Спортивная',
-//     placeholder: 'Выберете улицу',
-//   },
-//   3: {
-//     id: 3,
-//     name: '118',
-//     placeholder: 'Выберете дом',
-//   },
-// };
-
 const cityList = {
-  1: {
+  innopolis: {
     id: 1,
     name: 'Иннополис',
   },
-  2: {
+  praga: {
     id: 2,
-    name: 'Бандар-Сери-Бегаван',
+    name: 'Прага',
   },
-  3: {
+  vinece: {
     id: 3,
-    name: 'Тегусигальпа',
+    name: 'Венеция',
+  },
+  amsterdam: {
+    id: 4,
+    name: 'Амстердам',
   }
 };
 
+
 const streetList = {
-  1: {
-    id: 1,
-    name: 'Montmartre Hill',
+  innopolis: {
+    innopolis1: {
+      id: 1,
+      name: 'Спортивная',
+    },
   },
-  2: {
-    id: 2,
-    name: 'Red Light District',
+
+  praga: {
+    praga1: {
+      id: 1,
+      name: 'Číslo popisné',
+    },
+    praga2: {
+      id: 2,
+      name: 'U Dvou slunců',
+    }
   },
-  3: {
-    id: 3,
-    name: 'Piazza San Marco',
-  }
+
+  vinece: {
+    vinece1: {
+      id: 1,
+      name: 'Piazza San Marco',
+    },
+    vinece2: {
+      id: 2,
+      name: 'Fondamenta Ponte Piccolo',
+    },
+  },
+
+  amsterdam: {
+    amsterdam1: {
+      id: 1,
+      name: 'Red Light District',
+    },
+    amsterdam2: {
+      id: 2,
+      name: 'Damrak',
+    },
+  },
 };
 
 const houseList = {
-  1: {
-    id: 1,
-    name: '007',
+  innopolis1: {
+    1: {
+      id: 1,
+      name: 'inop_sport_007',
+    },
   },
-  2: {
-    id: 2,
-    name: '070',
+
+  praga1: {
+    1: {
+      id: 1,
+      name: 'pr_cislo_1',
+    },
+    2: {
+      id: 2,
+      name: 'pr_cislo_2',
+    },
   },
-  3: {
-    id: 3,
-    name: '700',
-  }
+
+  praga2: {
+    1: {
+      id: 1,
+      name: 'pr_dvou_1',
+    },
+    2: {
+      id: 2,
+      name: 'pr_dvou_2',
+    },
+  },
+
+  vinece1: {
+    1: {
+      id: 1,
+      name: 'vinece_piazza_theatre',
+    },
+  },
+
+  vinece2: {
+    1: {
+      id: 1,
+      name: 'ponte_piccolo_1',
+    },
+    2: {
+      id: 2,
+      name: 'ponte_piccolo_2',
+    },
+  },
+
+  amsterdam1: {
+    1: {
+      id: 1,
+      name: 'amster_redline_privateRoom№1',
+    },
+    2: {
+      id: 2,
+      name: 'amster_redline_privateRoom№2',
+    },
+  },
+
+  amsterdam2: {
+    1: {
+      id: 1,
+      name: 'amster_damrak_shop',
+    },
+  },
 };
+
 
 const displayProp = 'name';
 
