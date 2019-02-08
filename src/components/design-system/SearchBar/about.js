@@ -25,6 +25,7 @@ export const code = `
     firstPlaceholder={cityPlaceholder}
     secondPlaceholder={streetPlaceholder}
     thirdPlaceholder={housePlaceholder}
+    width={width}
   />;
 `;
 
@@ -70,5 +71,10 @@ export const props = {
   thirdPlaceholder: {
     type: 'string',
     description: 'Когда не выбран элемент третьего списка - эта надпись',
+  },
+  width: {
+    type: 'string',
+    description: 'Ширина окошка выпадающего списка',
+    default: '320px'
   }
 };

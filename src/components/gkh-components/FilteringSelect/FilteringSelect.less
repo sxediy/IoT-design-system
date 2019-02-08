@@ -3,17 +3,19 @@
 
 .dropdown{
     height: 52px;
-    // width: 250px;
     top: 353px !important; // пододвинул дропдаун к нижней границе бордера Select
 }
 
   
 .searchBar{
     :global{
+      .ant-select.ant-select-enabled, .ant-select.ant-select-disabled{
+        width: inherit;
+      }
       .ant-select, .ant-select-enabled, .ant-select-focused, .ant-select-open{
         .ant-select-selection{
           height: 52px;
-          width: 250px;
+          width: inherit;
           border: 1px solid @freshAsphalt;
           border-radius: 0;
           box-shadow: none;
