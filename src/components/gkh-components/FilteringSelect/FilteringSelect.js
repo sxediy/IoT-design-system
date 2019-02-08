@@ -29,7 +29,10 @@ const FilteringSelect = ({
   return (
     <div
       style={{ width }}
-      className={classnames(styles.searchBar, { [styles.isSelected]: currentSelected })}
+      className={classnames(
+        styles.searchBar,
+        { [styles.isSelected]: fromParentComponent ? initialSelected : currentSelected }
+      )}
     >
       <Select
         dropdownClassName={styles.dropdown}

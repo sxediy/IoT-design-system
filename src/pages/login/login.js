@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { Form, Icon, Input } from 'antd';
 import { Button } from 'components/gkh-components/Buttons/Button/Button';
-// import { green } from 'src/colors';
+import { green } from 'src/colors';
 import styles from './login.less';
 
 const FormItem = Form.Item;
@@ -64,8 +64,8 @@ const NormalLoginForm = ({
       <FormItem>
         <Button
           buttonName={ 'Log in' }
-          customHoverBackground={ '#641E16' }
-          background = { '#641E16' }
+          size={'s'}
+          background = { green }
           className={styles.loginFormButton}
         >
         </Button>
