@@ -8,10 +8,11 @@ import { counters, initActiveElement } from 'components/gkh-components/CounterTa
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <CounterTabs
     counters={ counters }
     initActiveElement={ initActiveElement }
-  />;
+  />
+);
 
 export default constructFromTemplates(OurComponent, data);

@@ -23,8 +23,9 @@ const FilteringSelect = ({
     setNewSelected(eventTarget);
   };
 
-  const changeSelectElement = eventTarget =>
-    (fromParentComponent ? changeParentState(eventTarget) : setNewSelected(eventTarget));
+  const changeSelectElement = eventTarget => (
+    fromParentComponent ? changeParentState(eventTarget) : setNewSelected(eventTarget)
+  );
 
   return (
     <div

@@ -7,4 +7,11 @@ const buttonName = 'Выгрузка';
 const options = ['общедомовой', 'индивидуальный', 'коммерческий'];
 const onSubmit = (...selected) => () => console.log('callbackFunction Отправка данных на сервер', selected);
 
-export { firstLineData, secondLineData, buttonName, LogoComponent, options, onSubmit };
+export {
+  firstLineData,
+  secondLineData,
+  buttonName,
+  LogoComponent,
+  options,
+  onSubmit
+};

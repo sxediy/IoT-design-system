@@ -10,7 +10,7 @@ const ResourceTabs = ({ tabsArr, initActiveElement }) => {
   return (
     <div className={styles.gkhTabs}>
       {
-        tabsArr.map(tab =>
+        tabsArr.map(tab => (
           <div
             key={ tab.typeName }
             className={classnames(styles.tab, styles[tab.eng], { [styles.active]: currentActive === tab.typeName })}
@@ -21,7 +21,7 @@ const ResourceTabs = ({ tabsArr, initActiveElement }) => {
               { tab.title }
             </div>
           </div>
-        )
+        ))
       }
     </div>
   );

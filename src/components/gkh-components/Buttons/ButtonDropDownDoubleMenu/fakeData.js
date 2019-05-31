@@ -7,4 +7,10 @@ const buttonName = 'Выгрузка';
 const callbackFunction = ({ keyPath }) => console.log('callbackFunction Выбранные элементы', keyPath);
 
 
-export { firstLineData, secondLineData, buttonName, LogoComponent, callbackFunction };
+export {
+  firstLineData,
+  secondLineData,
+  buttonName,
+  LogoComponent,
+  callbackFunction
+};

@@ -15,14 +15,15 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <ButtonDropDownDoubleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
     buttonName={ buttonName }
     LogoComponent={ LogoComponent }
     callbackFunction={ callbackFunction }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

@@ -1,6 +1,12 @@
 import React from 'react';
 import constructFromTemplates from 'services/constructFromTemplates';
-import { fullWhite, fury, freshAsphalt, green, violet } from 'src/colors';
+import {
+  fullWhite,
+  fury,
+  freshAsphalt,
+  green,
+  violet
+} from 'src/colors';
 
 import { Button } from 'components/gkh-components/Buttons/Button/Button';
 import {
@@ -46,7 +52,7 @@ const pairContainer = {
 };
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <div style={containerStyle}>
     <div style={angelContainerStyle}>
       <div style={pairContainer}>
@@ -134,7 +140,8 @@ const OurComponent = () =>
       textSize = { textSize }
       callbackFunction= { callbackFunction }
     /> */}
-  </div>;
+  </div>
+);
 
 
 export default constructFromTemplates(OurComponent, data);

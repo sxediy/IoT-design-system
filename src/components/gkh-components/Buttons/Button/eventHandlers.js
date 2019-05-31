@@ -1,12 +1,14 @@
 
 import * as ivan from 'src/colors';
 
-const makeHoverBackground = (initialBackground) =>
-  (initialBackground === ivan.violet ? ivan.hoverViolet : ivan.hoverGreen);
+const makeHoverBackground = (initialBackground) => (
+  initialBackground === ivan.violet ? ivan.hoverViolet : ivan.hoverGreen
+);
 
 
-const makeDownBackground = (isDarkness) =>
-  (isDarkness ? ivan.freshAsphalt : ivan.buttonDown);
+const makeDownBackground = (isDarkness) => (
+  isDarkness ? ivan.freshAsphalt : ivan.buttonDown
+);
 
 
 // нажал
@@ -64,4 +66,9 @@ const onMouseOut = ({
   setNewTextColor(initialTextColor);
 };
 
-export { onMouseDown, onMouseUp, onMouseOver, onMouseOut };
+export {
+  onMouseDown,
+  onMouseUp,
+  onMouseOver,
+  onMouseOut
+};

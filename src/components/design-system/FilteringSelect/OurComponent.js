@@ -14,12 +14,13 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <FilteringSelect
     selected={initialSelected}
     list={cityList}
     placeholder={placeholder}
     displayProp={displayProp}
-  />;
+  />
+);
 
 export default constructFromTemplates(OurComponent, data);

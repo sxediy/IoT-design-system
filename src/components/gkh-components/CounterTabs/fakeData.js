@@ -46,4 +46,3 @@ const initActiveElement = '16-0048915-ЧВ';
 const setActiveCounterNum = () => {};
 
 export { counters, initActiveElement, setActiveCounterNum };
-

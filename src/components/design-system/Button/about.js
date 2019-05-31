@@ -145,4 +145,3 @@ export const props = {
     description: 'Обработчик клика на кнопку',
   }
 };
-

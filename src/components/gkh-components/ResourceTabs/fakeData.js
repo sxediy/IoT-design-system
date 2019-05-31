@@ -49,4 +49,3 @@ const initActiveElement = 'Горячая вода';
 
 
 export { tabsArr, initActiveElement };
-

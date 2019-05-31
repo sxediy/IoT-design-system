@@ -8,15 +8,16 @@ const { SubMenu } = Menu;
 const DoubleMenu = ({ linesData, callbackFunction }) => {
   const { firstLineData, secondLineData } = linesData;
 
-  const firstMenuItems = (firstitem) =>
+  const firstMenuItems = (firstitem) => (
     <SubMenu key={[firstitem]} title={firstitem}>
       {secondLineData.map(
-        seconditem =>
+        seconditem => (
           <Menu.Item key={[seconditem]}>
             {seconditem}
           </Menu.Item>)
-      }
-    </SubMenu>;
+      )}
+    </SubMenu>
+  );
 
   return (
     <Menu

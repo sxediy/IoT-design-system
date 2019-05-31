@@ -17,7 +17,7 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <Fragment>
     <ErrorMesage
       type={ typeError }
@@ -38,6 +38,7 @@ const OurComponent = () =>
       узла DOM дерева, в котором работает данное приложение.
       Надо сделать кнопочку и вызывать по клику на неё
     </p>
-  </Fragment>;
+  </Fragment>
+);
 
 export default constructFromTemplates(OurComponent, data);

@@ -6,7 +6,7 @@ import { MegaIoTLogo, GitHubLogo, ConfluenceLogo } from 'components/logotypes';
 import UIContainer from 'components/UIContainer';
 import styles from './home.less';
 
-const Home = ({ activeNameOfComponent }) =>
+const Home = ({ activeNameOfComponent }) => (
   <section className={styles.home}>
     <aside className={styles.aside}>
       <div className={styles.megafonLogo}>
@@ -25,7 +25,8 @@ const Home = ({ activeNameOfComponent }) =>
     <arcticle className={styles.UIContainer}>
       {UIContainer(activeNameOfComponent)}
     </arcticle>
-  </section>;
+  </section>
+);
 
 Home.propTypes = {
   activeNameOfComponent: PropTypes.string,
@@ -34,8 +35,7 @@ Home.propTypes = {
 
 const mapStateToProps = (
   { activeUIContainer: { activeNameOfComponent } }
-) =>
-  ({ activeNameOfComponent });
+) => ({ activeNameOfComponent });
 
 
 export default connect(mapStateToProps)(Home);

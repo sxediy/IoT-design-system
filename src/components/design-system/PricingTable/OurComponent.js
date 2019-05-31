@@ -7,11 +7,12 @@ import { pricingData, initActiveElement1 } from 'components/gkh-components/Prici
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <PricingTable
     pricingData={ pricingData }
     initActiveElement={ initActiveElement1 }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

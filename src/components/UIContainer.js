@@ -19,4 +19,3 @@ const UIContainer = (activeNameOfComponent) => {
 };
 
 export default UIContainer;
-

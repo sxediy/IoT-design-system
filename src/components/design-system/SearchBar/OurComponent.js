@@ -21,7 +21,7 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <SearchBar
     displayProp={displayProp}
     initialKeyFirst={initialCity}
@@ -34,6 +34,7 @@ const OurComponent = () =>
     secondPlaceholder={streetPlaceholder}
     thirdPlaceholder={housePlaceholder}
     width={width}
-  />;
+  />
+);
 
 export default constructFromTemplates(OurComponent, data);

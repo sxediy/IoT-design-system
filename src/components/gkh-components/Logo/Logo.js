@@ -14,55 +14,65 @@ import profileSVG from 'icons/profile.svg';
 import yesSVG from 'icons/yes.svg';
 import noSVG from 'icons/no.svg';
 
-export const DownloadLogo = () =>
+export const DownloadLogo = () => (
   <svg width='21' height='25' fill='currentColor'viewBox={downloadSVG.viewBox} >
     <use xlinkHref={`#${downloadSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const MegaLogo = () =>
+export const MegaLogo = () => (
   <svg viewBox={megaSVG.viewBox} width={200} >
     <use xlinkHref={`#${megaSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const ObjectsLogo = () =>
+export const ObjectsLogo = () => (
   <svg width='21' height='25' fill='currentColor' viewBox={objectsSVG.viewBox} >
     <use xlinkHref={`#${objectsSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const ReportsLogo = () =>
+export const ReportsLogo = () => (
   <svg width='21' height='25' fill='currentColor' viewBox={reportsSVG.viewBox} >
     <use xlinkHref={`#${reportsSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const UsersLogo = () =>
+export const UsersLogo = () => (
   <svg width='21' height='25' fill='currentColor' viewBox={usersSVG.viewBox} >
     <use xlinkHref={`#${usersSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const USPDLogo = () =>
+export const USPDLogo = () => (
   <svg width='21' height='25' fill='currentColor' viewBox={USPDSVG.viewBox} >
     <use xlinkHref={`#${USPDSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const BellLogo = ({ color } = 'black') =>
+export const BellLogo = ({ color } = 'black') => (
   <svg width='21' height='25' fill='currentColor' color={color} viewBox={alertSVG.viewBox} >
     <use xlinkHref={`#${alertSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const ProfileLogo = () =>
+export const ProfileLogo = () => (
   <svg width='21' height='25' fill='currentColor' viewBox={profileSVG.viewBox} >
     <use xlinkHref={`#${profileSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const YesLogo = () =>
+export const YesLogo = () => (
   <svg width='21' height='25' fill='currentColor'viewBox={yesSVG.viewBox} >
     <use xlinkHref={`#${yesSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
-export const NoLogo = () =>
+export const NoLogo = () => (
   <svg width='21' height='25' fill='currentColor'viewBox={noSVG.viewBox} >
     <use xlinkHref={`#${noSVG.id}`} />
-  </svg>;
+  </svg>
+);
 
 
 BellLogo.propTypes = {

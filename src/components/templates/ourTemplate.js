@@ -2,9 +2,10 @@ import React from 'react';
 import ourStyle from 'templates/ourTemplates.less';
 
 
-const ourTemplate = (OurComponent) =>
+const ourTemplate = (OurComponent) => (
   <div className={ourStyle.container}>
     <OurComponent />
-  </div>;
+  </div>
+);
 
 export default ourTemplate;

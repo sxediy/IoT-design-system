@@ -7,11 +7,12 @@ import { initActiveElement2, navBarElements } from 'components/gkh-components/Ap
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <NavBar
     initActiveElement={ initActiveElement2 }
     navBarElements={ navBarElements }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

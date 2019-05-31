@@ -26,4 +26,9 @@ const navBarElements = [
 
 const profileElements = ['Поддержка пользователей', 'Мой профиль', 'Выход'];
 
-export { initActiveElement1, initActiveElement2, navBarElements, profileElements };
+export {
+  initActiveElement1,
+  initActiveElement2,
+  navBarElements,
+  profileElements
+};

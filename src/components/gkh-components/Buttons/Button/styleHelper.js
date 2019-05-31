@@ -1,7 +1,8 @@
 import * as ivan from 'src/colors';
 
-const makeBorder = (isDarkness, backgroundColor, initialBorder) =>
-  (isDarkness && backgroundColor === ivan.freshAsphalt ? initialBorder : 'none');
+const makeBorder = (isDarkness, backgroundColor, initialBorder) => (
+  isDarkness && backgroundColor === ivan.freshAsphalt ? initialBorder : 'none'
+);
 
 
 const makeDisableBackground = (isDarkness, initialBackground) => {
@@ -12,16 +13,15 @@ const makeDisableBackground = (isDarkness, initialBackground) => {
 
 
 const makeOpacity = (initialBackground, isDarkness, isDisabled) => {
-  const shellOpacity = isDarkness && isDisabled && initialBackground === ivan.freshAsphalt ?
-    '0.5' : '1';
+  const shellOpacity = isDarkness && isDisabled && initialBackground === ivan.freshAsphalt ? '0.5' : '1';
   const textOpacity = isDarkness && isDisabled ? '0.5' : '1';
   return [shellOpacity, textOpacity];
 };
 
-
+const defaultBorder = `1px solid ${ivan.fullWhite}`;
 const styleHelper = ({
   size = 'm',
-  border: initialBorder = `1px solid ${ivan.fullWhite}`,
+  border: initialBorder = defaultBorder,
   isDarkness,
   isDisabled = false,
   initialBackground,
@@ -31,8 +31,6 @@ const styleHelper = ({
   currentBoxShadow,
   currentTextColor,
 }) => {
-// eslint-disable-next-line
-
   const height = {
     s: '32px',
     m: '48px',
@@ -46,8 +44,7 @@ const styleHelper = ({
   }[size];
 
 
-  const backgroundColor = isDisabled ?
-    makeDisableBackground(isDarkness, initialBackground) : currentBackground;
+  const backgroundColor = isDisabled ? makeDisableBackground(isDarkness, initialBackground) : currentBackground;
 
   const border = makeBorder(isDarkness, backgroundColor, initialBorder);
   const boxShadow = isDisabled ? 'none' : currentBoxShadow;
@@ -74,8 +71,7 @@ const styleHelper = ({
 
   const color = isDisabled ? initialTextColor : currentTextColor;
 
-  // eslint-disable-next-line
-  const lineHeight = parseInt(height, 10) / 2 + 'px';
+  const lineHeight = `${parseInt(height, 10) / 2}px`;
 
   const textStyle = {
     fontSize,
@@ -89,4 +85,3 @@ const styleHelper = ({
 
 
 export { styleHelper };
-

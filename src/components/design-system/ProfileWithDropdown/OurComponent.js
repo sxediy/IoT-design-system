@@ -7,12 +7,13 @@ import { profileElements } from 'components/gkh-components/AppHeader/fakeData';
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <div style={{ marginLeft: 'auto' }}>
     <ProfileWithDropdown
       profileElements={ profileElements }
     />
-  </div>;
+  </div>
+);
 
 
 export default constructFromTemplates(OurComponent, data);

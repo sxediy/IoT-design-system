@@ -6,10 +6,11 @@ import { Bell } from 'components/gkh-components/AppHeader/Bell';
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <div style={{ marginLeft: 'auto', marginRight: '10%' }}>
     <Bell />
-  </div>;
+  </div>
+);
 
 
 export default constructFromTemplates(OurComponent, data);

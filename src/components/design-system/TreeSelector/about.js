@@ -50,4 +50,3 @@ export const props = {
     description: 'Включен/отключен поиск',
   }
 };
-

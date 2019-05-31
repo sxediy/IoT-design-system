@@ -20,11 +20,11 @@ import { checkboxTitle } from 'components/gkh-components/Checkbox/SmartCheckboxW
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <ButtonDropDownTripleMenu
     firstLineData={ firstLineData }
     secondLineData={ secondLineData }
-    thirdLine={ (...args) =>
+    thirdLine={ (...args) => (
       <SmartCheckboxWithButton
         args={ args }
         callbackFunction={ onSubmit }
@@ -32,10 +32,11 @@ const OurComponent = () =>
         checkboxTitle={ checkboxTitle }
         defaultCheckedList={ options }
       />
-    }
+    )}
     buttonName={ buttonName }
     LogoComponent={ LogoComponent }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

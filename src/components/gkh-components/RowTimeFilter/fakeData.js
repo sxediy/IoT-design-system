@@ -7,4 +7,10 @@ const initialDateTo = moment();
 const disabledDate = (current) => current > today.endOf('day');
 const isTSRV = false;
 
-export { initialDateFrom, initialDateTo, today, disabledDate, isTSRV };
+export {
+  initialDateFrom,
+  initialDateTo,
+  today,
+  disabledDate,
+  isTSRV
+};

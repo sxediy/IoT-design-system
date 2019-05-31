@@ -31,4 +31,3 @@ export const props = {
     description: 'Название начального активного таба',
   }
 };
-

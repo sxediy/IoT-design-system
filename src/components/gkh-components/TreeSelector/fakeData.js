@@ -58,4 +58,11 @@ const customStyle = {
 };
 const onSearch = () => false;
 
-export { title, treeData, initActiveElement, placeholder, customStyle, onSearch };
+export {
+  title,
+  treeData,
+  initActiveElement,
+  placeholder,
+  customStyle,
+  onSearch
+};

@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as ivan from 'src/colors';
 import { styleHelper } from './styleHelper';
-import { onMouseDown, onMouseUp, onMouseOver, onMouseOut } from './eventHandlers';
+import {
+  onMouseDown,
+  onMouseUp,
+  onMouseOver,
+  onMouseOut
+} from './eventHandlers';
 
 const Button = ({
   buttonName,

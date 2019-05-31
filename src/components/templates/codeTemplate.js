@@ -6,7 +6,7 @@ import { githubGist } from 'react-syntax-highlighter/dist/styles/hljs';
 // import { dark } from 'react-syntax-highlighter/dist/styles/prism';
 // список цветовых тем https://github.com/conorhastings/react-syntax-highlighter/blob/HEAD/AVAILABLE_STYLES_HLJS.MD
 
-const codeTemplate = (code) =>
+const codeTemplate = (code) => (
   <div className={codeStyle.container}>
     <SyntaxHighlighter
       language='javascript'
@@ -15,7 +15,7 @@ const codeTemplate = (code) =>
     >
       {code}
     </SyntaxHighlighter>
-  </div >;
+  </div >
+);
 
 export default codeTemplate;
-

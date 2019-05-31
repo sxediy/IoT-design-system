@@ -16,13 +16,14 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <RowTimeFilter
     initialDateFrom={ initialDateFrom }
     initialDateTo={ initialDateTo }
     today={ today }
     disabledDate={ disabledDate }
     isTSRV= { isTSRV }
-  />;
+  />
+);
 
 export default constructFromTemplates(OurComponent, data);

@@ -6,8 +6,9 @@ import { Redirect } from 'react-router-dom';
 const mapStateToProps = ({ auth }) => ({ isAuthorized: Boolean(auth.username) });
 
 const Athorization = (WrappedComponent) => {
-  const WithAuthorization = (props) =>
-    (props.isAuthorized ? <WrappedComponent {...props}/> : <Redirect to='/login' />);
+  const WithAuthorization = (props) => (
+    props.isAuthorized ? <WrappedComponent {...props}/> : <Redirect to='/login' />
+  );
 
   WithAuthorization.propTypes = {
     isAuthorized: PropTypes.bool

@@ -16,7 +16,7 @@ const ButtonDropDownSingleMenu = ({
   LogoComponent,
   buttonName,
   callbackFunction
-}) =>
+}) => (
   <Dropdown
     overlay={menu(callbackFunction, items)}
     placement="bottomCenter"
@@ -25,7 +25,8 @@ const ButtonDropDownSingleMenu = ({
       <LogoComponent color={'orange'}/>
       <span className={styles.buttonName}>{buttonName}</span>
     </div>
-  </Dropdown>;
+  </Dropdown>
+);
 
 ButtonDropDownSingleMenu.propTypes = {
   items: PropTypes.array,
@@ -36,4 +37,3 @@ ButtonDropDownSingleMenu.propTypes = {
 
 
 export { ButtonDropDownSingleMenu };
-

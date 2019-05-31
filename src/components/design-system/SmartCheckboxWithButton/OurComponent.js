@@ -15,7 +15,7 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <SmartCheckboxWithButton
     args={ choisedBefore }
     callbackFunction={ onSubmit }
@@ -23,7 +23,8 @@ const OurComponent = () =>
     checkboxTitle={ checkboxTitle }
     defaultCheckedList={ options }
     styleContainer={ { width: '250px', boxShadow: '0 1px 4px rgba(0, 21, 41, 0.08)' } }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

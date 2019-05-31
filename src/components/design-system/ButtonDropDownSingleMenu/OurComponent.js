@@ -14,13 +14,14 @@ import {
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <ButtonDropDownSingleMenu
     items={ items }
     LogoComponent={ LogoComponent }
     buttonName={ buttonName }
     callbackFunction={ callbackFunction }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);

@@ -18,4 +18,9 @@ const cityList = {
 const placeholder = 'Выберете город';
 const displayProp = 'name';
 const initialSelected = undefined; // '1'
-export { initialSelected, cityList, placeholder, displayProp };
+export {
+  initialSelected,
+  cityList,
+  placeholder,
+  displayProp
+};

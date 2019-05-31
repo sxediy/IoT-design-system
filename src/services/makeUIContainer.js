@@ -11,24 +11,24 @@ const makeUIContainer = key => {
   } = obj[key];
 
 
-  const title = (() =>
+  const title = (
     <Fragment>
       <Title />
     </Fragment>
-  )();
+  );
 
-  const leftSide = (() =>
+  const leftSide = (
     <Fragment>
       <OurContainer />
       <Code />
     </Fragment>
-  )();
+  );
 
-  const rightSide = (() =>
+  const rightSide = (
     <Fragment>
       <Props />
     </Fragment>
-  )();
+  );
 
   return [title, leftSide, rightSide];
 };

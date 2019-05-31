@@ -19,4 +19,3 @@ export const code = `
 
 export const props = {
 };
-

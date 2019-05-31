@@ -76,4 +76,3 @@ RowTimeFilter.propTypes = {
 };
 
 export { RowTimeFilter };
-

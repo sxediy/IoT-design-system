@@ -54,4 +54,3 @@ export const props = {
     description: 'Компонент логотипа/иконки',
   }
 };
-

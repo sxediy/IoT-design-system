@@ -54,11 +54,11 @@ MenuBar.propTypes = {
 
 const mapDispatchToProps = (dispatch) => (
   {
-    changeUIContainer: (activeNameOfComponent) =>
-      dispatch({ type: 'changeUIContainer', payload: { activeNameOfComponent } }),
+    changeUIContainer: (activeNameOfComponent) => (
+      dispatch({ type: 'changeUIContainer', payload: { activeNameOfComponent } })
+    )
   }
 );
 
 
 export default connect(null, mapDispatchToProps)(MenuBar);
-

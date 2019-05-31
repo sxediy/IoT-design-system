@@ -12,7 +12,7 @@ const NavBar = ({ initActiveElement, navBarElements, setNewActive: setNewActiveP
 
   return (
     <div className={styles.items}>
-      {navBarElements.map(element =>
+      {navBarElements.map(element => (
         <div
           key={element.name}
           className={classNames(styles.item, { [styles.active]: currentActive === element.name })}
@@ -21,7 +21,7 @@ const NavBar = ({ initActiveElement, navBarElements, setNewActive: setNewActiveP
           {logotypes[element.logoName]()}
           <div className={styles.title}>{element.title}</div>
         </div>
-      )}
+      ))}
     </div>
   );
 };
@@ -35,4 +35,3 @@ NavBar.propTypes = {
 
 
 export { NavBar };
-

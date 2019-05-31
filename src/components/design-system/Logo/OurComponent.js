@@ -7,13 +7,15 @@ import layout from './layout.less';
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <div className={layout.container}>
     {
-      Object.keys(logotypes).map(name =>
+      Object.keys(logotypes).map(name => (
         <div key={name} className={layout.item}>{logotypes[name]()}</div>
       )
+      )
     }
-  </div>;
+  </div>
+);
 
 export default constructFromTemplates(OurComponent, data);

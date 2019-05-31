@@ -7,12 +7,12 @@ import { initActiveElement1, navBarElements, profileElements } from 'components/
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <AppHeader
     initActiveElement={ initActiveElement1 }
     navBarElements={ navBarElements }
     profileElements= { profileElements }
-  />;
-
+  />
+);
 
 export default constructFromTemplates(OurComponent, data);

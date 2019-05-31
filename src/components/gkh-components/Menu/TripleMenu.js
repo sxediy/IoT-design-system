@@ -9,16 +9,18 @@ const { SubMenu } = Menu;
 const TripleMenu = ({ linesData }) => {
   const { firstLineData = [], secondLineData = [], thirdLine = () => {} } = linesData;
 
-  const secondMenuItems = (firstitem, seconditem) =>
+  const secondMenuItems = (firstitem, seconditem) => (
     <SubMenu key={[seconditem]} title={ seconditem }>
       {thirdLine(firstitem, seconditem)}
-    </SubMenu>;
+    </SubMenu>
+  );
 
 
-  const firstMenuItems = firstitem =>
+  const firstMenuItems = firstitem => (
     <SubMenu key={[firstitem]} title={ firstitem }>
       {secondLineData.map(seconditem => secondMenuItems(firstitem, seconditem))}
-    </SubMenu>;
+    </SubMenu>
+  );
 
 
   return (

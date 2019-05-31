@@ -47,4 +47,3 @@ export const props = {
     description: 'Текст сообщения',
   },
 };
-

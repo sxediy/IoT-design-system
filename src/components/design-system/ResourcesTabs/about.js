@@ -31,4 +31,3 @@ export const props = {
     default: 'Тепло'
   }
 };
-

@@ -8,11 +8,12 @@ import { tabsArr, initActiveElement } from 'components/gkh-components/ResourceTa
 import * as data from './about';
 
 
-const OurComponent = () =>
+const OurComponent = () => (
   <ResourceTabs
     tabsArr={ tabsArr }
     initActiveElement={ initActiveElement }
-  />;
+  />
+);
 
 
 export default constructFromTemplates(OurComponent, data);
