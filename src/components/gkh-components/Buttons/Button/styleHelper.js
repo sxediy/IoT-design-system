@@ -67,6 +67,7 @@ const styleHelper = ({
     padding: '2%',
     cursor,
     pointerEvents,
+    position: 'relative',
   };
 
   const color = isDisabled ? initialTextColor : currentTextColor;
