@@ -50,6 +50,7 @@ const Button = ({
 
   return (
     <button
+      type={type}
       style={shellStyle}
       onClick= {callbackFunction}
       onMouseDown={onMouseDown(forHandlers)}
@@ -57,10 +58,7 @@ const Button = ({
       onMouseOver={onMouseOver(forHandlers)}
       onMouseOut={onMouseOut(forHandlers)}
     >
-      <span
-        style={textStyle}
-        type={type}
-      >
+      <span style={textStyle}>
         {buttonName}
       </span>
     </button>
