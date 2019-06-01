@@ -15,7 +15,6 @@ const SmartCheckboxWithButton = ({
   styleContainer,
   checkboxTitle,
 }) => {
-  console.log('checkboxTitle', checkboxTitle);
   const [currentCheckedList, setNewCheckedList] = useState(defaultCheckedList);
   const [currentIndeterminate, setNewIndeterminate] = useState(true);
   const [currentCheckAll, setNewCheckAll] = useState(false);

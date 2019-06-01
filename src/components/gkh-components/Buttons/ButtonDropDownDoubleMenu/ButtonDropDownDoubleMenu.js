@@ -5,7 +5,6 @@ import { DoubleMenu } from 'components/gkh-components/Menu/DoubleMenu';
 import styles from './ButtonDropDownDoubleMenu.less';
 
 const ButtonDropDownDoubleMenu = ({
-  getFirstLineData,
   buttonName,
   LogoComponent,
   callbackFunction,
@@ -24,7 +23,7 @@ const ButtonDropDownDoubleMenu = ({
       placement="bottomCenter"
       trigger={['click']}
     >
-      <div onClick={getFirstLineData} className={styles.buttonWrapper}>
+      <div className={styles.buttonWrapper}>
         <LogoComponent />
         <span className={styles.buttonName}>{buttonName}</span>
       </div>
@@ -33,7 +32,6 @@ const ButtonDropDownDoubleMenu = ({
 };
 
 ButtonDropDownDoubleMenu.propTypes = {
-  getFirstLineData: PropTypes.func,
   buttonName: PropTypes.string,
   LogoComponent: PropTypes.func,
   callbackFunction: PropTypes.func
